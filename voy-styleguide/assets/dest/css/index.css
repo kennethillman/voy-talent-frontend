@@ -186,7 +186,7 @@ nav {
     .sgd-color-card.-grey4 .body:before {
       content: "#f5f5f5"; }
 
-/* STYLEGUIDE - Placolder */
+/* STYLEGUIDE - Placeholder */
 .sgd-placeholder {
   height: 50px;
   background: #4be8a5;
@@ -534,11 +534,21 @@ nav {
   .sgd-grid .gc .g-t-pull-12 {
     margin-right: 100%; } }
 
-/* HEADER
-------------------------------------------------------------------------*/
+/* STYLEGUIDE - Header*/
 .s-header {
   text-align: center;
-  display: block; }
+  display: block;
+  position: relative;
+  padding-top: 130px; }
+  .s-header .logo-inverted {
+    position: absolute;
+    width: 100%;
+    padding: 15px;
+    background: #000000;
+    top: 0; }
+    .s-header .logo-inverted svg {
+      fill: #ffffff;
+      height: 30px; }
 
 /* LISTS
 ------------------------------------------------------------------------*/

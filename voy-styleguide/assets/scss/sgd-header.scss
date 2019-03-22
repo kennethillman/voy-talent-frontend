@@ -1,0 +1,23 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* STYLEGUIDE - Header*/
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.s-header {
+  text-align: center;
+  display: block;
+  position: relative;
+  padding-top: 130px;
+
+  .logo-inverted {
+  	position: absolute;
+  	width: 100%;
+  	padding: 15px;
+  	background: $black;
+  	top: 0;
+  	svg {
+  		fill: $white;
+  		height: 30px;
+  	}
+  }
+
+}
