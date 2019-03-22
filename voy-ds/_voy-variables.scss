@@ -1,0 +1,61 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* VOY TALENT - DS */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// VARIABLES
+//
+
+/////////////////////////////////////////////////////////////////////////
+// COLORS
+/////////////////////////////////////////////////////////////////////////
+
+$black: 		#000000 !default;
+$white: 		#ffffff !default;
+$yellow: 		#ffbf0d !default;
+$green: 		#4be8a5 !default;
+$orange: 		#ffa300 !default;
+
+$grey1: 		#4d4d4d !default;
+$grey2: 		#b5b5b5 !default;
+$grey3: 		#c9c9c9 !default;
+$grey4: 		#f5f5f5 !default;
+
+/////////////////////////////////////////////////////////////////////////
+// FONTS
+/////////////////////////////////////////////////////////////////////////
+
+$font-system: -apple-system, BlinkMacSystemFont, "Apple Color Emoji", “Segoe UI”, Roboto, “Helvetica Neue”, Helvetica, Arial, sans-serif;
+$font-georgia: Georgia, Times, "Times New Roman", serif;
+
+$font-header: $font-georgia;
+$font-bread: $font-georgia;
+
+$vp320-base-rem: 18px;
+$vp320-base-rem-line-height: 28px;
+
+$vp768-base-rem: 19px;
+$vp768-base-rem-line-height: 29px;
+
+$vp1280-base-rem: 20px;
+$vp1280-base-rem-line-height: 30px;
+
+
+/* Headers */
+/* Font weights: 700, 800 */
+$font-a: -apple-system, BlinkMacSystemFont, "Apple Color Emoji", “Segoe UI”, Roboto, “Helvetica Neue”, Helvetica, Arial, sans-serif;
+$font-a-google: '';
+
+
+/////////////////////////////////////////////////////////////////////////
+// Z-index
+/////////////////////////////////////////////////////////////////////////
+
+
+$z-index-wcag-skip-links: 10001;
+$z-index-header: 500;
+$z-index-content: 1;
+
+
+
+

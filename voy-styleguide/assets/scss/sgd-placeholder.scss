@@ -1,0 +1,22 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* STYLEGUIDE - Placolder */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.sgd-placeholder {
+  
+  height: 50px;
+  background: $green;
+  margin-bottom: 1rem;
+  line-height: 50px;
+  text-align: center;
+  color: rgba(0,0,0,.55);
+  font-weight: bold;
+
+  &.-darker {
+    background: darken($green,10%);
+  }
+  &.-lighter {
+    background: lighten($green,10%);
+  }
+
+}

@@ -1,0 +1,288 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* DESING SYSYEM */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// GRID
+//
+
+// Grid variables
+
+$prefix: ds !default;
+$contentWidth: 100% !default;
+$columns: 12 !default;
+$gutter: 1 !default;
+$min-width: 320px !default;
+$max-width: 980px !default;
+
+
+@mixin grid-cols($col: $columns, $name: g) {
+
+    $columnprefix: $name;
+
+    @for $i from 1 through $columns {
+
+        @if $i==12 {
+
+            $combo: $i;
+            $comboStart: 1;
+
+            @for $p from $comboStart through $combo {
+                .#{$columnprefix}-#{$p}     {width: ($p / $combo) * 100%;}
+            }
+
+        }
+
+        @if $i==12 {
+
+            $combo: $i;
+            $comboStart: 1;
+
+            @for $p from $comboStart through $combo {
+                .gc .#{$columnprefix}-push-#{$p}     {margin-left: ($p / $combo) * 100%;}
+            }
+
+            @for $p from $comboStart through $combo {
+                .gc .#{$columnprefix}-pull-#{$p}     {margin-right: ($p / $combo) * 100%;}
+            }
+
+        }
+
+    } // @for END
+
+}
+
+
+// Mixin - Grid
+
+@mixin grid($prefix, $contentWidth, $columns, $gutter, $min-width) {
+
+    @include VP320 {
+
+        .#{$prefix}-grid {
+
+            // - - - GC - G=COLUMN, M=Module
+
+            [class^="g-"] {
+                float: left;
+                @include box-sizing();
+            }
+
+            // - - - GC - content wrapper
+
+            .gc {
+                @include clearfix;
+                padding: 0 $gutter * .5rem;
+                min-width: $min-width;
+                max-width: $max-width;
+                margin-left: auto;
+                margin-right: auto;
+
+                > [class^="g-"] {
+                            padding: 0 $gutter * .5rem;
+                        }
+
+                // - - - GC - MAXIMIZE
+
+                &.-maximize {
+                    width: 100%;
+                    max-width: 100%;
+                    padding: 0;
+
+                    > [class^="g-"],
+                    > div > [class^="g-"] {
+                        padding: 0;
+                    }
+
+                    .-full-width {
+                        > [class^="g-"] {
+                            padding: 0 $gutter * .5rem;
+                        }
+                    }
+
+                }
+
+                // - - - GC - CENTER
+
+                &.-column-center,
+                &.-g-center {
+                    > [class^="g-"] {
+                        float: none;
+                        margin-right: auto;
+                        margin-left: auto;
+                        &.g-1 {
+                            float: left;
+                        }
+                    }
+                }
+
+                // - - - GC - FULL WIDTH
+
+                &.-full-width {
+                    width: 100%;
+                    max-width: 100%;
+                    padding: 0 $gutter * .5rem;
+                    &.-no-gutter {
+                        padding: 0 $gutter * 1rem;
+                    }
+                }
+
+
+                // - - - GC - NO GUTTER
+
+                &.-no-gutter {
+                    padding: 0 $gutter * .5rem;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    [class^="g-"] {
+                        padding: 0;
+                    }
+
+                    [class^="m-"] {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+
+                }
+
+
+            } // .gc END
+
+
+            // - - - COLUMNS
+
+            // Columns > 1/2
+            $oneStart: 1;
+            $oneEnd: 2;
+
+            @for $p from $oneStart through $oneEnd {
+
+                .g-#{$p} { width: 50%;}
+
+            }
+
+            $twoStart: 3;
+            $twoEnd: 6;
+
+            @for $p from $twoStart through $twoEnd {
+                .g-#{$p} { width: 100%;}
+            }
+
+            $threeStart: 7;
+            $threeEnd: 12;
+
+
+            @for $p from $threeStart through $threeEnd {
+                .g-#{$p} { width: 100%;}
+            }
+
+            .row {
+                @include clearfix;
+            }
+
+        } // -grid END
+
+
+    } // VP320 END
+
+
+
+
+    @include VP600 {
+
+        .#{$prefix}-grid {
+
+            // - - - GC
+
+
+
+
+            // - - - COLUMNS - MODIFIER
+
+            .-g-shift-vp768 [class^="g-"] {
+                float: right;
+            }
+
+            // - - - COLUMNS & PUSH / PULL
+
+            @for $i from 1 through $columns {
+
+                @if $i == 12 {
+
+                    $combo: $i;
+                    $comboStart: 1;
+
+                    @for $p from $comboStart through $combo {
+                        .g-#{$p} {width: ($p / $combo) * 100%;}
+                    }
+
+                }
+
+                @if $i == 12 {
+
+                    $combo: $i;
+                    $comboStart: 1;
+
+                    @for $p from $comboStart through $combo {
+                        .g-push-#{$p} {margin-left: ($p / $combo) * 100%;}
+                    }
+
+                    @for $p from $comboStart through $combo {
+                        .g-pull-#{$p} {margin-right: ($p / $combo) * 100%;}
+                    }
+                }
+            }
+        }
+    } // VP768 END
+    @include VP768 {
+
+        .#{$prefix}-grid {
+            // - - - GC
+  
+        }
+    }
+
+    @include VP1280 {
+
+        .#{$prefix}-grid {
+            .gc {
+                margin: 0 auto;
+                // width: 86%;
+                padding: 0;
+            }
+        }
+
+    }
+
+    @include MOBILE     { .#{$prefix}-grid { @include grid-cols(12, g-m); } }
+    @include TABLET     { .#{$prefix}-grid { @include grid-cols(12, g-t); } }
+
+
+
+} // MIXIN grid END
+
+
+@include grid($prefix, $contentWidth, $columns, $gutter, $min-width);
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// MAKE THE GRID
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// @include grid-rwd   ($prefix, $width, $columns, $gutter, $outer-padding, $behavior, $min-width);
+// @include g-grid  ($prefix, $width, $columns, $gutter, $outer-padding, fixed, $min-width);
+
+// @include grid-breakpoint($breakpoint, $prefix, $behavior, $width, $gutter, $outer-padding);
+// @include grid-breakpoint(1441px, $prefix,  fixed, 1176 , 24, 0);
+// @include grid-breakpoint(1820px, $prefix,  fixed, 1390 , 26, 0);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Full fluid exampel -  (Leave width in breakpoint default for full fluid)*
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// @include grid-rwd   ($name, $prefix, $width, $columns, $gutter, $outer-padding, $behavior, $min-width, $break480, $ie7);
+// @include grid-breakpoint($media-768, $name, $prefix, $media, fluid, $width , 10, 0);
+// @include grid-breakpoint($media-480, $name, $prefix, $media, fluid, $width , 10, 0);

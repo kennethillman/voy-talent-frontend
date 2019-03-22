@@ -1,0 +1,144 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// MIXINS - BREAKPOINT/MEDIA/CONTENT
+//
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - VARIABLE SETUP
+// - - - Viewport
+// - - - Only ranges
+// - - - Breakpoints
+// - - - Styleguide & Seagal
+// - - - Extras
+//
+// - CONTENT MIXINS
+// - - - Viewport
+// - - - Only ranges
+// - - - Breakpoints
+// - - - Styleguide & Seagal
+// - - - Extras
+//
+// - INLINE MEDIA MIXIN MAGIC
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// VARIABLE SETUP
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// MQ Viewport
+$VP320:                                 false !default;
+$VP480:                                 false !default;
+$VP600:                                 false !default;
+$VP768:                                 false !default;
+$VP1024:                                false !default;
+$VP1280:                                false !default;
+$VP1368:                                false !default;
+$VP1440:                                false !default;
+$VP1680:                                false !default;
+$VP1920:                                false !default;
+
+// Only ranges
+$MOBILE:                                false !default;
+$TABLET:                                false !default;
+$DESKTOP:                               false !default;
+
+$MOBILETABLET:                          false !default;
+
+// Breakpoints
+$bp-480:                                480px !default;
+$bp-600:                                600px !default;
+$bp-768:                                768px !default;
+$bp-1024:                               998px !default;
+$bp-1280:                               1280px !default;
+$bp-1368:                               1368px !default;
+$bp-1440:                               1440px !default;
+$bp-1680:                               1680px !default;
+$bp-1920:                               1920px !default;
+
+// Styleguide & Seagal
+$SEAGAL:                                false !default;
+$SG:                                    false !default;
+
+// Extras
+$TINYMCE:                               false !default;
+$msie:                                  false !default;
+$no-js:                                 false !default;
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CONTENT MIXINS
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Viewport
+@mixin VP320                            { @if $VP320                     { @content; } }
+@mixin VP480                            { @if $VP480                     { @include media-min($bp-480)  {@content;} }  }
+@mixin VP600                            { @if $VP600                     { @include media-min($bp-600)  {@content;} }  }
+@mixin VP768                            { @if $VP768                     { @include media-min($bp-768)  {@content;} }  }
+@mixin VP1024                           { @if $VP1024                    { @include media-min($bp-1024) {@content;} }  }
+@mixin VP1280                           { @if $VP1280                    { @include media-min($bp-1280) {@content;} }  }
+@mixin VP1368                           { @if $VP1368                    { @include media-min($bp-1368) {@content;} }  }
+@mixin VP1440                           { @if $VP1440                    { @include media-min($bp-1440) {@content;} }  }
+@mixin VP1680                           { @if $VP1680                    { @include media-min($bp-1680) {@content;} }  }
+@mixin VP1920                           { @if $VP1920                    { @include media-min($bp-1920) {@content;} }  }
+
+/// Only ranges
+@mixin MOBILE                           { @if $MOBILE                    { @include media-only(240px, 599px) {@content;} } }
+@mixin TABLET                           { @if $TABLET                    { @include media-only(600px, 997px) {@content;} } }
+@mixin MOBILETABLET                     { @if $MOBILETABLET              { @include media-only(240px, 997px) {@content;} } }
+@mixin DESKTOP                          { @if $DESKTOP                   { @include media-min($bp-1024)      {@content;} } }
+
+// Styleguide & Seagal
+@mixin SEAGAL                           { @if $SG {   @if $SEGAL         { .seagal           {@content;}}    } @else {   @if $SEGAL         {@content;}    } }
+@mixin SG                               { @if $SG {   @content;}   }
+
+////// Extras
+@mixin TINYMCE                          { @if $TINYMCE                   {@content;} }
+@mixin msie                             { @if $msie                      {@content;} }
+@mixin no-js                            { @if $no-js                     {@content;} }
+
+
+/////////////////////////////////////////////////////////////////////////
+// INLINE MEDIA MIXIN MAGIC
+// -> http://jakearchibald.github.io/sass-ie/
+/////////////////////////////////////////////////////////////////////////
+
+//////// BREAKPOINTS FOR MODULES
+
+$fix-mqs: false !default;
+
+@mixin media-min($width) {
+    @if $fix-mqs {
+        @if $fix-mqs >= $width {
+            @content;
+        }
+    } @else {
+        @media screen and (min-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin media-max($width) {
+    @if $fix-mqs {
+        @if $fix-mqs <= $width {
+            @content;
+            }
+    } @else {
+        @media screen and (max-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin media-only($minwidth, $maxwidth) {
+    @media screen and (min-width: $minwidth) and (max-width: $maxwidth) {
+        @content;
+    }
+}

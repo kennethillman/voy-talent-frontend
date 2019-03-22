@@ -1,0 +1,59 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* STYLEGUIDE - Color card */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.sgd-color-card {
+  
+  @include aspect-ratio-content(1,1);
+  display: block;
+  margin-bottom: 1rem;
+  position: relative;
+  
+  .body {
+    border-radius: 100%;
+    overflow: hidden;
+    &:before,
+    &:after {
+      text-align: center;
+      display: inline-block;
+      color: $white;
+      background-color: rgba(0,0,0,.5);
+      padding: .75rem 1.25rem;
+      border-radius: 50px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%,0);
+      @include transition(transform .675s ease);
+      
+    }
+
+    &:before{
+      top: 100%;
+    }
+    &:after{
+      bottom: 100%;
+    }
+
+    // Transition on Hover
+    &:hover {
+      &:before{
+        transform: translate(-50%,-135%);
+      }
+      &:after{
+       transform: translate(-50%,135%);
+      }
+    }
+  }
+
+  @include sgdColors($yellow, 'yellow');
+  @include sgdColors($orange, 'orange');
+  @include sgdColors($green, 'green');
+  @include sgdColors($white, 'white');
+  @include sgdColors($black, 'black');
+  @include sgdColors($grey1, 'grey1');
+  @include sgdColors($grey2, 'grey2');
+  @include sgdColors($grey3, 'grey3');
+  @include sgdColors($grey4, 'grey4');
+
+
+}

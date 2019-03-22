@@ -1,0 +1,63 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* STYLEGUIDE - Typography */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.sgd-header {
+
+  font-size: 36px;
+  font-family: $font-system;
+  font-weight: 900;
+  color: $grey1;
+  position: relative;
+  margin: 3rem 0 1.75rem;
+
+  &.-type {
+    &:before {
+      font-size: 10px;
+      background: $grey1;
+      padding: .45rem;
+      color: $white;
+      border-radius: 4px;
+      position: absolute;
+      bottom: 120%;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+  }
+
+  &.-common {
+    &:before {
+      content: "common";
+    }
+  }
+
+  &.-component {
+    &:before {
+      content: "component";
+    }
+  }
+
+  &.-module {
+    &:before {
+      content: "module";
+    }
+  }
+
+  &.-section {
+    &:before {
+      content: "section";
+    }
+  }
+
+
+  .-inverted & {
+    color: $grey4;
+      &.-type {
+      &:before {
+        background: $grey4;
+        color: $grey1;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,58 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* STYLEGUIDE - Global */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+body {
+  color: $color-charcoal;
+  font-size: $font-small;
+  font-family: $font-sans;
+  min-height: 100vh;
+  margin: 0;
+}
+
+header,
+footer,
+article,
+nav {
+  background-color: $color-gray-tint;
+}
+
+[class*="s-"] {
+    padding: 1.5em 0 2.75rem;
+
+    &.-light {
+    	background-color: $white;
+    }
+
+    &.-inverted {
+    	background-color: $black;
+    	color: $grey4;
+    }
+
+ //    background: repeating-linear-gradient(
+	//   -45deg,
+	//   transparent,
+	//   $black 1px,
+	//   transparent 1px,
+	//   transparent 6px,
+	//   $black 6px,
+	//   transparent 7px,
+	//   transparent 42px,
+	// );
+
+  // https://css-tricks.com/stripes-css/
+
+  // background: repeating-linear-gradient(
+  //   45deg,
+  //   #606dbc,
+  //   #606dbc 10px,
+  //   #465298 10px,
+  //   #465298 20px
+  // );
+
+}
+
+
+
+
+
