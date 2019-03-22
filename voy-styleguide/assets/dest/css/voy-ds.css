@@ -419,6 +419,93 @@ body {
 .-pattern-stripe-big-light {
   background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 3px, #c9c9c9 4px, transparent 5px, transparent 20px); }
 
+<<<<<<< HEAD
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="phone"],
+input[type="datetime"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {
+  font-size: 16px;
+  padding: 16px;
+  margin: 0 0 18px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  border: none;
+  display: block;
+  box-sizing: border-box;
+  outline: none; }
+  textarea.-full-width,
+  input[type="text"].-full-width,
+  input[type="password"].-full-width,
+  input[type="email"].-full-width,
+  input[type="phone"].-full-width,
+  input[type="datetime"].-full-width,
+  input[type="date"].-full-width,
+  input[type="month"].-full-width,
+  input[type="time"].-full-width,
+  input[type="week"].-full-width {
+    width: 100%; }
+  textarea.-error,
+  input[type="text"].-error,
+  input[type="password"].-error,
+  input[type="email"].-error,
+  input[type="phone"].-error,
+  input[type="datetime"].-error,
+  input[type="date"].-error,
+  input[type="month"].-error,
+  input[type="time"].-error,
+  input[type="week"].-error {
+    background-color: red;
+    color: #ffffff; }
+
+textarea {
+  min-height: 192px; }
+
+.checkbox-holder {
+  position: relative;
+  display: block;
+  padding: 1px 0 0 40px;
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif; }
+  .checkbox-holder input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+  .checkbox-holder .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    border: 1px solid #c9c9c9;
+    border-radius: 6px; }
+    .checkbox-holder .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none; }
+  .checkbox-holder input:checked ~ .checkmark {
+    background-color: #f5f5f5; }
+  .checkbox-holder input:checked ~ .checkmark:after {
+    display: block; }
+
+.checkbox-holder .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #000000;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+=======
 .-pattern-stripe-orange {
   background: repeating-linear-gradient(-45deg, transparent, #ffa300 1px, transparent 2px, transparent 3px, #ffa300 4px, transparent 5px, transparent 20px); }
 
@@ -573,3 +660,4 @@ body {
 
 figure {
   margin: 0; }
+>>>>>>> 90f362ae5cda7bf6e3320f560ab41604dac0f5f6
