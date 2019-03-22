@@ -32,6 +32,11 @@ $VP320: 		true;
 @import "ds-common/ds-typography";
 @import "ds-common/ds-patterns";
 
+@import "ds-sections/s-header/s-header";
+
+figure {
+	margin: 0;
+}
 
 // @import "reset";
 

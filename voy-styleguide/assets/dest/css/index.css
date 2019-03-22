@@ -32,8 +32,7 @@ body {
 
 header,
 footer,
-article,
-nav {
+article {
   background-color: #efefef; }
 
 [class^="s-"] {
@@ -561,18 +560,18 @@ nav {
     margin-right: 100%; } }
 
 /* STYLEGUIDE - Header*/
-.s-header {
+.ds-header {
   text-align: center;
   display: block;
   position: relative;
   padding-top: 130px; }
-  .s-header .logo-inverted {
+  .ds-header .logo-inverted {
     position: absolute;
     width: 100%;
     padding: 15px;
     background: #000000;
     top: 0; }
-    .s-header .logo-inverted svg {
+    .ds-header .logo-inverted svg {
       fill: #ffffff;
       height: 30px; }
 
