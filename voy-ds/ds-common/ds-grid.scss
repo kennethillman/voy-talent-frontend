@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-/* DESING SYSYEM */
+/* VOY TALENT - DS */
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //
@@ -11,9 +11,9 @@
 $prefix: ds !default;
 $contentWidth: 100% !default;
 $columns: 12 !default;
-$gutter: 1 !default;
+$gutter: 22 !default;
 $min-width: 320px !default;
-$max-width: 980px !default;
+$max-width: 1130px !default;
 
 
 @mixin grid-cols($col: $columns, $name: g) {
@@ -72,14 +72,15 @@ $max-width: 980px !default;
 
             .gc {
                 @include clearfix;
-                padding: 0 $gutter * .5rem;
+                padding: 0 $gutter * 0.5px;
                 min-width: $min-width;
                 max-width: $max-width;
                 margin-left: auto;
                 margin-right: auto;
+                box-sizing: border-box;
 
                 > [class^="g-"] {
-                            padding: 0 $gutter * .5rem;
+                            padding: 0 $gutter * 0.5px;
                         }
 
                 // - - - GC - MAXIMIZE
@@ -96,7 +97,7 @@ $max-width: 980px !default;
 
                     .-full-width {
                         > [class^="g-"] {
-                            padding: 0 $gutter * .5rem;
+                            padding: 0 $gutter * 0.5px;
                         }
                     }
 
@@ -121,9 +122,9 @@ $max-width: 980px !default;
                 &.-full-width {
                     width: 100%;
                     max-width: 100%;
-                    padding: 0 $gutter * .5rem;
+                    padding: 0 $gutter * 0.5px;
                     &.-no-gutter {
-                        padding: 0 $gutter * 1rem;
+                        padding: 0 $gutter * 1px;
                     }
                 }
 
@@ -131,7 +132,7 @@ $max-width: 980px !default;
                 // - - - GC - NO GUTTER
 
                 &.-no-gutter {
-                    padding: 0 $gutter * .5rem;
+                    padding: 0 $gutter * 0.5px;
                     margin-left: auto;
                     margin-right: auto;
 

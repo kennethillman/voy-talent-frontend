@@ -1,0 +1,24 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* STYLEGUIDE - Pattern */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.sgd-pattern {
+  
+  height: 200px;
+  position: relative;
+
+  span {
+    text-align: center;
+      display: inline-block;
+      color: $white;
+      background-color: rgba(0,0,0,.5);
+      padding: .75rem 1.25rem;
+      border-radius: 50px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+  }
+
+
+}

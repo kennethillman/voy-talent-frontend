@@ -1,21 +1,26 @@
-/* APPLICATION
-------------------------------------------------------------------------*/
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* VOY TALENT - DS */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	$MOBILE: 		true;
-	$TABLET: 		true;
-	$DESKTOP: 		true;
-	$MOBILETABLET: 	true;
+//
+// IMPORTS
+//
 
-	$VP1920: 		true;
-	$VP1680: 		true;
-	$VP1440: 		true;
-	$VP1368: 		true;
-	$VP1280: 		true;
-	$VP1024: 		true;
-	$VP768: 		true;
-	$VP600: 		true;
-	$VP480: 		true;
-	$VP320: 		true;
+$MOBILE: 		true;
+$TABLET: 		true;
+$DESKTOP: 		true;
+$MOBILETABLET: 	true;
+
+$VP1920: 		true;
+$VP1680: 		true;
+$VP1440: 		true;
+$VP1368: 		true;
+$VP1280: 		true;
+$VP1024: 		true;
+$VP768: 		true;
+$VP600: 		true;
+$VP480: 		true;
+$VP320: 		true;
 
 @import "_voy-variables";
 
@@ -24,6 +29,7 @@
 @import "_ds-utils/mixins-breakpoint";
 
 @import "ds-common/ds-grid";
+@import "ds-common/ds-patterns";
 
 
 // @import "reset";

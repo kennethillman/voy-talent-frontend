@@ -1,5 +1,4 @@
-/* APPLICATION
-------------------------------------------------------------------------*/
+/* VOY TALENT - DS */
 /* VOY TALENT - DS */
 /* Headers */
 /* Font weights: 700, 800 */
@@ -12,7 +11,7 @@ transition: $property $duration $function $delay;
 /* - Placeholder text color - - */
 /* - Placeholder text transform - - */
 /* - Placeholder text fade  out - - */
-/* DESING SYSYEM */
+/* VOY TALENT - DS */
 .ds-grid [class^="g-"] {
   float: left;
   -webkit-box-sizing: border-box;
@@ -21,11 +20,12 @@ transition: $property $duration $function $delay;
 
 .ds-grid .gc {
   zoom: 1;
-  padding: 0 0.5rem;
+  padding: 0 11px;
   min-width: 320px;
-  max-width: 980px;
+  max-width: 1130px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  box-sizing: border-box; }
   .ds-grid .gc:before, .ds-grid .gc:after {
     content: "\0020";
     display: block;
@@ -34,7 +34,7 @@ transition: $property $duration $function $delay;
   .ds-grid .gc:after {
     clear: both; }
   .ds-grid .gc > [class^="g-"] {
-    padding: 0 0.5rem; }
+    padding: 0 11px; }
   .ds-grid .gc.-maximize {
     width: 100%;
     max-width: 100%;
@@ -43,7 +43,7 @@ transition: $property $duration $function $delay;
     .ds-grid .gc.-maximize > div > [class^="g-"] {
       padding: 0; }
     .ds-grid .gc.-maximize .-full-width > [class^="g-"] {
-      padding: 0 0.5rem; }
+      padding: 0 11px; }
   .ds-grid .gc.-column-center > [class^="g-"], .ds-grid .gc.-g-center > [class^="g-"] {
     float: none;
     margin-right: auto;
@@ -53,11 +53,11 @@ transition: $property $duration $function $delay;
   .ds-grid .gc.-full-width {
     width: 100%;
     max-width: 100%;
-    padding: 0 0.5rem; }
+    padding: 0 11px; }
     .ds-grid .gc.-full-width.-no-gutter {
-      padding: 0 1rem; }
+      padding: 0 22px; }
   .ds-grid .gc.-no-gutter {
-    padding: 0 0.5rem;
+    padding: 0 11px;
     margin-left: auto;
     margin-right: auto; }
     .ds-grid .gc.-no-gutter [class^="g-"] {
@@ -340,3 +340,10 @@ transition: $property $duration $function $delay;
     margin-right: 91.66667%; }
   .ds-grid .gc .g-t-pull-12 {
     margin-right: 100%; } }
+
+/* VOY TALENT - DS */
+.-pattern-stripe-dark {
+  background: repeating-linear-gradient(-45deg, transparent, #4d4d4d 1px, transparent 2px, transparent 3px, #4d4d4d 4px, transparent 5px, transparent 20px); }
+
+.-pattern-stripe-light {
+  background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 3px, #c9c9c9 4px, transparent 5px, transparent 20px); }

@@ -17,7 +17,7 @@ nav {
   background-color: $color-gray-tint;
 }
 
-[class*="s-"] {
+[class^="s-"] {
     padding: 1.5em 0 2.75rem;
 
     &.-light {
@@ -29,27 +29,10 @@ nav {
     	color: $grey4;
     }
 
- //    background: repeating-linear-gradient(
-	//   -45deg,
-	//   transparent,
-	//   $black 1px,
-	//   transparent 1px,
-	//   transparent 6px,
-	//   $black 6px,
-	//   transparent 7px,
-	//   transparent 42px,
-	// );
+}
 
-  // https://css-tricks.com/stripes-css/
-
-  // background: repeating-linear-gradient(
-  //   45deg,
-  //   #606dbc,
-  //   #606dbc 10px,
-  //   #465298 10px,
-  //   #465298 20px
-  // );
-
+.-hide {
+  display: none;
 }
 
 
