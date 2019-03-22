@@ -369,12 +369,12 @@ body {
 .ds-typography h4,
 .ds-typography h5,
 .ds-typography h6 {
-  font-family: "Cabin", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple Color Emoji", “Segoe UI”, Roboto, “Helvetica Neue”, Helvetica, Arial, sans-serif;
   color: #000000;
   display: block;
   margin: 0 0 .44em;
   word-break: break-word;
-  font-weight: 700; }
+  font-weight: 800; }
 
 .ds-typography h1 {
   font-size: 50px;
@@ -412,12 +412,13 @@ body {
   line-height: 1.64706rem; }
 
 /* VOY TALENT - DS */
-.-pattern-stripe-dark {
+.-pattern-stripe-big-dark {
   background: repeating-linear-gradient(-45deg, transparent, #4d4d4d 1px, transparent 2px, transparent 3px, #4d4d4d 4px, transparent 5px, transparent 20px); }
 
-.-pattern-stripe-light {
+.-pattern-stripe-big-light {
   background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 3px, #c9c9c9 4px, transparent 5px, transparent 20px); }
 
+<<<<<<< HEAD
 textarea,
 input[type="text"],
 input[type="password"],
@@ -503,3 +504,79 @@ textarea {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
+=======
+.-pattern-stripe-orange {
+  background: repeating-linear-gradient(-45deg, transparent, #ffa300 1px, transparent 2px, transparent 3px, #ffa300 4px, transparent 5px, transparent 20px); }
+
+.-pattern-stripe-dark {
+  background: repeating-linear-gradient(-45deg, transparent, #4d4d4d 1px, transparent 2px, transparent 6px); }
+
+.-pattern-stripe-light-tight {
+  background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 4px); }
+
+.-pattern-stripe-light {
+  background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 7px); }
+
+.-pattern-stripe-big-orange {
+  background: repeating-linear-gradient(-45deg, transparent, #ffa300 1px, transparent 2px, transparent 3px, #ffa300 4px, transparent 5px, transparent 20px); }
+
+.-pattern-stripe-orange {
+  background: repeating-linear-gradient(-45deg, transparent, #ffa300 1px, transparent 2px, transparent 7px); }
+
+.-pattern-solid-orange {
+  background: #ffa300; }
+
+/* VOY TALENT - DS */
+.s-header {
+  height: 108px;
+  background: #000000;
+  padding: 0; }
+  .s-header .gc {
+    position: relative; }
+  .s-header svg {
+    fill: #ffffff; }
+  .s-header a {
+    color: #ffffff;
+    text-decoration: none;
+    height: 108px;
+    line-height: 108px;
+    display: inline-block;
+    box-sizing: border-box;
+    float: left;
+    margin: 0 25px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    letter-spacing: 2px; }
+    .s-header a:hover {
+      color: #ffa300; }
+    .s-header a.-active:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      background: #ffffff; }
+    .s-header a.-active:hover:after {
+      background: #ffa300; }
+  .s-header nav {
+    float: left; }
+  .s-header .logo {
+    margin-right: 50px;
+    float: left;
+    margin-top: 35px; }
+    .s-header .logo svg {
+      height: 38px;
+      width: 138px;
+      max-width: 100%; }
+  .s-header .search-temp {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); }
+
+figure {
+  margin: 0; }
+>>>>>>> 90f362ae5cda7bf6e3320f560ab41604dac0f5f6
