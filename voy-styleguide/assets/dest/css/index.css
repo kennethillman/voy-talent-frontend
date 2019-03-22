@@ -13,8 +13,6 @@
 /* FONT-SIZES */
 /* FONT-WEIGHTS */
 /* VOY TALENT - DS */
-/* Headers */
-/* Font weights: 700, 800 */
 /*
 @mixin transition($property, $duration:0.3s, $function: ease, $delay: 0s){
 -webkit-transition: $property $duration $function $delay;

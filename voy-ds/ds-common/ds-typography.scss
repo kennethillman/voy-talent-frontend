@@ -1,0 +1,91 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* VOY TALENT - DS */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// TYPOGRAPHY
+//
+
+///////////////////////////////////////////////////////////
+// BASE TYPO
+///////////////////////////////////////////////////////////
+
+html {
+    font-size: $vp320-base-rem;
+    line-height: $vp320-base-rem-line-height;
+}
+
+body {
+    color: $black;
+    font-family: $font-system;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+}
+
+@media screen and (min-width: $bp-768) {
+    html {
+        font-size: $vp768-base-rem;
+        line-height: $vp768-base-rem-line-height;
+    }
+}
+
+@media screen and (min-width: $bp-1280) {
+    html {
+        font-size: $vp1280-base-rem;
+        line-height: $vp1280-base-rem-line-height;
+    }
+}
+
+.ds-typography {
+
+///////////////////////////////////////////////////////////
+// HEADINGS
+///////////////////////////////////////////////////////////
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6  {
+    font-family: $font-header;
+    color: $black;
+    display: block;
+    margin: 0 0 .44em;
+    word-break: break-word;
+    font-weight: 700;
+}
+
+h1  {font-size: 50px; line-height: 62px;}
+h2  {font-size: 40px; line-height: 52px;}
+h3  {font-size: 30px; line-height: 40px;}
+h4  {font-size: 26px; line-height: 34px;}
+h5  {font-size: 22px; line-height: 34px;}
+h6  {font-size: 20px; line-height: 34px;}
+
+
+// - - - MISC
+
+p {
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0 0 1.5em;
+}
+
+
+// - - - HELPER CLASSES / MODIFIERS
+
+.preamble,
+.excerpt {
+    font-weight: bold;
+    font-size: rem-calc(20px);
+    line-height: rem-calc(28px);
+}
+
+
+
+
+
+}
