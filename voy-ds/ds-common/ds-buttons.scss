@@ -1,0 +1,368 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* VOY TALENT - DS */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// BUTTONS
+//
+
+//////////////////////////////////////////////
+// KS - Buttons
+////////////////////////////////////////////
+
+    .btn {
+
+// - - - DEFAULT
+
+        position: relative;
+        display: inline-block;
+        background-color: $black;
+        color: $white;
+        font-family: $font-bread;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 48px;
+        line-height: 48px;
+        border-radius: 50px;
+        padding: 0 30px;
+        text-align: center;
+        cursor: pointer;
+  
+
+// - - - COLORS
+
+        &.-icon {
+          position: relative;
+          overflow: hidden;
+          padding-right: 64px;
+          svg {
+            position: absolute;
+            right: 20px;
+            fill: $white;
+            width: 30px;
+            height: 48px;
+            display: inline-block;
+          }
+        }
+
+
+// - - - HELPERS
+
+        &.-shadow {
+            @include box-shadow(-2px, 2px, 18px, rgba(0, 0, 0, 0.35), $inset: false);
+        }
+
+        &.-block {
+            display: block;
+        }
+
+
+// - - - INTERACTION
+
+        &:hover {
+             background:lighten($black,20%);
+             color: $white;
+        }
+
+        &:active {
+             background: lighten($black,20%);
+        }
+
+        &:visited {
+            color: $white;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+
+// - - - COLORS
+
+        &.-green {
+          background-color: $green;
+          &:hover {
+               background:lighten($green,12%);
+               color: $white;
+          }
+          &:active {
+               background: lighten($green,12%);
+          }
+          &:visited {
+              background-color: $green;
+          }
+        }
+
+        &.-orange {
+          background-color: $orange;
+          &:hover {
+               background:lighten($orange,12%);
+               color: $white;
+          }
+          &:active {
+               background: lighten($orange,12%);
+          }
+          &:visited {
+              background-color: $orange;
+          }
+        }
+
+        &.-yellow {
+          background-color: $yellow;
+          &:hover {
+               background:lighten($yellow,12%);
+               color: $white;
+          }
+          &:active {
+               background: lighten($yellow,12%);
+          }
+          &:visited {
+              background-color: $yellow;
+          }
+        }
+
+
+
+// // - - - MODIFIERS - Sizes
+
+//         // Large
+//         &.-large {
+
+//             font-size: 20px;
+//             padding: rem-calc(13px) rem-calc(28px);
+
+//         }
+
+
+
+// // - - - MODIFIERS - Colors
+
+
+
+//         &.-negative {
+//             background: $bmb-negative;
+//             border-color: $bmb-negative;
+//             &:hover {
+//                 background: darken($bmb-negative,7%);
+//                 border-color: darken($bmb-negative,7%);
+//             }
+//             &:active {
+//                 background: darken($bmb-negative,12%);
+//                 border-color: darken($bmb-negative,12%);
+//             }
+//         }
+
+
+//         &.-positive {
+//             background: $bmb-positive;
+//             border-color: $bmb-positive;
+//             &:hover {
+//                 background: darken($bmb-positive,7%);
+//                 border-color: darken($bmb-positive,7%);
+
+//             }
+//             &:active {
+//                 background: darken($bmb-positive,12%);
+//                 border-color: darken($bmb-positive,12%);
+//             }
+//         }
+
+//         &.-white {
+//             background: $white;
+//             color: $black;
+//             border-color: $white;
+//             &:hover {
+//                 background: darken($white,7%);
+//                 border-color: darken($white,7%);
+//                 color: $black;
+
+//             }
+//             &:active {
+//                 background: darken($white,12%);
+//                 border-color: darken($white,12%);
+//                 color: $black;
+//             }
+
+//             &.-ghost {
+//                 color: $white;
+//                 border-color: $white;
+//             }
+//         }
+
+
+
+
+   //      &.-disabled {
+   //          background: $bmb-grey;
+   //          border-color: $bmb-grey;
+   //          color: $white;
+   //          opacity: .5;
+   //          pointer-events: none;
+   // cursor: default;
+
+   //           &:hover {
+   //              background: $bmb-grey;
+   //              border-color: $bmb-grey;
+   //              color: $white;
+   //          }
+
+   //          &:active {
+   //              background: $bmb-grey;
+   //              border-color: $bmb-grey;
+   //              color: $white;
+   //          }
+
+   //          &.-ghost {
+   //              background: $bmb-grey;
+   //              border-color: $bmb-grey;
+   //              color: $white;
+   //          }
+
+   //      }
+
+
+
+
+// // - - - Extras
+
+//         .btn-extra-outside {
+
+//             padding: 0rem;
+//             position: absolute;
+//             width: 1.5rem;
+//             height: 1.5rem;
+//             left: 100%;
+//             top: 50%;
+//             left: 100%;
+//             @include transform(translateY(-50%));
+//             color: $black;
+//             background: none;
+//             border: 1px solid $black;
+//             @include border-radius(999px);
+//             margin-left: .5rem;
+
+//             svg {
+//                 position: absolute;
+//                 width: .75rem;
+//                 height: .75rem;
+//                 fill: $black;
+//                 left: 50%;
+//                 top: 50%;
+//                 @include transform(translate(-50%, -50%));
+//             }
+
+//             &:hover,
+//             &:active {
+//                 border-color: $black; // $bmb-negative;
+//                 background: $black; // $bmb-negative;
+//                 svg {
+//                     fill: $white;
+//                 }
+//             }
+
+//         }
+
+//         &.-active {
+
+//             .btn-extra-outside {
+//                 svg {
+//                     fill: $black;
+//                 }
+//             }
+
+//             &:hover,
+//             &:active {
+//                 border-color: $black; // $bmb-negative;
+//                 .btn-extra-outside {
+//                     border-color: $black; // $bmb-negative;
+//                     background: $black; // $bmb-negative;
+//                     svg {
+//                         fill: $white;
+//                     }
+//                 }
+//             }
+//         }
+
+// - - - MODIFIERS - TYPE - Ghost
+
+        // &.-ghost {
+
+        //     color: $black;
+        //     background: none;
+        //     border-color: $black;
+
+
+        //     // // SVG
+        //     // svg {
+        //     //     fill: $black;
+        //     // }
+
+        //     // // Icon
+        //     // &.-icon {
+        //     //     padding: 12px 53px 12px 19px; // -1px from "-small"
+        //     // }
+
+
+
+
+        //     // Interaction
+        //     &:hover {
+        //          background: $b-grey;
+        //          border-color: $b-grey;
+        //          color: $white;
+        //     }
+
+        //     &:active {
+        //          background: $bmb-grey-dark;
+        //          border-color: $bmb-grey-dark;
+        //     }
+
+        // }
+
+
+// - - - MODIFIERS - Active
+
+            // &.-active {
+            //     color: $white;
+            //     background: $black;
+            //     border-color: $black;
+
+            //     // SVG
+            //     svg {
+            //         fill: lighten($bmb-positive,12%);
+            //     }
+
+
+            //     // Interaction
+            //     &:hover {
+            //          background: darken($black,7%);
+            //          border-color: darken($bmb-positive,7%);
+            //          color: $white;
+            //     }
+
+            //     &:active {
+            //          background: darken($black,12%);
+            //          border-color: darken($bmb-positive,12%);
+            //          color: $white;
+            //     }
+
+
+
+            // }
+
+// LATER - Teknisk skuld "touch / no-touch"
+
+        /*
+
+            .no-touch & {
+
+            }
+
+            .touch & {
+
+            }
+
+        */
+
+
+    }

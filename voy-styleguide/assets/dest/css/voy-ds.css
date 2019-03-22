@@ -412,6 +412,7 @@ body {
   line-height: 1.64706rem; }
 
 /* VOY TALENT - DS */
+/* VOY TALENT - DS */
 .-pattern-stripe-big-dark {
   background: repeating-linear-gradient(-45deg, transparent, #4d4d4d 1px, transparent 2px, transparent 3px, #4d4d4d 4px, transparent 5px, transparent 20px); }
 
@@ -438,6 +439,86 @@ body {
 
 .-pattern-solid-orange {
   background: #ffa300; }
+
+/* VOY TALENT - DS */
+.btn {
+  position: relative;
+  display: inline-block;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 48px;
+  line-height: 48px;
+  border-radius: 50px;
+  padding: 0 30px;
+  text-align: center;
+  cursor: pointer;
+  /*
+
+            .no-touch & {
+
+            }
+
+            .touch & {
+
+            }
+
+        */ }
+  .btn.-icon {
+    position: relative;
+    overflow: hidden;
+    padding-right: 64px; }
+    .btn.-icon svg {
+      position: absolute;
+      right: 20px;
+      fill: #ffffff;
+      width: 30px;
+      height: 48px;
+      display: inline-block; }
+  .btn.-shadow {
+    -webkit-box-shadow: -2px 2px 18px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: -2px 2px 18px rgba(0, 0, 0, 0.35);
+    box-shadow: -2px 2px 18px rgba(0, 0, 0, 0.35); }
+  .btn.-block {
+    display: block; }
+  .btn:hover {
+    background: #333333;
+    color: #ffffff; }
+  .btn:active {
+    background: #333333; }
+  .btn:visited {
+    color: #ffffff; }
+  .btn:focus {
+    outline: none; }
+  .btn.-green {
+    background-color: #4be8a5; }
+    .btn.-green:hover {
+      background: #81efc0;
+      color: #ffffff; }
+    .btn.-green:active {
+      background: #81efc0; }
+    .btn.-green:visited {
+      background-color: #4be8a5; }
+  .btn.-orange {
+    background-color: #ffa300; }
+    .btn.-orange:hover {
+      background: #ffb93d;
+      color: #ffffff; }
+    .btn.-orange:active {
+      background: #ffb93d; }
+    .btn.-orange:visited {
+      background-color: #ffa300; }
+  .btn.-yellow {
+    background-color: #ffbf0d; }
+    .btn.-yellow:hover {
+      background: #ffcf4a;
+      color: #ffffff; }
+    .btn.-yellow:active {
+      background: #ffcf4a; }
+    .btn.-yellow:visited {
+      background-color: #ffbf0d; }
 
 /* VOY TALENT - DS */
 .s-header {

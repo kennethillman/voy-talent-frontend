@@ -224,6 +224,11 @@ article {
   width: 70px;
   margin: 0 22px 22px 0; }
 
+/* STYLEGUIDE - Buttons */
+.sgd-buttons a {
+  float: left;
+  margin: 0 15px 15px 0; }
+
 /* FOOTER
 ------------------------------------------------------------------------*/
 .s-footer {
