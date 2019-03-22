@@ -1,0 +1,81 @@
+
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="phone"],
+input[type="datetime"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {
+	font-size: 16px;
+	padding: 16px;
+	margin:0 0 18px;
+	border-radius: 4px;
+	background-color: $grey4;
+	border: none; 
+	display: block;
+	box-sizing: border-box;
+	outline: none;
+	&.-full-width {
+		width: 100%;
+	}
+	&.-error {
+		background-color: red;
+		color: $white;
+	}
+}
+
+textarea {min-height: 192px;}
+
+.checkbox-holder {
+	position: relative;
+	display: block;
+	padding: 1px 0 0 40px;
+	font-size: 16px;
+	font-family: $font-source;
+
+	input {
+	  position: absolute;
+	  opacity: 0;
+	  cursor: pointer;
+	  height: 0;
+	  width: 0;
+	}
+
+	.checkmark {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 24px;
+	  width: 24px;
+	  border: 1px solid $grey3;
+	  border-radius: 6px;
+	  &:after {
+		  content: "";
+		  position: absolute;
+		  display: none;
+		}
+	}
+
+	input:checked ~ .checkmark {
+	  background-color: $grey4;
+	}
+	input:checked ~ .checkmark:after {
+	  display: block;
+	}
+}
+
+.checkbox-holder .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid $black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
