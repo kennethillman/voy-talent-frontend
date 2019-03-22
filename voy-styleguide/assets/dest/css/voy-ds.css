@@ -369,12 +369,12 @@ body {
 .ds-typography h4,
 .ds-typography h5,
 .ds-typography h6 {
-  font-family: "Cabin", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple Color Emoji", “Segoe UI”, Roboto, “Helvetica Neue”, Helvetica, Arial, sans-serif;
   color: #000000;
   display: block;
   margin: 0 0 .44em;
   word-break: break-word;
-  font-weight: 700; }
+  font-weight: 800; }
 
 .ds-typography h1 {
   font-size: 50px;
@@ -412,8 +412,29 @@ body {
   line-height: 1.64706rem; }
 
 /* VOY TALENT - DS */
-.-pattern-stripe-dark {
+.-pattern-stripe-big-dark {
   background: repeating-linear-gradient(-45deg, transparent, #4d4d4d 1px, transparent 2px, transparent 3px, #4d4d4d 4px, transparent 5px, transparent 20px); }
 
-.-pattern-stripe-light {
+.-pattern-stripe-big-light {
   background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 3px, #c9c9c9 4px, transparent 5px, transparent 20px); }
+
+.-pattern-stripe-orange {
+  background: repeating-linear-gradient(-45deg, transparent, #ffa300 1px, transparent 2px, transparent 3px, #ffa300 4px, transparent 5px, transparent 20px); }
+
+.-pattern-stripe-dark {
+  background: repeating-linear-gradient(-45deg, transparent, #4d4d4d 1px, transparent 2px, transparent 6px); }
+
+.-pattern-stripe-light-tight {
+  background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 4px); }
+
+.-pattern-stripe-light {
+  background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 7px); }
+
+.-pattern-stripe-big-orange {
+  background: repeating-linear-gradient(-45deg, transparent, #ffa300 1px, transparent 2px, transparent 3px, #ffa300 4px, transparent 5px, transparent 20px); }
+
+.-pattern-stripe-orange {
+  background: repeating-linear-gradient(-45deg, transparent, #ffa300 1px, transparent 2px, transparent 7px); }
+
+.-pattern-solid-orange {
+  background: #ffa300; }

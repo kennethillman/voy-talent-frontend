@@ -190,7 +190,8 @@ nav {
 /* STYLEGUIDE - Pattern */
 .sgd-pattern {
   height: 200px;
-  position: relative; }
+  position: relative;
+  margin-bottom: 22px; }
   .sgd-pattern span {
     text-align: center;
     display: inline-block;
@@ -201,7 +202,8 @@ nav {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    white-space: nowrap; }
 
 /* STYLEGUIDE - Placeholder */
 .sgd-placeholder {
@@ -216,6 +218,12 @@ nav {
     background: #1ee28e; }
   .sgd-placeholder.-lighter {
     background: #78eebc; }
+
+/* STYLEGUIDE - Icons */
+.sgd-icons img {
+  height: auto;
+  width: 70px;
+  margin: 0 22px 22px 0; }
 
 /* FOOTER
 ------------------------------------------------------------------------*/
