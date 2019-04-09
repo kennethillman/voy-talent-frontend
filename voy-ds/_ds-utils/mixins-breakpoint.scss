@@ -89,8 +89,8 @@ $no-js:                                 false !default;
 @mixin VP1920                           { @if $VP1920                    { @include media-min($bp-1920) {@content;} }  }
 
 /// Only ranges
-@mixin MOBILE                           { @if $MOBILE                    { @include media-only(240px, 599px) {@content;} } }
-@mixin TABLET                           { @if $TABLET                    { @include media-only(600px, 997px) {@content;} } }
+@mixin MOBILE                           { @if $MOBILE                    { @include media-only(240px, 767px) {@content;} } }
+@mixin TABLET                           { @if $TABLET                    { @include media-only(768px, 997px) {@content;} } }
 @mixin MOBILETABLET                     { @if $MOBILETABLET              { @include media-only(240px, 997px) {@content;} } }
 @mixin DESKTOP                          { @if $DESKTOP                   { @include media-min($bp-1024)      {@content;} } }
 
