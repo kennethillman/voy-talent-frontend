@@ -44,47 +44,138 @@ body {
 // HEADINGS
 ///////////////////////////////////////////////////////////
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6  {
-    font-family: $font-header;
-    color: $black;
-    display: block;
-    margin: 0 0 .44em;
-    word-break: break-word;
-    font-weight: 800;
-}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6  {
+        font-family: $font-header;
+        color: $black;
+        display: block;
+        margin: 0 0 .44em;
+        word-break: break-word;
+        font-weight: 800;
+    }
 
-h1  {font-size: 50px; line-height: 62px;}
-h2  {font-size: 40px; line-height: 52px;}
-h3  {font-size: 30px; line-height: 40px;}
-h4  {font-size: 26px; line-height: 34px;}
-h5  {font-size: 22px; line-height: 34px;}
-h6  {font-size: 20px; line-height: 34px;}
-
-
-// - - - MISC
-
-p {
-    font-size: inherit;
-    line-height: inherit;
-    margin: 0 0 1.5em;
-}
+    h1  {font-size: 50px; line-height: 62px;}
+    h2  {font-size: 40px; line-height: 52px;}
+    h3  {font-size: 30px; line-height: 40px;}
+    h4  {font-size: 26px; line-height: 34px;}
+    h5  {font-size: 22px; line-height: 34px;}
+    h6  {font-size: 20px; line-height: 34px;}
 
 
-// - - - HELPER CLASSES / MODIFIERS
+// - - - Section (Striped)
 
-.preamble,
-.excerpt {
-    font-weight: bold;
-    font-size: rem-calc(20px);
-    line-height: rem-calc(28px);
-}
+    .header-section {
+
+        color: $grey1;
+        font-size: 32px; 
+        line-height: 1;
+        font-weight: 700;
+        padding: 8px 0px 4px;
+
+        @media screen and (min-width: $bp-768) {
+            background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 7px);
+            font-size: 66px; 
+            padding: 16px 5px 8px;
+        }
+    }
+
+// - - - Number (Solid/Striped)
+
+    .header-number {
+        position: relative;
+        font-size: 22px;
+        line-height: 1;
+        z-index: 1;
+        padding-left: 12px;
+        margin: 20px 0 36px; 
+
+        padding-top: 70px;
+
+        figure {
+            @extend .-pattern-stripe-orange;
+            position: absolute;
+            left:0;
+            top: 0;
+            z-index: -1;
+            height :60px;
+            width: 60px;
+            border-radius: 200px;
+        }
+
+        .number {
+            position: absolute;
+            left:0;
+            top: 0;
+            font-size: 44px;
+            display: inline-block;
+            padding-right: 5px;
+            color: $orange;
+            width: 66px;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .text {
+            display: block;
+        }
+
+        &.-solid {
+            figure {
+                background: $orange;
+            }
+            .number {
+                color: $white;
+            }
+        }
+
+        @media screen and (min-width: $bp-768) {
+
+              padding-top: 0px;
+            figure {
+                top: 50%;
+                transform: translateY(-50%);
+                height :90px;
+                width: 90px;
+            }
+            .number {
+                position: static;
+                font-size: 52px;
+                display: inline-block;
+                padding-right: 8px;
+                width: auto;
+                text-align: center;
+                line-height: 1;
+            }
+            .text {
+                display: inline-block;
+            }
+        }
+
+    }
+
+///////////////////////////////////////////////////////////
+// Misc
+///////////////////////////////////////////////////////////
+
+    p {
+        font-size: inherit;
+        line-height: inherit;
+        margin: 0 0 1.5em;
+    }
 
 
+ // - - - HELPER CLASSES / MODIFIERS
+
+    .preamble,
+    .excerpt {
+        font-weight: bold;
+        font-size: rem-calc(20px);
+        line-height: rem-calc(28px);
+    }
 
 
 

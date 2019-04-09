@@ -54,6 +54,9 @@ article {
   color: #4d4d4d;
   position: relative;
   margin: 3rem 0 1.75rem; }
+  .sgd-header.-sub {
+    font-size: 24px;
+    color: #b5b5b5; }
   .sgd-header.-type:before {
     font-size: 10px;
     background: #4d4d4d;

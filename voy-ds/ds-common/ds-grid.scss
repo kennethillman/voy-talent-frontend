@@ -201,7 +201,7 @@ $max-width: 1130px !default;
 
             // - - - COLUMNS - MODIFIER
 
-            .-g-shift-vp768 [class^="g-"] {
+            .-g-shift-vp600 [class^="g-"] {
                 float: right;
             }
 
@@ -236,10 +236,15 @@ $max-width: 1130px !default;
             }
         }
     } // VP768 END
+
     @include VP768 {
 
         .#{$prefix}-grid {
-            // - - - GC
+           // - - - COLUMNS - MODIFIER
+
+            .-g-shift-vp768 [class^="g-"] {
+                float: right;
+            }
   
         }
     }

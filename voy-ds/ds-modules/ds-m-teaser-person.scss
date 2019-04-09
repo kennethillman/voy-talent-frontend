@@ -1,0 +1,53 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* VOY TALENT - DS */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// TEASER PERSON
+//
+
+.m-teaser-person {
+
+  margin: 0 0 22px;
+
+  .body {
+    @extend .-pattern-stripe-light-tight;
+    margin: 0 0 8px;
+    padding: 0 22px;
+    position: relative;
+  }
+
+  figure {
+    @include aspect-ratio-img(1,1);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 50%;
+    background: red;
+    overflow: hidden;
+  }
+
+
+  .header{
+    position: absolute;
+    top: 22px;
+    left: 12px;
+    z-index: 2;
+
+    &-name{
+      color: $orange;
+      font-size: 30px;
+      margin: 0 0 5px;
+    }
+    &-title{
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+}

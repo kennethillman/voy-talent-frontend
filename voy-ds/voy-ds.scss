@@ -22,25 +22,41 @@ $VP600: 		true;
 $VP480: 		true;
 $VP320: 		true;
 
+
+// Variables
 @import "_voy-variables";
 
+// Utils
 @import "_ds-utils/functions";
 @import "_ds-utils/mixins";
 @import "_ds-utils/mixins-breakpoint";
 
+// Common
+@import "ds-common/ds-globals";
 @import "ds-common/ds-grid";
 @import "ds-common/ds-typography";
-@import "ds-common/ds-patterns";
 @import "ds-common/ds-links";
-@import "ds-common/ds-buttons";
+@import "ds-common/ds-patterns";
 @import "ds-common/ds-forms";
 
 
-@import "ds-sections/s-header/s-header";
+// Components
+@import "ds-components/ds-c-buttons";
 
-figure {
-	margin: 0;
-}
+// Modules
+@import "ds-modules/ds-m-teaser-person";
+@import "ds-modules/ds-m-list";
+
+// Sections
+@import "ds-sections/s-header/s-header";
+@import "ds-sections/s-breadcrumbs";
+@import "ds-sections/s-join-email";
+@import "ds-sections/s-inspiration-week";
+@import "ds-sections/s-share";
+@import "ds-sections/s-footer";
+
+
+
 
 // @import "reset";
 

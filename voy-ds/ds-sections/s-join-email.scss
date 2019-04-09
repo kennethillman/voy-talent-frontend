@@ -3,6 +3,22 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //
-// LINKS
+// S-JOIN-EMAIL
 //
+
+
+.s-join-email {
+  background: $yellow;
+
+  .btn {
+    margin-top: 22px;
+  }
+
+  @media screen and (min-width: $bp-768) {
+    .btn {
+      margin-top: 0;
+    } 
+  }
+
+}
 

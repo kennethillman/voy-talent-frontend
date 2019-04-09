@@ -11,6 +11,17 @@ transition: $property $duration $function $delay;
 /* - Placeholder text transform - - */
 /* - Placeholder text fade  out - - */
 /* VOY TALENT - DS */
+figure {
+  margin: 0; }
+
+img {
+  height: auto;
+  width: 100%; }
+
+.ds [class^="s-"] {
+  padding: 1.5em 0 1.5rem; }
+
+/* VOY TALENT - DS */
 .ds-grid [class^="g-"] {
   float: left;
   -webkit-box-sizing: border-box;
@@ -112,7 +123,7 @@ transition: $property $duration $function $delay;
     clear: both; }
 
 @media screen and (min-width: 600px) {
-  .ds-grid .-g-shift-vp768 [class^="g-"] {
+  .ds-grid .-g-shift-vp600 [class^="g-"] {
     float: right; }
   .ds-grid .g-1 {
     width: 8.33333%; }
@@ -187,12 +198,16 @@ transition: $property $duration $function $delay;
   .ds-grid .g-pull-12 {
     margin-right: 100%; } }
 
+@media screen and (min-width: 768px) {
+  .ds-grid .-g-shift-vp768 [class^="g-"] {
+    float: right; } }
+
 @media screen and (min-width: 1280px) {
   .ds-grid .gc {
     margin: 0 auto;
     padding: 0; } }
 
-@media screen and (min-width: 240px) and (max-width: 599px) {
+@media screen and (min-width: 240px) and (max-width: 767px) {
   .ds-grid .g-m-1 {
     width: 8.33333%; }
   .ds-grid .g-m-2 {
@@ -266,7 +281,7 @@ transition: $property $duration $function $delay;
   .ds-grid .gc .g-m-pull-12 {
     margin-right: 100%; } }
 
-@media screen and (min-width: 600px) and (max-width: 997px) {
+@media screen and (min-width: 768px) and (max-width: 997px) {
   .ds-grid .g-t-1 {
     width: 8.33333%; }
   .ds-grid .g-t-2 {
@@ -400,6 +415,70 @@ body {
   font-size: 20px;
   line-height: 34px; }
 
+.ds-typography .header-section {
+  color: #4d4d4d;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 700;
+  padding: 8px 0px 4px; }
+  @media screen and (min-width: 768px) {
+    .ds-typography .header-section {
+      background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 7px);
+      font-size: 66px;
+      padding: 16px 5px 8px; } }
+
+.ds-typography .header-number {
+  position: relative;
+  font-size: 22px;
+  line-height: 1;
+  z-index: 1;
+  padding-left: 12px;
+  margin: 20px 0 36px;
+  padding-top: 70px; }
+  .ds-typography .header-number figure {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    height: 60px;
+    width: 60px;
+    border-radius: 200px; }
+  .ds-typography .header-number .number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 44px;
+    display: inline-block;
+    padding-right: 5px;
+    color: #ffa300;
+    width: 66px;
+    text-align: center;
+    line-height: 60px; }
+  .ds-typography .header-number .text {
+    display: block; }
+  .ds-typography .header-number.-solid figure {
+    background: #ffa300; }
+  .ds-typography .header-number.-solid .number {
+    color: #ffffff; }
+  @media screen and (min-width: 768px) {
+    .ds-typography .header-number {
+      padding-top: 0px; }
+      .ds-typography .header-number figure {
+        top: 50%;
+        transform: translateY(-50%);
+        height: 90px;
+        width: 90px; }
+      .ds-typography .header-number .number {
+        position: static;
+        font-size: 52px;
+        display: inline-block;
+        padding-right: 8px;
+        width: auto;
+        text-align: center;
+        line-height: 1; }
+      .ds-typography .header-number .text {
+        display: inline-block; } }
+
 .ds-typography p {
   font-size: inherit;
   line-height: inherit;
@@ -419,107 +498,28 @@ body {
 .-pattern-stripe-big-light {
   background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 3px, #c9c9c9 4px, transparent 5px, transparent 20px); }
 
-.-pattern-stripe-orange {
+.-pattern-stripe-orange, .ds-typography .header-number figure {
   background: repeating-linear-gradient(-45deg, transparent, #ffa300 1px, transparent 2px, transparent 3px, #ffa300 4px, transparent 5px, transparent 20px); }
 
 .-pattern-stripe-dark {
   background: repeating-linear-gradient(-45deg, transparent, #4d4d4d 1px, transparent 2px, transparent 6px); }
 
-.-pattern-stripe-light-tight {
+.-pattern-stripe-light-tight, .m-teaser-person .body {
   background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 4px); }
 
-.-pattern-stripe-light {
+.-pattern-stripe-light, .m-list li a:hover {
   background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 7px); }
 
 .-pattern-stripe-big-orange {
   background: repeating-linear-gradient(-45deg, transparent, #ffa300 1px, transparent 2px, transparent 3px, #ffa300 4px, transparent 5px, transparent 20px); }
 
-.-pattern-stripe-orange {
+.-pattern-stripe-orange, .ds-typography .header-number figure {
   background: repeating-linear-gradient(-45deg, transparent, #ffa300 1px, transparent 2px, transparent 7px); }
 
 .-pattern-solid-orange {
   background: #ffa300; }
 
 /* VOY TALENT - DS */
-.btn {
-  position: relative;
-  display: inline-block;
-  background-color: #000000;
-  color: #ffffff;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 48px;
-  line-height: 48px;
-  border-radius: 50px;
-  padding: 0 30px;
-  text-align: center;
-  cursor: pointer;
-  /*
-
-            .no-touch & {
-
-            }
-
-            .touch & {
-
-            }
-
-        */ }
-  .btn.-icon {
-    position: relative;
-    overflow: hidden;
-    padding-right: 64px; }
-    .btn.-icon svg {
-      position: absolute;
-      right: 20px;
-      fill: #ffffff;
-      width: 30px;
-      height: 48px;
-      display: inline-block; }
-  .btn.-shadow {
-    -webkit-box-shadow: -2px 2px 18px rgba(0, 0, 0, 0.35);
-    -moz-box-shadow: -2px 2px 18px rgba(0, 0, 0, 0.35);
-    box-shadow: -2px 2px 18px rgba(0, 0, 0, 0.35); }
-  .btn.-block {
-    display: block; }
-  .btn:hover {
-    background: #333333;
-    color: #ffffff; }
-  .btn:active {
-    background: #333333; }
-  .btn:visited {
-    color: #ffffff; }
-  .btn:focus {
-    outline: none; }
-  .btn.-green {
-    background-color: #4be8a5; }
-    .btn.-green:hover {
-      background: #81efc0;
-      color: #ffffff; }
-    .btn.-green:active {
-      background: #81efc0; }
-    .btn.-green:visited {
-      background-color: #4be8a5; }
-  .btn.-orange {
-    background-color: #ffa300; }
-    .btn.-orange:hover {
-      background: #ffb93d;
-      color: #ffffff; }
-    .btn.-orange:active {
-      background: #ffb93d; }
-    .btn.-orange:visited {
-      background-color: #ffa300; }
-  .btn.-yellow {
-    background-color: #ffbf0d; }
-    .btn.-yellow:hover {
-      background: #ffcf4a;
-      color: #ffffff; }
-    .btn.-yellow:active {
-      background: #ffcf4a; }
-    .btn.-yellow:visited {
-      background-color: #ffbf0d; }
-
 textarea,
 input[type="text"],
 input[type="password"],
@@ -607,6 +607,194 @@ textarea {
   transform: rotate(45deg); }
 
 /* VOY TALENT - DS */
+.btn {
+  position: relative;
+  display: inline-block;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 48px;
+  line-height: 48px;
+  border-radius: 50px;
+  padding: 0 30px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  /*
+
+            .no-touch & {
+
+            }
+
+            .touch & {
+
+            }
+
+        */ }
+  .btn.-icon {
+    position: relative;
+    overflow: hidden;
+    padding-right: 64px; }
+    .btn.-icon svg {
+      position: absolute;
+      right: 20px;
+      fill: #ffffff;
+      width: 30px;
+      height: 48px;
+      display: inline-block; }
+  .btn.-icon-only {
+    padding-right: 64px;
+    padding-left: 64px;
+    height: 48px; }
+    .btn.-icon-only svg {
+      fill: #ffffff;
+      width: 30px;
+      height: 48px;
+      display: inline-block; }
+  .btn.-shadow {
+    -webkit-box-shadow: -2px 2px 18px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: -2px 2px 18px rgba(0, 0, 0, 0.35);
+    box-shadow: -2px 2px 18px rgba(0, 0, 0, 0.35); }
+  .btn.-block {
+    display: block; }
+  .btn.-text-left {
+    text-align: left; }
+  .btn:hover {
+    background: #333333;
+    color: #ffffff; }
+  .btn:active {
+    background: #333333; }
+  .btn:visited {
+    color: #ffffff; }
+  .btn:focus {
+    outline: none; }
+  .btn.-green {
+    background-color: #4be8a5; }
+    .btn.-green:hover {
+      background: #81efc0;
+      color: #ffffff; }
+    .btn.-green:active {
+      background: #81efc0; }
+    .btn.-green:visited {
+      background-color: #4be8a5; }
+  .btn.-orange {
+    background-color: #ffa300; }
+    .btn.-orange:hover {
+      background: #ffb93d;
+      color: #ffffff; }
+    .btn.-orange:active {
+      background: #ffb93d; }
+    .btn.-orange:visited {
+      background-color: #ffa300; }
+  .btn.-yellow {
+    background-color: #ffbf0d; }
+    .btn.-yellow:hover {
+      background: #ffcf4a;
+      color: #ffffff; }
+    .btn.-yellow:active {
+      background: #ffcf4a; }
+    .btn.-yellow:visited {
+      background-color: #ffbf0d; }
+
+/* VOY TALENT - DS */
+.m-teaser-person {
+  margin: 0 0 22px; }
+  .m-teaser-person .body {
+    margin: 0 0 8px;
+    padding: 0 22px;
+    position: relative; }
+  .m-teaser-person figure {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 50%;
+    background: red;
+    overflow: hidden; }
+    .m-teaser-person figure:before {
+      display: block;
+      content: " ";
+      width: 100%;
+      padding-top: 100%; }
+    .m-teaser-person figure img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0; }
+  .m-teaser-person .header {
+    position: absolute;
+    top: 22px;
+    left: 12px;
+    z-index: 2; }
+    .m-teaser-person .header-name {
+      color: #ffa300;
+      font-size: 30px;
+      margin: 0 0 5px; }
+    .m-teaser-person .header-title {
+      font-size: 14px;
+      margin: 0; }
+  .m-teaser-person a {
+    text-decoration: none;
+    color: inherit; }
+
+/* VOY TALENT - DS */
+.m-list {
+  line-height: 1;
+  font-size: 18px; }
+  .m-list-header {
+    font-size: 22px;
+    padding: 0 0 22px;
+    margin: 0;
+    border-bottom: 1px solid #000000; }
+  .m-list ul {
+    padding: 0;
+    margin: 0 0 22px; }
+  .m-list li {
+    padding: 8px 0;
+    list-style-type: none;
+    border-bottom: 1px solid #b5b5b5; }
+    .m-list li .btn {
+      display: inline-block;
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      height: 36px;
+      transform: translateY(-50%); }
+      .m-list li .btn.-icon-only {
+        padding-right: 2px;
+        padding-left: 2px; }
+      .m-list li .btn svg {
+        position: relative;
+        height: 20px;
+        top: -4px; }
+    .m-list li a {
+      text-decoration: none;
+      padding: 18px 50px 18px 12px;
+      position: relative;
+      display: block;
+      color: inherit; }
+  @media screen and (min-width: 768px) {
+    .m-list-header {
+      font-size: 30px; }
+    .m-list li .btn {
+      height: 48px; }
+      .m-list li .btn.-icon-only {
+        padding-right: 64px;
+        padding-left: 64px; }
+      .m-list li .btn svg {
+        height: 48px;
+        top: 0px; }
+    .m-list li a {
+      padding: 30px 0 30px 22px; }
+    .m-list a.-icon svg {
+      padding-right: 54px;
+      padding-left: 54px; } }
+
+/* VOY TALENT - DS */
 .s-header {
   height: 108px;
   background: #000000;
@@ -657,5 +845,61 @@ textarea {
     top: 50%;
     transform: translateY(-50%); }
 
-figure {
-  margin: 0; }
+/* VOY TALENT - DS */
+.s-breadcrumbs {
+  background: #000000;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 12px 0;
+  font-size: 18px; }
+  .s-breadcrumbs a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal; }
+    .s-breadcrumbs a:hover {
+      color: #ffa300; }
+      .s-breadcrumbs a:hover:after {
+        color: #ffffff; }
+    .s-breadcrumbs a:after {
+      content: '/';
+      display: inline-block;
+      padding: 0 10px; }
+
+/* VOY TALENT - DS */
+.s-join-email {
+  background: #ffbf0d; }
+  .s-join-email .btn {
+    margin-top: 22px; }
+  @media screen and (min-width: 768px) {
+    .s-join-email .btn {
+      margin-top: 0; } }
+
+/* VOY TALENT - DS */
+.s-inspiration-week {
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .s-inspiration-week {
+      display: block; }
+      .s-inspiration-week .header {
+        font-size: 22px;
+        padding: 0 0 22px;
+        margin: 0; }
+      .s-inspiration-week .gc {
+        position: relative; }
+      .s-inspiration-week .text-col {
+        padding-bottom: 80px !important; }
+        .s-inspiration-week .text-col .btn {
+          position: absolute;
+          bottom: 0px;
+          left: 0;
+          margin-top: 22px;
+          width: 26%;
+          margin: 0 11px; } }
+
+/* VOY TALENT - DS */
+.s-share {
+  color: red; }
+
+/* VOY TALENT - DS */
+.s-footer {
+  color: red; }
