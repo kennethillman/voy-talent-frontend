@@ -3,22 +3,112 @@
 const gulp = require("gulp");
 
 // Load all required plugins (listed in package.json)
-const plugins = require("gulp-load-plugins")({
+const $ = require("gulp-load-plugins")({
   pattern: "*"
 });
 
-console.log(plugins); // Logs loaded plugins in terminal
+console.log($); // Logs loaded plugins in terminal
 
-const reload = plugins.browserSync.reload;
+const reload = $.browserSync.reload;
+
+
+/////////////////////////////////////////////////////////////////
+// CONFIG
+/////////////////////////////////////////////////////////////////
+
+
+const config = {
+    dev: $.yargs.argv.dev,
+    prod: $.yargs.argv.prod,
+    styles: {
+        src:        [], 
+        print:      '',
+        critical:   '',
+        styleguide: './voy-styleguide/assets/dest/css/',
+        dev: 'voy--dev/styles/',
+        dist: 'voy--dist/styles/',
+    },
+    scripts: {
+        src:        [], 
+        polyfills:  '',
+        inline:     '',
+        inlinedist: '', 
+    },
+    linting: {
+        styles:     '', 
+        scripts:    '', 
+    },
+    watch: {        
+        scripts:    [],
+        styles:     [],
+    },
+    dev:            'voy--dev/',
+    dist:           'voy--dist/'
+}
+
+
+/////////////////////////////////////////////////////////////////
+// FIX GULP PIPE
+// (i) -> ERROR HANDLING AND PIPE FIX FOR GULP SRC
+/////////////////////////////////////////////////////////////////
+
+let origSrc = gulp.src;
+
+gulp.src = function () {
+    return fixPipe(origSrc.apply(this, arguments));
+};
+
+const fixPipe = function (stream) {
+
+    var origPipe = stream.pipe;
+    stream.pipe = function (dest) {
+        arguments[0] = dest.on('error', function (error) {
+            var nextStreams = dest._nextStreams;
+            if (nextStreams) {
+                nextStreams.forEach(function (nextStream) {
+                    nextStream.emit('error', error);
+                });
+            } else if (dest.listeners('error').length === 1) {
+                throw error;
+            }
+        });
+        var nextStream = fixPipe(origPipe.apply(this, arguments));
+        (this._nextStreams || (this._nextStreams = [])).push(nextStream);
+        return nextStream;
+    };
+    return stream;
+}
+
+/////////////////////////////////////////////////////////////////
+// CLEAN
+/////////////////////////////////////////////////////////////////
+
+/*
+  (i) -> WIP -> NEED SOME LOVE - 
+  * When to clean what
+*/
+
+gulp.task('clean:dev', (cb) => $.del([config.dev], cb));
+gulp.task('clean:dist', (cb) => $.del([config.dist], cb));
+gulp.task('clean', ['clean:dev','clean:dist']);
+
+
+/////////////////////////////////////////////////////////////////
+// BROWSER SYNC
+/////////////////////////////////////////////////////////////////
 
 // Loads BrowserSync
 gulp.task("browser-sync", () => {
-  plugins.browserSync.init({
+  $.browserSync.init({
     server: {
       baseDir: "./voy-styleguide"
     }
   });
 });
+
+/////////////////////////////////////////////////////////////////
+// NUNJUCKS
+/////////////////////////////////////////////////////////////////
 
 // Renders Nunjucks
 gulp.task("njk", () =>
@@ -27,13 +117,13 @@ gulp.task("njk", () =>
     .src("./voy-styleguide/pages/**/*.+(html|njk)")
     // Adding data to Nunjucks
     .pipe(
-      plugins.data(() => {
+      $.data(() => {
         return require("./voy-styleguide/data.json");
       })
     )
     // Renders template with nunjucks
     .pipe(
-      plugins.nunjucksRender({
+      $.nunjucksRender({
         path: ["./voy-styleguide/templates"]
       })
     )
@@ -41,16 +131,16 @@ gulp.task("njk", () =>
     .pipe(gulp.dest("./voy-styleguide"))
 );
 
-//////////////////////////////
-// STYLEGUIDE
-// - Compile Sass
-//////////////////////////////
+
+/////////////////////////////////////////////////////////////////
+// STYLES
+/////////////////////////////////////////////////////////////////
 
 gulp.task("styles-sgd", () =>
   gulp
     .src("./voy-styleguide/assets/scss/index.scss")
     .pipe(
-      plugins.sass({
+      $.sass({
         onError: function(err) {
           return notify().write(err);
         }
@@ -58,115 +148,125 @@ gulp.task("styles-sgd", () =>
     )
     .pipe(gulp.dest("./voy-styleguide/assets/dest/css/"))
 );
-
-
-//////////////////////////////
-// DESIGN SYSTEM
-// - Compile Sass
-//////////////////////////////
 
 gulp.task("styles-ds", () =>
   gulp
     .src("./voy-ds/voy-ds.scss")
+    .pipe($.sourcemaps.init())
     .pipe(
-      plugins.sass({
+      $.sass({
+        outputStyle: 'compact',
         onError: function(err) {
           return notify().write(err);
         }
       })
     )
-    .pipe(gulp.dest("./voy-styleguide/assets/dest/css/"))
+    .pipe($.if(config.prod, $.minifyCss()))
+    .pipe($.if(config.prod, $.rename({ suffix: '.min' })))
+    .pipe($.if(config.prod, $.sourcemaps.write('.'), $.sourcemaps.write()))
+    .pipe($.if(!config.prod, gulp.dest(config.styles.dev), gulp.dest(config.styles.dist)))
+    .pipe(gulp.dest(config.styles.styleguide))
+
 );
-
-
-
-
 
 gulp.task("styles-all", ["styles-ds", "styles-sgd"]);
 
+
+/////////////////////////////////////////////////////////////////
+// SCRIPTS
+/////////////////////////////////////////////////////////////////
 
 // Compile JS
 gulp.task("scripts", () =>
   gulp
     .src("./voy-styleguide/assets/js/**/*.js")
-    .pipe(plugins.concat("index.js"))
+    .pipe($.concat("index.js"))
     .pipe(gulp.dest("./voy-styleguide/assets/dest/js/"))
 );
+
+
+/////////////////////////////////////////////////////////////////
+// LINT
+/////////////////////////////////////////////////////////////////
 
 // Linters
 gulp.task("lint-styles", () =>
   gulp
     .src(["./voy-styleguide/assets/scss/**/*.scss", "!assets/scss/vendor/**/*.scss"])
-    .pipe(plugins.sassLint())
-    .pipe(plugins.sassLint.format())
-    .pipe(plugins.sassLint.failOnError())
+    .pipe($.sassLint())
+    .pipe($.sassLint.format())
+    .pipe($.sassLint.failOnError())
 );
 
 gulp.task("lint-scripts", () =>
   gulp
     .src(["./voy-styleguide/assets/js/**/*.js", "!node_modules/**"])
-    .pipe(plugins.eslint())
-    .pipe(plugins.eslint.format())
-    .pipe(plugins.eslint.failAfterError())
+    .pipe($.eslint())
+    .pipe($.eslint.format())
+    .pipe($.eslint.failAfterError())
 );
+
+
+/////////////////////////////////////////////////////////////////
+// MERGE (Concat)
+/////////////////////////////////////////////////////////////////
 
 // Merge and minify files
 gulp.task("sgd-concat-styles", () =>
   gulp
     .src(["./voy-styleguide/assets/css/index.css", "./voy-styleguide/assets/css/vendor/**/*.css"])
-    .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.concat("styles.css"))
-    .pipe(plugins.minifyCss())
+    .pipe($.sourcemaps.init())
+    .pipe($.concat("styles.css"))
+    .pipe($.minifyCss())
     .pipe(
-      plugins.rename({
+      $.rename({
         suffix: ".min"
       })
     )
     .pipe(
-      plugins.autoprefixer({
+      $.autoprefixer({
         browsers: ["last 2 versions"],
         cascade: false
       })
     )
-    .pipe(plugins.sourcemaps.write())
+    .pipe($.sourcemaps.write())
     .pipe(gulp.dest("./voy-styleguide/assets/dist/css/"))
 );
-
 
 // Merge and minify files
 gulp.task("ds-concat-styles", () =>
   gulp
     .src(["./voy-styleguide/assets/css/index.css"])
-    .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.concat("styles.css"))
-    .pipe(plugins.minifyCss())
+    .pipe($.sourcemaps.init())
+    .pipe($.concat("styles.css"))
+    .pipe($.minifyCss())
     .pipe(
-      plugins.rename({
+      $.rename({
         suffix: ".min"
       })
     )
     .pipe(
-      plugins.autoprefixer({
+      $.autoprefixer({
         browsers: ["last 2 versions"],
         cascade: false
       })
     )
-    .pipe(plugins.sourcemaps.write())
+    .pipe($.sourcemaps.write())
     .pipe(gulp.dest("./voy-styleguide/assets/dist/css/"))
 );
 
 gulp.task("concat-js", () =>
   gulp
     .src(["./voy-styleguide/assets/js/index.js", "./voy-styleguide/assets/js/vendor/**/*.js"])
-    .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.concat("bundle.js"))
-    .pipe(plugins.uglify())
+    .pipe($.sourcemaps.init())
+    .pipe($.concat("bundle.js"))
+    .pipe($.uglify())
     .pipe(
-      plugins.rename({
+      $.rename({
         suffix: ".min"
       })
     )
-    .pipe(plugins.sourcemaps.write())
+    .pipe($.sourcemaps.write())
     .pipe(gulp.dest("./voy-styleguide/assets/dist/js/"))
 );
 
@@ -185,7 +285,15 @@ gulp.task("watch", ["browser-sync"], () => {
   );
 });
 
-gulp.task("build", ["styles-ds", "styles-sgd", "merge"]); // Compile sass, concat and minify css + js
-gulp.task("default", ["watch"]); // Default gulp task
+
+/////////////////////////////////////////////////////////////////
+// GULP TASKS
+/////////////////////////////////////////////////////////////////
+
+gulp.task("build", [ "styles-all", "scripts", "merge"]); // Compile sass, concat and minify css + js
+gulp.task("default", [ "styles-all", "scripts", "watch"]); // Default gulp task
 gulp.task("lint", ["lint-styles", "lint-scripts"]); // Lint css + js files
 gulp.task("merge", ["concat-styles", "concat-js"]); // Merge & minify css + js
+
+
+

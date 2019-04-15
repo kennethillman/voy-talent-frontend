@@ -20,6 +20,11 @@ $ gulp
 ## Gulp tasks
 
 ```
+$ gulp (default)
+$ gulp --prod (dist files)
+```
+
+```
 $ gulp watch (default task)
 ```
 

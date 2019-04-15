@@ -35,6 +35,8 @@ build/Release
 
 # Generated files
 app.html
+voy--dev/
+voy--dist/
 
 # Dependency directories
 node_modules/
