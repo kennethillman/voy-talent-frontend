@@ -8,12 +8,78 @@
 
 .s-share {
 
-	color: red;
+	background: $black;
+	padding: 14px 0;
 
-  	@media screen and (min-width: $bp-768) {
-  	
-  		
-  	}
+	.logo-holder {
+
+		.logo {
+			margin-top: 7px;
+			svg {
+				fill: $white;
+				width: 100px;
+				height: 30px;
+			}
+		}
+
+	}
+
+	.follow-us {
+
+		h3 {
+			color: $grey3;
+			margin:20px 0 0 0;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-content: space-around;
+
+			li {
+
+				a { 
+					display: inline-block;
+					margin: 8px 0 0 0;
+
+					svg {
+						fill: $white;
+					}
+
+				}
+
+			}
+		}
+		@media screen and (min-width: $bp-768) {
+		    h3 { 
+		    	float: left; 
+		    	margin: 0;
+		    }
+
+			ul { 
+				float: left; 
+				display: inherit;
+
+				li { 
+					float: left; 
+					margin: 8px 30px 0 0; 
+				}
+
+			}
+		}
+		@media screen and (min-width: $bp-1024) {
+			ul { 
+				float: right;
+
+				li { 
+					margin: 0px 0 0 30px; 
+				}
+			}
+		}
+	}
 
 }
 

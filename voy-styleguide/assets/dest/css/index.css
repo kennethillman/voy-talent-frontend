@@ -576,7 +576,7 @@ article {
   .ds-header .logo-inverted {
     position: absolute;
     width: 100%;
-    padding: 15px;
+    padding: 15px 0;
     background: #000000;
     top: 0; }
     .ds-header .logo-inverted svg {

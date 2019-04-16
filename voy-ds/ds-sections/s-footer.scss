@@ -7,13 +7,37 @@
 //
 
 .s-footer {
+	background-color: $grey1;
+	text-align: left;
 
-	color: red;
+	p {
+		color: $white;
+		margin: 0 0 20px;
+	}
 
-  	@media screen and (min-width: $bp-768) {
-  	
-  		
-  	}
+	a {
+		display: inline-block;
+		color: $white; text-decoration: none;
+		&:hover { color: $orange;}
+	}
 
+	.mb0 { margin-bottom: 0;}
+
+	ul { margin: 0; padding: 0;
+		li { list-style-type: none;}
+	}
+
+	.hide-tab-desktop {
+		display: none;
+	}
+	
+	@media screen and (min-width: $bp-1024) {
+		padding: 76px 0;
+
+		.hide-tab-desktop {
+			display: block;
+		}
+
+	}
 }
 
