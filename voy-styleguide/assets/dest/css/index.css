@@ -222,7 +222,7 @@ article {
     background: #78eebc; }
 
 /* STYLEGUIDE - Icons */
-.sgd-icons img {
+.sgd-icons svg {
   height: auto;
   width: 70px;
   margin: 0 22px 22px 0; }

@@ -9,77 +9,87 @@
 .s-share {
 
 	background: $black;
-	padding: 14px 0;
+	padding: 5px 0;
 
-	.logo-holder {
+	.logo {
+		display: none;
+	}
 
+	.header {
+		display: none;
+		color: $grey3;
+		margin:20px 0 0 0;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		display: block;
+		text-align: center;
+
+		a { 
+			display: inline-block;
+			margin: 8px 0 0 0;
+
+			svg {
+				fill: $white;
+				width: 50px;
+				height: 50px;
+
+			}
+
+			&:hover {
+				svg {
+					fill: $yellow;
+				}
+			}
+
+		}
+
+	}
+	li {
+		display: inline-block;
+		margin:5px 10px ;
+	}
+
+	@media screen and (min-width: $bp-600) {
+	    .header { 
+	    	display: inline-block;
+	    	float: left;
+	    	margin: 22px 15px 0 0;
+	    }
+
+		ul { 
+			float: left; 
+			display: block;
+			text-align: left;
+
+			li { 
+				float: left; 
+				
+			}
+
+		}
+	}
+
+	@media screen and (min-width: $bp-768) {
 		.logo {
-			margin-top: 7px;
+			display: block;
+			margin-top: 20px;
 			svg {
 				fill: $white;
 				width: 100px;
 				height: 30px;
 			}
 		}
-
 	}
 
-	.follow-us {
-
-		h3 {
-			color: $grey3;
-			margin:20px 0 0 0;
-		}
-
-		ul {
-			margin: 0;
-			padding: 0;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-content: space-around;
-
-			li {
-
-				a { 
-					display: inline-block;
-					margin: 8px 0 0 0;
-
-					svg {
-						fill: $white;
-					}
-
-				}
-
-			}
-		}
-		@media screen and (min-width: $bp-768) {
-		    h3 { 
-		    	float: left; 
-		    	margin: 0;
-		    }
-
-			ul { 
-				float: left; 
-				display: inherit;
-
-				li { 
-					float: left; 
-					margin: 8px 30px 0 0; 
-				}
-
-			}
-		}
-		@media screen and (min-width: $bp-1024) {
-			ul { 
-				float: right;
-
-				li { 
-					margin: 0px 0 0 30px; 
-				}
-			}
-		}
+	@media screen and (min-width: $bp-1024) {
+		.header { 
+	    	margin: 22px 30px 0 0;
+	    }
 	}
+	
 
 }
 

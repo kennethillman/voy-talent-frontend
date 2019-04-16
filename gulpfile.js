@@ -21,12 +21,12 @@ const config = {
     dev: $.yargs.argv.dev,
     prod: $.yargs.argv.prod,
     styles: {
-        src:        [], 
+        src:        './voy-ds/voy-ds.scss', 
         print:      '',
         critical:   '',
         styleguide: './voy-styleguide/assets/dest/css/',
-        dev: 'voy--dev/styles/',
-        dist: 'voy--dist/styles/',
+        dev:        './voy--dev/styles/',
+        dist:       './voy--dist/styles/',
     },
     scripts: {
         src:        [], 
@@ -42,8 +42,11 @@ const config = {
         scripts:    [],
         styles:     [],
     },
-    dev:            'voy--dev/',
-    dist:           'voy--dist/'
+    svg: {
+      icons:        './voy-ds/ds-assets/svg/icons/*.svg',
+    },
+    dev:            './voy--dev/',
+    dist:           './voy--dist/'
 }
 
 
@@ -91,6 +94,36 @@ const fixPipe = function (stream) {
 gulp.task('clean:dev', (cb) => $.del([config.dev], cb));
 gulp.task('clean:dist', (cb) => $.del([config.dist], cb));
 gulp.task('clean', ['clean:dev','clean:dist']);
+
+
+/////////////////////////////////////////////////////////////////
+// SVG SPRITE
+/////////////////////////////////////////////////////////////////
+
+ let spriteConfig = {
+          shape:     {
+              id: {
+                  generator: 'voy-', // set the symbol id (%s == filename without extension)
+              },
+          },
+          mode:      {
+              symbol: { // use the «symbol» mode: https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode
+                  dest:       '.', // make output destination relative to «gulp.dest()»
+                  dimensions: '%s', // don't add the default "-dims" string, just use the value from «prefix»
+                  prefix:     '%s', // selectors used in SCSS output
+                  sprite:     'svg-sprite.svg', // .svg sprite output path
+              },
+          },
+      };
+
+gulp.task("svg-sprite", () =>
+  gulp
+    .src(config.svg.icons)
+    .pipe($.using())
+    .pipe($.svgSprite(spriteConfig))
+    .pipe(gulp.dest(config.dev))
+    .pipe(gulp.dest(config.dist))
+);
 
 
 /////////////////////////////////////////////////////////////////
@@ -151,7 +184,7 @@ gulp.task("styles-sgd", () =>
 
 gulp.task("styles-ds", () =>
   gulp
-    .src("./voy-ds/voy-ds.scss")
+    .src(config.styles.src)
     .pipe($.sourcemaps.init())
     .pipe(
       $.sass({
@@ -164,9 +197,9 @@ gulp.task("styles-ds", () =>
     .pipe($.if(config.prod, $.minifyCss()))
     .pipe($.if(config.prod, $.rename({ suffix: '.min' })))
     .pipe($.if(config.prod, $.sourcemaps.write('.'), $.sourcemaps.write()))
-    .pipe($.if(!config.prod, gulp.dest(config.styles.dev), gulp.dest(config.styles.dist)))
     .pipe(gulp.dest(config.styles.styleguide))
-
+    .pipe($.if(!config.prod, gulp.dest(config.styles.dev), gulp.dest(config.styles.dist)))
+    
 );
 
 gulp.task("styles-all", ["styles-ds", "styles-sgd"]);
@@ -290,8 +323,8 @@ gulp.task("watch", ["browser-sync"], () => {
 // GULP TASKS
 /////////////////////////////////////////////////////////////////
 
-gulp.task("build", [ "styles-all", "scripts", "merge"]); // Compile sass, concat and minify css + js
-gulp.task("default", [ "styles-all", "scripts", "watch"]); // Default gulp task
+gulp.task("build", [ "svg-sprite", "styles-all", "scripts", "merge"]); // Compile sass, concat and minify css + js
+gulp.task("default", [ "svg-sprite", "styles-all", "scripts", "watch"]); // Default gulp task
 gulp.task("lint", ["lint-styles", "lint-scripts"]); // Lint css + js files
 gulp.task("merge", ["concat-styles", "concat-js"]); // Merge & minify css + js
 
