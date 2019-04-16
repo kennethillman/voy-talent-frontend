@@ -1,0 +1,36 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* VOY TALENT - DS */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// TEASER VIDEO
+//
+
+.m-teaser-video {
+
+	.text {
+		background-color: $grey1;
+		color: $white;
+		padding: 12px;
+		margin: -1px 0 0;
+
+		h5 {
+			color: $white;
+			margin: 0;
+		}
+		.date-time-name {
+			margin-bottom: 12px;
+		}
+	}
+
+	&:hover {
+		.text {
+			@extend .-pattern-stripe-light;
+			color: $black;
+			h5 {
+	        	color: $black;
+	        }
+		}		
+	}
+	
+}
