@@ -16,7 +16,6 @@ const reload = $.browserSync.reload;
 // CONFIG
 /////////////////////////////////////////////////////////////////
 
-
 const config = {
     dev: $.yargs.argv.dev,
     prod: $.yargs.argv.prod,
@@ -46,7 +45,10 @@ const config = {
       icons:        './voy-ds/ds-assets/svg/icons/*.svg',
     },
     dev:            './voy--dev/',
-    dist:           './voy--dist/'
+    dist:           './voy--dist/',
+    wp: {
+      assets:      '../voy-wp/wp-content/themes/voytalent/assets', 
+    }    
 }
 
 
@@ -81,6 +83,37 @@ const fixPipe = function (stream) {
     };
     return stream;
 }
+
+/////////////////////////////////////////////////////////////////
+// COPY TO WP
+/////////////////////////////////////////////////////////////////
+
+gulp.task("wp-styles", () =>
+  gulp
+    .src("./voy--*/**/*.+(css|map)")
+    .pipe($.using())
+    .pipe($.flatten())
+    .pipe(gulp.dest($.path.join(config.wp.assets, 'styles')))
+);
+
+gulp.task("wp-svg", () =>
+  gulp
+    .src("./voy--dev/**/*.svg")
+    .pipe($.using())
+    .pipe($.flatten())
+    .pipe(gulp.dest($.path.join(config.wp.assets, 'svg')))
+);
+
+gulp.task("wp-scripts", () =>
+  gulp
+    .src("./voy--dist/**/*.js")
+    .pipe($.using())
+    .pipe($.flatten())
+    .pipe(gulp.dest($.path.join(config.wp.assets, 'scripts')))
+);
+
+gulp.task("wp", ["wp-styles", "wp-svg", "wp-scripts"]);
+
 
 /////////////////////////////////////////////////////////////////
 // CLEAN
