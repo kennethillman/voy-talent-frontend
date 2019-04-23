@@ -20,7 +20,7 @@ const config = {
     dev: $.yargs.argv.dev,
     prod: $.yargs.argv.prod,
     styles: {
-        src:        './voy-ds/voy-ds.scss', 
+        src:        './voy-ds/voy-ds.scss',
         print:      '',
         critical:   '',
         styleguide: './voy-styleguide/assets/dest/css/',
@@ -28,16 +28,16 @@ const config = {
         dist:       './voy--dist/styles/',
     },
     scripts: {
-        src:        [], 
-        polyfills:  '',
+        src:        ['./voy-ds/ds--js/voy.js'],
+        polyfills:  './voy-ds/ds--js/polyfills/*.js',
         inline:     '',
-        inlinedist: '', 
+        inlinedist: '',
     },
     linting: {
-        styles:     '', 
-        scripts:    '', 
+        styles:     '',
+        scripts:    '',
     },
-    watch: {        
+    watch: {
         scripts:    [],
         styles:     [],
     },
@@ -47,8 +47,8 @@ const config = {
     dev:            './voy--dev/',
     dist:           './voy--dist/',
     wp: {
-      assets:      '../voy-wp/wp-content/themes/voytalent/assets', 
-    }    
+      assets:      '../voy-wp/wp-content/themes/voytalent/assets',
+    }
 }
 
 
@@ -120,7 +120,7 @@ gulp.task("wp", ["wp-styles", "wp-svg", "wp-scripts"]);
 /////////////////////////////////////////////////////////////////
 
 /*
-  (i) -> WIP -> NEED SOME LOVE - 
+  (i) -> WIP -> NEED SOME LOVE -
   * When to clean what
 */
 
@@ -232,7 +232,7 @@ gulp.task("styles-ds", () =>
     .pipe($.if(config.prod, $.sourcemaps.write('.'), $.sourcemaps.write()))
     .pipe(gulp.dest(config.styles.styleguide))
     .pipe($.if(!config.prod, gulp.dest(config.styles.dev), gulp.dest(config.styles.dist)))
-    
+
 );
 
 gulp.task("styles-all", ["styles-ds", "styles-sgd"]);
@@ -247,6 +247,14 @@ gulp.task("scripts", () =>
   gulp
     .src("./voy-styleguide/assets/js/**/*.js")
     .pipe($.concat("index.js"))
+    .pipe(gulp.dest("./voy-styleguide/assets/dest/js/"))
+);
+
+// Compile JS
+gulp.task("scripts-ds", () =>
+  gulp
+    .src(config.scripts.src)
+    .pipe($.using())
     .pipe(gulp.dest("./voy-styleguide/assets/dest/js/"))
 );
 
@@ -356,8 +364,8 @@ gulp.task("watch", ["browser-sync"], () => {
 // GULP TASKS
 /////////////////////////////////////////////////////////////////
 
-gulp.task("build", [ "svg-sprite", "styles-all", "scripts", "merge"]); // Compile sass, concat and minify css + js
-gulp.task("default", [ "svg-sprite", "styles-all", "scripts", "watch"]); // Default gulp task
+gulp.task("build", [ "svg-sprite", "styles-all", "scripts", "scripts-ds", "merge"]); // Compile sass, concat and minify css + js
+gulp.task("default", [ "svg-sprite", "styles-all", "scripts", "scripts-ds", "watch"]); // Default gulp task
 gulp.task("lint", ["lint-styles", "lint-scripts"]); // Lint css + js files
 gulp.task("merge", ["concat-styles", "concat-js"]); // Merge & minify css + js
 
