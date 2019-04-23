@@ -50,6 +50,9 @@ $max-width: 1130px !default;
 
     } // @for END
 
+    .#{$columnprefix}-push-0 {margin-left: 0}
+    .#{$columnprefix}-pull-0 {margin-right: 0}
+
 }
 
 
@@ -220,6 +223,7 @@ $max-width: 1130px !default;
 
                 }
 
+
                 @if $i == 12 {
 
                     $combo: $i;
@@ -245,7 +249,7 @@ $max-width: 1130px !default;
             .-g-shift-vp768 [class^="g-"] {
                 float: right;
             }
-  
+
         }
     }
 
