@@ -568,20 +568,22 @@ article {
     margin-right: 100%; } }
 
 /* STYLEGUIDE - Header*/
-.ds-header {
+.sgd-top-header {
+  margin: 0;
   text-align: center;
   display: block;
-  position: relative;
-  padding-top: 130px; }
-  .ds-header .logo-inverted {
-    position: absolute;
+  position: relative; }
+  .sgd-top-header .logo-inverted {
     width: 100%;
     padding: 15px 0;
     background: #000000;
     top: 0; }
-    .ds-header .logo-inverted svg {
+    .sgd-top-header .logo-inverted svg {
       fill: #ffffff;
       height: 30px; }
+  .sgd-top-header #logo {
+    margin-top: 50px;
+    margin-bottom: 20px; }
 
 /* LISTS
 ------------------------------------------------------------------------*/

@@ -2,14 +2,15 @@
 /* STYLEGUIDE - Header*/
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-.ds-header {
+.sgd-top-header {
+  margin: 0;
   text-align: center;
   display: block;
   position: relative;
-  padding-top: 130px;
+
 
   .logo-inverted {
-  	position: absolute;
+  	//position: absolute;
   	width: 100%;
   	padding: 15px 0;
   	background: $black;
@@ -18,6 +19,10 @@
   		fill: $white;
   		height: 30px;
   	}
+  }
+  #logo{
+    margin-top: 50px;
+    margin-bottom: 20px;
   }
 
 }
