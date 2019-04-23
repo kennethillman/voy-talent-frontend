@@ -1,0 +1,55 @@
+.p-job {
+	.job-content {
+		position: relative;
+
+		.job-details {
+			padding: 12px;
+			margin-bottom: 12px;
+
+			.company { 
+				font-size: 24px;
+				font-weight: 500;
+				margin-bottom: 12px;
+			}
+
+			.detail {
+				font-size: 16px;
+				margin-bottom: 12px;
+				.header { 
+					font-weight: 500; 
+					display: block;
+				}
+				.text {
+					display: block;
+				}
+			}
+		}
+
+		figure {
+			margin: 0 0 1.5em;
+		}
+	}
+
+	.job-apply {
+		.checkbox-holder {
+			margin-bottom: 14px;
+		}
+	}
+
+	@media screen and (min-width: $bp-768) {
+	 
+		.job-content {
+
+			.job-details {
+				position: absolute;
+				top: 0;
+				left: 11px;
+				width: 29.33%
+			}
+		}
+
+	}
+
+
+}
+
