@@ -4,23 +4,28 @@
 
 //
 // GLOBALS
+//
 
+figure {
+	margin: 0;
+}
 
-	figure {
-		margin: 0;
-	}
-
-	img {
-		height: auto;
-		width: 100%;
-	}
+img {
+	height: auto;
+	width: 100%;
+}
 
 .ds {
 	[class^="s-"] {
 	   padding: 1.5em 0 1.5rem;
-	}	
+	}
 }
 
 .-hide {
 	display: none;
+}
+
+.-block,
+.-show {
+  display: block;
 }
