@@ -66,6 +66,11 @@
       width: 138px;
       max-width: 100%;
     }
+    &.logo {
+      line-height: inherit;
+      height: auto;
+      margin-left: 0;
+    }
   }
 
   .search-temp {

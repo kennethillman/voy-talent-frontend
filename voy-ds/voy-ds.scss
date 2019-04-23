@@ -38,7 +38,7 @@ $VP320: 		true;
 @import "ds-common/ds-links";
 @import "ds-common/ds-patterns";
 @import "ds-common/ds-forms";
-
+@import "ds-common/ds-component-divider";
 
 // Components
 @import "ds-components/ds-c-buttons";
@@ -55,6 +55,10 @@ $VP320: 		true;
 @import "ds-sections/s-inspiration-week";
 @import "ds-sections/s-share";
 @import "ds-sections/s-footer";
+
+// Pages
+@import "ds-pages/p-get-in-touch/p-get-in-touch";
+@import "ds-pages/p-job/p-job";
 
 
 
