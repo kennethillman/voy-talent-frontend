@@ -25,11 +25,17 @@ $grey4: 		#f5f5f5 !default;
 // FONTS
 /////////////////////////////////////////////////////////////////////////
 
+$font-a:        '';
+$font-a-google: '';
+$font-b:        'Source Sans Pro', sans-serif;
+$font-b-google: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
+
 $font-system: -apple-system, BlinkMacSystemFont, "Apple Color Emoji", “Segoe UI”, Roboto, “Helvetica Neue”, Helvetica, Arial, sans-serif;
-$font-source: 'Source Sans Pro', sans-serif;
+$font-source: $font-b;
 
 $font-header: $font-system;
 $font-bread: $font-source;
+
 
 $vp320-base-rem: 17px;
 $vp320-base-rem-line-height: 25px;
