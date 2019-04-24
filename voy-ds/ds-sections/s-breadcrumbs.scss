@@ -33,18 +33,5 @@
 		}
 	}
 
-  &.-sgd {
-    a {
-      &:last-child {
-        &:after {
-          content: '';
-          display: inline-block;
-          padding: 0;
-        }
-
-      }
-    }
-  }
-
 }
 
