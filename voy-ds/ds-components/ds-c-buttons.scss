@@ -160,3 +160,28 @@
 
 
     }
+
+
+  .btn-choice  {
+    display: block;
+    padding: 12px 0;
+    background-color: $grey4;
+    color: $grey2;
+    text-align: center;
+    font-weight: 500;
+    border: 1px solid $grey4;
+    margin-bottom: 24px;
+
+    &:hover {
+      color: $black;
+      text-decoration: underline;
+    }
+
+    &.-active {
+      background-color: $white;
+      border-color: $black;
+      color: $black;
+    }
+  }
+
+
