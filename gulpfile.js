@@ -168,7 +168,8 @@ gulp.task("browser-sync", () => {
   $.browserSync.init({
     server: {
       baseDir: "./voy-styleguide"
-    }
+    },
+    port: 4000
   });
 });
 
