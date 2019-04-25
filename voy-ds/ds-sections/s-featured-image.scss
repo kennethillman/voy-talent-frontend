@@ -1,0 +1,41 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* VOY TALENT - DS */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// S-FEATURED-IMAGE
+//
+
+.s-featured-image {
+
+  position: relative;
+
+  .gc {
+    position: relative;
+  }
+
+  .header {
+    color: yellow;
+  }
+
+  .headers {
+    bottom: 34px;
+    left: 34px;
+    position: absolute;
+  }
+
+	@media screen and (min-width: $bp-600) {
+
+	}
+
+	@media screen and (min-width: $bp-768) {
+
+	}
+
+	@media screen and (min-width: $bp-1024) {
+
+	}
+
+
+}
+
