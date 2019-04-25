@@ -1,0 +1,46 @@
+{% extends "layout-page.njk" %}
+
+{% block content %}
+
+	<div class="p-stories">
+
+		<!-- Header + text -->
+		
+		<section class="s-stories-top">
+			<div class="gc">
+				<div class="g-12">
+					<h2 class="header-section">You make it worth!</h2>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean maximus ante at elit gravida molestie. Morbi ac erat dolor. Quisque interdum sodales nunc in commodo. Morbi egestas enim sollicitudin lectus iaculis finibus. Duis quis augue elementum, molestie dolor scelerisque, pharetra turpis.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="s-stories-filter">
+			<div class="gc">
+				<div class="g-12">
+					{% include "ds/m-filter.njk" %}
+				</div>
+			</div>
+		</section>
+
+		<section class="s-stories-teaser-big">
+			<div class="gc">
+				<div class="g-12">
+					Teaser big
+				</div>
+			</div>
+		</section>
+
+		<section class="s-stories-teaser-small">
+			<div class="gc">
+				<div class="g-12">
+					Teaser small
+				</div>
+			</div>
+		</section>
+
+
+	</div>
+
+{% endblock %}
