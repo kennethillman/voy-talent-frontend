@@ -11,19 +11,42 @@
                 <path d="M216,80c-25-1-53.3,17.5-53,51,.29,33.26,29,52,53,50,24,2,52.71-16.74,53-50C269.3,97.5,241,79,216,80Zm0,73s-20,0-20-23,20-23,20-23,20,0,20,23S216,153,216,153Z" transform="translate(-39 -79.96)"></path>
             </svg>
         </a>
+
         <nav>
-            <a href="http://staging-voy.activetalents.se/jobs/" class="-active">Jobs</a>
-			<a href="http://staging-voy.activetalents.se/stories/">Stories</a>
-			<a href="http://staging-voy.activetalents.se/about/" aria-current="page">About</a>
+          <a href="http://staging-voy.activetalents.se/jobs/" class="-active">Jobs</a>
+          <a href="http://staging-voy.activetalents.se/stories/">Employers</a>
+          <a href="http://staging-voy.activetalents.se/stories/">Stories</a>
+          <a href="http://staging-voy.activetalents.se/stories/">Voy TV</a>
+          <a href="http://staging-voy.activetalents.se/about/" aria-current="page">About</a>
+          <a href="http://staging-voy.activetalents.se/about/" aria-current="page">Contact</a>
         </nav>
-        <figure class="search-temp">
-			<form role="search" method="get" id="search-form" action="http://staging-voy.activetalents.se/">
-			    <div class="search-wrap">
-			        <label class="screen-reader-text" for="s">Search for:</label>
-			        <input type="search" placeholder="Search…" name="s" id="search-input" value="">
-			        <input class="screen-reader-text" type="submit" id="search-submit" value="Search">
-			    </div>
-			</form>
-		</figure>
+
+        <div class="search">
+          <form role="search" method="get" id="search-form" action="http://staging-voy.activetalents.se/">
+              <div class="search-wrap">
+                  <label class="screen-reader-text" for="s">Search for:</label>
+                  <input type="search" placeholder="Search…" name="s" id="search-input" value="">
+                  <input class="screen-reader-text" type="submit" id="search-submit" value="Search">
+                  <button value="Search">
+                        <svg role="img" title="icon" class="svg-icon">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#voy-menu-thin"  svg=""></use>
+                        </svg>
+                    </button>
+              </div>
+          </form>
+        </div>
+
+        <div id="search-toggle">
+          <svg role="img" title="icon" class="svg-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#voy-magnifier"  svg=""></use>
+          </svg>
+        </div>
+
+        <div id="mobile-menu-toggle">
+          <svg role="img" title="icon" class="svg-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#voy-menu-thin"  svg=""></use>
+          </svg>
+        </div>
+
     </div>
 </header>

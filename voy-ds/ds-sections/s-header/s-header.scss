@@ -8,10 +8,13 @@
 
 .s-header {
 
-  height: 108px;
+  height: 60px;
   background: $black;
   padding: 0;
-  
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+
   .gc{
     position: relative;
   }
@@ -20,65 +23,238 @@
     fill: $white;
   }
 
-  a {
-    color: $white;
-    text-decoration: none;
-    height: 108px;
-    line-height: 108px;
-    display: inline-block;
-    box-sizing: border-box;
-    float: left;
-    margin: 0 25px;
-    font-family: $font-bread;
-    font-size: 24px;
-    font-weight: bold;
-    position: relative;
-    letter-spacing: 2px;
-    &:hover {
-      color: $orange;
-    }
-    &.-active {
-      &:after {
-        content: '';
-        position:absolute;
-        bottom: 0;
-        left:0;
-        height: 4px;
-        width: 100%;
-        background: $white;
-      }
-      &:hover {
-        &:after {
-          background: $orange;
-        }
-      }
-    }
-  }
-  nav {
-    float: left;
-  }
-  .logo {
-    margin-right: 50px;
-    float: left;
-    margin-top:35px;
+  #mobile-menu-toggle {
+    position: absolute;
+    right: 18px;
+    top: 8px;
     svg {
-      height: 38px;
-      width: 138px;
-      max-width: 100%;
-    }
-    &.logo {
-      line-height: inherit;
-      height: auto;
-      margin-left: 0;
+      height: 44px;
+      width: 44px;
     }
   }
 
-  .search-temp {
-    position: absolute;
-    right:0;
-    top:50%;
-    transform: translateY(-50%);
+  #search-toggle {
+    display: none
   }
+
+
+  nav {
+    display: none;
+  }
+  .logo {
+    margin: 0;
+    line-height: 0;
+    height: auto;
+    float: left;
+    margin-top: 10px;
+    svg {
+      height: 40px;
+      width: 80px;
+      max-width: 100%;
+    }
+    &:hover {
+      svg {
+        fill: $orange;
+      }
+    }
+    // &.logo {
+    //   line-height: inherit;
+    //   height: auto;
+    //   margin-left: 0;
+    // }
+  }
+
+  .search {
+    display: none;
+  }
+
+
+
+// - - - 600
+
+  @media screen and (min-width: $bp-600) {
+
+    height: 70px;
+
+    .logo {
+      margin-top: 15px;
+      svg {
+        width: 94px;
+      }
+    }
+
+    #mobile-menu-toggle {
+      right: 24px;
+      top: 9px;
+      svg {
+        height: 50px;
+        width: 50px;
+      }
+    }
+
+  }
+
+
+// - - - 768
+
+  @media screen and (min-width: $bp-768) {
+
+    height: 90px;
+
+    .logo {
+      margin-top: 25px;
+      margin-right: 22px;
+      svg {
+        width: 118px;
+      }
+    }
+
+    #mobile-menu-toggle {
+      display: none;
+    }
+
+    #search-toggle {
+      display: block;
+      position: absolute;
+      right: 40px;
+      top: 26px;
+      svg {
+        height: 36px;
+        width: 36px;
+        fill: $yellow;
+      }
+    }
+
+    &.-visible-search {
+       #search-toggle {
+        display: none;
+
+      }
+      .search {
+        width: 100%;
+        display: block;
+        background: $white;
+        right:0;
+        top:0;
+        position: absolute;
+        height: 90px;
+        //opacity: .85;
+
+        #search-input {
+          padding: 32px 40px 29px 30px;
+          color: $black;
+          font-weight: bold;
+          line-height: 1;
+          font-size: 18px;
+          border: none;
+          display: block;
+          width: 90%;
+          text-align: left;
+          font-family: $font-source;
+        }
+
+        button{
+          background: none;
+          position: absolute;
+          right: 40px;
+          top: 26px;
+          padding: 0;
+          border: 0;
+        }
+        svg {
+          height: 36px;
+          width: 36px;
+          fill: $black;
+        }
+      }
+
+    }
+
+
+
+    nav {
+      display: block;
+      float: left;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+      height: 90px;
+      line-height: 90px;
+      display: inline-block;
+      box-sizing: border-box;
+      float: left;
+      margin: 0 14px;
+      font-family: $font-bread;
+      font-size: 18px;
+      font-weight: bold;
+      position: relative;
+      letter-spacing: 1px;
+      &:hover {
+        color: $orange;
+      }
+      &.-active {
+        &:after {
+          content: '';
+          position:absolute;
+          bottom: 0;
+          left:0;
+          height: 4px;
+          width: 100%;
+          background: $white;
+        }
+        &:hover {
+          &:after {
+            background: $orange;
+          }
+        }
+      }
+    }
+
+
+
+  }
+
+
+// - - - 1024
+
+  @media screen and (min-width: $bp-1024) {
+
+    height: 110px;
+
+    .logo {
+      margin-right: 50px;
+      float: left;
+      margin-top: 35px;
+      svg {
+        height: 38px;
+        width: 138px;
+        max-width: 100%;
+      }
+    }
+
+    a {
+      height: 110px;
+      line-height: 110px;
+      margin: 0 20px;
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+
+    #search-toggle {
+      right: 11px;
+      top: 36px;
+      svg {
+        height: 44px;
+        width: 44px;
+      }
+    }
+
+
+
+  }
+
 
 }
 

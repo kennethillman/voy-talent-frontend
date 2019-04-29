@@ -587,6 +587,9 @@ body {
     display: inline-block;
     padding: 0; }
 
+.-sgd .s-header {
+  position: static; }
+
 /* LISTS
 ------------------------------------------------------------------------*/
 .list-bullet {

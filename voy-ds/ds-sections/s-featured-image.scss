@@ -9,33 +9,106 @@
 .s-featured-image {
 
   position: relative;
+  padding: 0;
 
-  .gc {
-    position: relative;
-  }
-
-  .header {
-    color: yellow;
+  .text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }
 
   .headers {
-    bottom: 34px;
-    left: 34px;
-    position: absolute;
+    padding-bottom: 22px;
   }
 
-	@media screen and (min-width: $bp-600) {
+  .header {
+    color: $white;
+    font-size: 30px;
+    margin-bottom: .10em;
+    line-height: 1.256;
+  }
 
+  .sub-header {
+    color: $yellow;
+    font-size: 18px;
+    margin-bottom: 0;
+    line-height: 1.256;
+  }
+
+  .image {
+    @include aspect-ratio-img(1,1);
+    background: black;
+    background-size: cover;
+  }
+
+
+// - - Modifer
+
+  &.-no-image {
+    padding-top: 40px;
+    .image {
+      display: none;
+    }
+    .text {
+      position: static;
+    }
+    .header {
+      color: $black;
+    }
+  }
+
+
+
+// - - - 600
+
+	@media screen and (min-width: $bp-600) {
+    .image {
+      @include aspect-ratio-img(16,9);
+    }
 	}
+
+
+// - - - 768
 
 	@media screen and (min-width: $bp-768) {
+    .headers {
+      padding-bottom: 34px;
+    }
+    .header {
+      font-size: 40px;
+    }
 
+    .sub-header {
+      font-size: 22px;
+    }
+    .image {
+      @include aspect-ratio-img(18,9);
+    }
 	}
+
+
+// - - - 1024
 
 	@media screen and (min-width: $bp-1024) {
 
-	}
+    .headers {
+      padding-bottom: 50px;
+    }
 
+    .header {
+      font-size: 50px;
+    }
+
+    .sub-header {
+      font-size: 26px;
+    }
+
+    .image {
+      @include aspect-ratio-img(33,10);
+    }
+
+	}
 
 }
 
