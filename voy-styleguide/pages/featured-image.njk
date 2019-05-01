@@ -1,3 +1,6 @@
+{% extends "layout-lab.njk" %}
+
+{% block content %}
 
 <style type="text/css">
 
@@ -66,11 +69,10 @@
 
 </style>
 
+<br><br>
 <section class="s-featured-image">
 
-  <figure class="image" class="-focus-center-center">
-      <!-- <img src="assets/images/temp-featured.jpg"> -->
-  </figure>
+  <figure class="image" class="-focus-center-center"></figure>
 
   <div class="text">
     <div class="gc">
@@ -78,10 +80,10 @@
 
         <div class="headers">
           <h2 class="header">
-            Cursus euismod
+            Deafult
           </h2>
           <h3 class="sub-header">
-            Elementum eu facilisis
+            Default center-center text-left
           </h3>
         </div>
 
@@ -91,3 +93,85 @@
 
 </section>
 
+
+<br><br>
+<section class="s-featured-image -text-pos-right">
+
+  <figure class="image" class="-focus-right-top "></figure>
+
+  <div class="text">
+    <div class="gc">
+      <div class="g-12">
+
+        <div class="headers">
+          <h2 class="header">
+            Text right
+          </h2>
+          <h3 class="sub-header">
+            -focus-right-top -text-pos-right
+          </h3>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<br><br>
+<section class="s-featured-image -text-pos-center">
+
+  <figure class="image" class="-focus-center-center "></figure>
+
+  <div class="text">
+    <div class="gc">
+      <div class="g-12">
+
+        <div class="headers">
+          <h2 class="header">
+            Text center
+          </h2>
+          <h3 class="sub-header">
+            -text-pos-center
+          </h3>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<br><br>
+<section class="s-featured-image -text-pos-center -text-large">
+
+  <figure class="image" class="-focus-center-center "></figure>
+
+  <div class="text">
+    <div class="gc">
+      <div class="g-12">
+
+        <div class="headers">
+          <h2 class="header">
+            Text center large
+          </h2>
+          <h3 class="sub-header">
+            -text-pos-center -text-pos-large
+          </h3>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<br><br>
+
+  {% include "ds/s-join-email.njk" %}
+  {% include "ds/s-follow.njk" %}
+  {% include "ds/s-footer.njk" %}
+
+
+{% endblock %}

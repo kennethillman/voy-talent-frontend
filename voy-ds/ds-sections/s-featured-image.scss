@@ -45,6 +45,7 @@
 
 // - - Modifer
 
+  // No imgae
   &.-no-image {
     padding-top: 40px;
     .image {
@@ -55,6 +56,30 @@
     }
     .header {
       color: $black;
+    }
+  }
+
+
+  // Text position
+  &.-text-pos-left {
+    text-align: left!important;
+  }
+
+  &.-text-pos-right {
+    text-align: right!important;
+  }
+
+  &.-text-pos-center {
+    text-align: center!important;
+  }
+
+  // Text size
+  &.-text-large {
+    .header {
+      font-size: 38px;
+    }
+    .sub-header {
+      font-size: 22px;
     }
   }
 
@@ -78,13 +103,23 @@
     .header {
       font-size: 40px;
     }
-
     .sub-header {
       font-size: 22px;
     }
     .image {
       @include aspect-ratio-img(18,9);
     }
+
+    // Text size
+    &.-text-large {
+      .header {
+        font-size: 50px;
+      }
+      .sub-header {
+        font-size: 28px;
+      }
+    }
+
 	}
 
 
@@ -106,6 +141,16 @@
 
     .image {
       @include aspect-ratio-img(33,10);
+    }
+
+    // Text size
+    &.-text-large {
+      .header {
+        font-size: 62px;
+      }
+      .sub-header {
+        font-size: 36px;
+      }
     }
 
 	}

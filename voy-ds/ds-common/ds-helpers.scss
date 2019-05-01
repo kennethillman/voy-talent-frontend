@@ -6,7 +6,7 @@
 // HELPERS
 //
 
-    // Background position
+// - - - Background position
 
     // Top
     .-focus-left-top {
@@ -38,3 +38,20 @@
     .-focus-right-bottom {
       background-position: right bottom!important;
     }
+
+
+// - - - Text position
+
+      .-text-pos-left {
+        text-align: left!important;
+      }
+
+      .-text-pos-right {
+        text-align: right!important;
+      }
+
+      .-text-pos-center {
+        text-align: center!important;
+      }
+
+
