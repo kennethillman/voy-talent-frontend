@@ -127,6 +127,8 @@
   }
 
   .search {
+    position: relative;
+    z-index: 5;
     width: 0;
     height: 0;
     overflow: hidden;
