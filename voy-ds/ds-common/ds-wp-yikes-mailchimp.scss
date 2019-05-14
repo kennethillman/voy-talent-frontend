@@ -1,0 +1,85 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* VOY TALENT - DS */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// WP YIKES MAILCHIMP
+//
+
+.yikes-mailchimp-container {
+
+  .label-inline {
+    span {
+      display: none;
+    }
+  }
+
+  .edit-link {
+    display: none;
+  }
+
+  .yikes-easy-mc-form input[type=email] {
+    border: none;
+    padding: 16px;
+    margin-bottom: 0px;
+  }
+
+  .yikes-easy-mc-submit-button {
+
+    display: inline-block;
+    background-color: $black;
+    color: $white;
+    font-family: $font-bread;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1;
+    line-height: 48px;
+    line-height: 48px;
+    border-radius: 50px;
+    padding: 0 30px!important;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    margin-bottom: 0;
+
+    &:hover {
+         background:lighten($black,20%);
+         color: $white;
+    }
+
+    &:active {
+         background: lighten($black,20%);
+    }
+
+    &:visited {
+        color: $white;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    .yikes-mailchimp-submit-button-span-text {
+
+    }
+
+  }
+
+
+  @media screen and (min-width: $bp-768) {
+
+
+// - - - yotu-template-grid
+
+
+
+    }
+
+    @media screen and (min-width: $bp-1024) {
+
+
+
+    }
+
+}

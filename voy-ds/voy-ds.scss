@@ -40,6 +40,9 @@ $VP320: 		true;
 @import "ds-common/ds-patterns";
 @import "ds-common/ds-forms";
 @import "ds-common/ds-component-divider";
+@import "ds-common/ds-wp";
+@import "ds-common/ds-wp-yotu-videos";
+@import "ds-common/ds-wp-yikes-mailchimp";
 
 // Components
 @import "ds-components/ds-c-buttons";
@@ -51,16 +54,18 @@ $VP320: 		true;
 @import "ds-modules/ds-m-form-expertice";
 @import "ds-modules/ds-m-filter";
 @import "ds-modules/ds-m-paginate";
+@import "ds-modules/ds-m-content-list";
 
 
 
 // Sections
 @import "ds-sections/s-header/s-header";
 @import "ds-sections/s-breadcrumbs";
-@import "ds-sections/s-join-email";
+@import "ds-sections/s-join-email/s-join-email";
 @import "ds-sections/s-inspiration-week";
 @import "ds-sections/s-share";
 @import "ds-sections/s-featured-image";
+@import "ds-sections/s-no-featured-image";
 @import "ds-sections/s-follow";
 @import "ds-sections/s-footer";
 

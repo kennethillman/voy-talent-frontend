@@ -1,0 +1,99 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* VOY TALENT - DS */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// WP
+//
+
+.content {
+
+// - - - s-inspiration-week
+
+  .s-inspiration-week{
+
+    @media screen and (min-width: $bp-768) {
+      margin: 0 -8.333vw;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      margin: 0 -26%;
+    }
+
+  }
+
+  h3.m-list-header.-wide {
+
+    @media screen and (min-width: $bp-768) {
+      margin: 0 -8.333vw!important;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      margin: 0 -26%!important;
+    }
+
+  }
+
+
+// - - - wp-block-quote
+
+  .wp-block-quote:not(.is-large):not(.is-style-large) {
+    border-left: 4px solid $green;
+    padding-left: 1em;
+        margin: 20px 0;
+  }
+
+// - - - wp-block-image
+
+  .wp-block-image {
+
+
+  @media screen and (min-width: $bp-600) {
+
+    .alignleft {
+      float: left;
+      max-width: 50%;
+      margin-left: -11px;
+      margin-right: 22px;
+      margin-bottom: 22px;
+    }
+    .alignright {
+      float: right;
+      max-width: 50%;
+      margin-right: -11px;
+      margin-left: 22px;
+      margin-bottom: 22px;
+    }
+
+  }
+
+  @media screen and (min-width: $bp-768) {
+
+    .alignleft {
+      margin-left: -12%;
+    }
+    .alignright {
+      margin-right: -12%;
+    }
+
+  }
+
+  @media screen and (min-width: $bp-1024) {
+
+  }
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+

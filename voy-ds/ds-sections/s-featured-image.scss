@@ -9,7 +9,7 @@
 .s-featured-image {
 
   position: relative;
-  padding: 0;
+  padding: 0!important;
 
   .text {
     position: absolute;
@@ -20,20 +20,27 @@
 
   .headers {
     padding-bottom: 22px;
+    margin-left: -6px;
   }
 
   .header {
     color: $white;
     font-size: 30px;
-    margin-bottom: .10em;
+    margin-bottom: 0;
     line-height: 1.256;
+    display: inline-block;
+    background: rgba(0,0,0,.5);
+    padding: 6px 8px;
   }
 
   .sub-header {
-    color: $yellow;
+    color: $green;
     font-size: 18px;
     margin-bottom: 0;
     line-height: 1.256;
+    display: inline-block;
+    background: rgba(0,0,0,.5);
+    padding: 4px 8px;
   }
 
   .image {
@@ -91,6 +98,7 @@
     .image {
       @include aspect-ratio-img(16,9);
     }
+
 	}
 
 
@@ -102,9 +110,11 @@
     }
     .header {
       font-size: 40px;
+      padding: 6px 12px;
     }
     .sub-header {
       font-size: 22px;
+      padding: 4px 12px;
     }
     .image {
       @include aspect-ratio-img(18,9);
@@ -140,7 +150,7 @@
     }
 
     .image {
-      @include aspect-ratio-img(33,10);
+      @include aspect-ratio-img(28,10);
     }
 
     // Text size

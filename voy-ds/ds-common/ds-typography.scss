@@ -85,14 +85,14 @@ body {
     .header-section {
 
         color: $grey1;
-        font-size: 32px; 
+        font-size: 32px;
         line-height: 1;
         font-weight: 700;
         padding: 8px 0px 4px;
 
         @media screen and (min-width: $bp-768) {
             background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 7px);
-            font-size: 66px; 
+            font-size: 66px;
             padding: 16px 5px 8px;
         }
     }
@@ -105,12 +105,12 @@ body {
         line-height: 1;
         z-index: 1;
         padding-left: 12px;
-        margin: 20px 0 36px; 
+        margin: 20px 0 36px;
 
         padding-top: 70px;
 
         figure {
-            @extend .-pattern-stripe-orange;
+            @extend .-pattern-stripe-green;
             position: absolute;
             left:0;
             top: 0;
@@ -127,7 +127,7 @@ body {
             font-size: 44px;
             display: inline-block;
             padding-right: 5px;
-            color: $orange;
+            color: $green;
             width: 66px;
             text-align: center;
             line-height: 60px;
@@ -139,7 +139,7 @@ body {
 
         &.-solid {
             figure {
-                background: $orange;
+                background: $green;
             }
             .number {
                 color: $white;

@@ -17,17 +17,16 @@ article {
 }
 
 [class^="s-"] {
-    padding: 1.5em 0 2.75rem;
+  padding: 1.5em 0 2.75rem;
 
-    &.-light {
-    	background-color: $white;
-    }
+  &.-light {
+  	background-color: $white;
+  }
 
-    &.-inverted {
-    	background-color: $black;
-    	color: $grey4;
-    }
-
+  &.-inverted {
+  	background-color: $black;
+  	color: $grey4;
+  }
 }
 
 .-hide {

@@ -1,0 +1,53 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* VOY TALENT - DS */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// FILTER
+//
+
+.m-content-list {
+  @include clearfix;
+  margin: 0 0 22px;
+  padding: 22px 22px 0;
+  background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 7px);
+  color: $grey1;
+  line-height: 1.7;
+
+
+
+    ul {
+      @include clearfix;
+      padding: 0;
+      margin: 0 0 22px;
+    }
+
+    li {
+      width: 100%;
+      float: left;
+      margin: 0;
+      list-style-type: none;
+    }
+
+  @media screen and (min-width: $bp-768) {
+
+    margin-left: -12%;
+    margin-right: -12%;
+
+    ul {
+      width: 33.3%;
+      float: left;
+    }
+
+
+  }
+
+  @media screen and (min-width: $bp-1024) {
+
+
+
+  }
+
+}
+
+

@@ -44,6 +44,19 @@
     );
 }
 
+.-pattern-stripe-yellow{
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      $yellow 1px,
+      transparent 2px,
+      transparent 3px,
+      $yellow 4px,
+      transparent 5px,
+      transparent 20px
+    );
+}
+
 .-pattern-stripe-dark{
     background: repeating-linear-gradient(
       -45deg,
@@ -51,7 +64,7 @@
       $grey1 1px,
       transparent 2px,
       transparent 6px
-  
+
     );
 }
 
@@ -100,4 +113,58 @@
 
 .-pattern-solid-orange{
     background: $orange;
+}
+
+.-pattern-stripe-big-yellow{
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      $yellow 1px,
+      transparent 2px,
+      transparent 3px,
+      $yellow 4px,
+      transparent 5px,
+      transparent 20px
+    );
+}
+
+.-pattern-stripe-yellow{
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      $yellow 1px,
+      transparent 2px,
+      transparent 7px
+    );
+}
+
+.-pattern-solid-yellow{
+    background: $yellow;
+}
+
+.-pattern-stripe-big-green{
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      $green 1px,
+      transparent 2px,
+      transparent 3px,
+      $green 4px,
+      transparent 5px,
+      transparent 20px
+    );
+}
+
+.-pattern-stripe-green{
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      $green 1px,
+      transparent 2px,
+      transparent 7px
+    );
+}
+
+.-pattern-solid-green{
+    background: $green;
 }

@@ -38,12 +38,12 @@
     &:hover {
       cursor: pointer;
       svg {
-        fill: $orange;
+        fill: $green;
       }
     }
     .-visible-mobile-menu & {
       svg {
-        fill: $orange;
+        fill: $green;
       }
     }
   }
@@ -92,7 +92,7 @@
         }
 
         &.-active {
-          color:  $orange;
+          color:  $green;
         }
         &:focus,
         &:hover,
@@ -121,7 +121,7 @@
     }
     &:hover {
       svg {
-        fill: $orange;
+        fill: $green;
       }
     }
   }
@@ -206,7 +206,7 @@
         @include transition(all 0.1s ease);
         height: 36px;
         width: 36px;
-        fill: $yellow;
+        fill: $green;
       }
     }
 
@@ -292,7 +292,7 @@
       }
 
       &:hover {
-        color: $orange;
+        color: $green;
       }
 
       &.-active {
@@ -307,7 +307,7 @@
         }
         &:hover {
           &:after {
-            background: $orange;
+            background: $green;
           }
         }
       }
@@ -316,7 +316,7 @@
 
 
     &.-is-tight {
-      //@include transition(height 0.225s ease);
+
       height: 60px;
       .logo {
         height: 46px;
@@ -347,6 +347,33 @@
         @include transition(background-color 0.225s ease);
         svg {
           @include transition(all 0.225s ease);
+        }
+      }
+
+    }
+
+    body.-breadcrumb-no-image & {
+      @include transition(none);
+      .logo {
+        @include transition(none);
+        svg {
+          @include transition(none);
+        }
+      }
+      a {
+        @include transition(none);
+      }
+      #toggle-search {
+        @include transition(none);
+        svg {
+          @include transition(none);
+        }
+      }
+
+      .search {
+        @include transition(background-color 0s ease);
+        svg {
+          @include transition(none);
         }
       }
 

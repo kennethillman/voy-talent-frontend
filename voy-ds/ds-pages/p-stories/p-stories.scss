@@ -1,5 +1,5 @@
 .p-stories {
-	
+
 	.m-stories-teaser-big {
 		padding: 20px 0;
 		figure {
@@ -28,7 +28,7 @@
 	}
 
 
-	
+
 
 	.m-stories-teaser-small {
 
@@ -56,7 +56,7 @@
 	    z-index: 2;
 
 	    &-name{
-	      color: $orange;
+	      color: $yellow;
 	      font-size: 30px;
 	      margin: 0;
 	    }
@@ -98,7 +98,7 @@
 		.stories-details {
 			margin-bottom: 12px;
 
-			.company { 
+			.company {
 				font-size: 24px;
 				font-weight: 500;
 				margin-bottom: 12px;
@@ -107,8 +107,8 @@
 			.detail {
 				font-size: 16px;
 				margin-bottom: 12px;
-				.header { 
-					font-weight: 500; 
+				.header {
+					font-weight: 500;
 					display: block;
 				}
 				.text {
@@ -133,7 +133,7 @@
 	}
 
 	@media screen and (min-width: $bp-768) {
-	 
+
 		.stories-content {
 
 			.stories-details {

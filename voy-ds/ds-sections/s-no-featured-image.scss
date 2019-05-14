@@ -1,0 +1,88 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* VOY TALENT - DS */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// S-NO-FEATURED-IMAGE
+//
+
+.s-no-featured-image {
+
+  padding: 0!important;
+
+
+
+  .headers {
+    padding-bottom: 22px;
+    margin-left: -6px;
+  }
+
+  .header {
+    color: $black;
+    font-size: 30px;
+    margin-bottom: 0;
+    line-height: 1.256;
+    display: inline-block;
+    // background: rgba(0,0,0,.5);
+    padding: 6px 8px;
+  }
+
+  .sub-header {
+    color: $green;
+    font-size: 18px;
+    margin-bottom: 0;
+    line-height: 1.256;
+    display: inline-block;
+    //background: rgba(0,0,0,.5);
+    padding: 4px 8px;
+  }
+
+
+
+
+// - - - 600
+
+	@media screen and (min-width: $bp-600) {
+
+
+	}
+
+
+// - - - 768
+
+	@media screen and (min-width: $bp-768) {
+    .headers {
+      padding-bottom: 34px;
+    }
+    .header {
+      font-size: 40px;
+      padding: 6px 12px;
+    }
+    .sub-header {
+      font-size: 22px;
+      padding: 4px 12px;
+    }
+
+	}
+
+
+// - - - 1024
+
+	@media screen and (min-width: $bp-1024) {
+
+    .headers {
+      padding-bottom: 50px;
+    }
+
+    .header {
+      font-size: 50px;
+    }
+
+    .sub-header {
+      font-size: 26px;
+    }
+
+	}
+
+}
+
