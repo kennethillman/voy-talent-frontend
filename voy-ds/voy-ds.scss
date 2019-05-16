@@ -32,6 +32,7 @@ $VP320: 		true;
 @import "_ds-utils/mixins-breakpoint";
 
 // Common
+@import "ds-common/ds-font-import";
 @import "ds-common/ds-globals";
 @import "ds-common/ds-helpers";
 @import "ds-common/ds-grid";

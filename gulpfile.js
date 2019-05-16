@@ -46,6 +46,9 @@ const config = {
     svg: {
       icons:        './voy-ds/ds-assets/svg/icons/*.svg',
     },
+    fonts: {
+      src:        './voy-ds/ds-assets/fonts/*.*',
+    },
     dev:            './voy--dev/',
     dist:           './voy--dist/',
     wp: {
@@ -130,8 +133,27 @@ gulp.task("wp-scripts:polyfills", () =>
     .pipe(gulp.dest($.path.join(config.wp.assets, 'scripts/polyfills')))
 );
 
-gulp.task("wp-scripts", ["wp-scripts:core", "wp-scripts:vendor", "wp-scripts:polyfills"]);
+gulp.task("wp-copy-fonts", () =>
+  gulp
+    .src('./voy-ds/ds-assets/fonts/*.*')
+    .pipe($.using())
+    .pipe(gulp.dest($.path.join(config.wp.assets, 'styles')))
+);
+
+gulp.task("wp-scripts", ["wp-scripts:core", "wp-scripts:vendor", "wp-scripts:polyfills", "wp-copy-fonts"]);
 gulp.task("wp", ["wp-styles", "wp-svg", "wp-scripts"]);
+
+/////////////////////////////////////////////////////////////////
+// COPY TO FONTS
+/////////////////////////////////////////////////////////////////
+
+gulp.task("copy-fonts", () =>
+  gulp
+    .src('./voy-ds/ds-assets/fonts/*.*')
+    .pipe($.using())
+    .pipe(gulp.dest(config.styles.styleguide))
+    .pipe($.if(!config.prod, gulp.dest(config.styles.dev), gulp.dest(config.styles.dist)))
+);
 
 
 /////////////////////////////////////////////////////////////////
@@ -385,9 +407,9 @@ gulp.task("watch", ["browser-sync"], () => {
 // GULP TASKS
 /////////////////////////////////////////////////////////////////
 
-gulp.task("build", [ "svg-sprite", "styles-all", "scripts", "scripts-ds", "merge"]); // Compile sass, concat and minify css + js
+gulp.task("build", [ "copy-fonts", "svg-sprite", "styles-all", "scripts", "scripts-ds", "merge"]); // Compile sass, concat and minify css + js
 
-gulp.task("default", [ "svg-sprite", "styles-all", "scripts", "scripts-ds", "watch"]); // Default gulp task
+gulp.task("default", [ "copy-fonts", "svg-sprite", "styles-all", "scripts", "scripts-ds", "watch"]); // Default gulp task
 gulp.task("lint", ["lint-styles", "lint-scripts"]); // Lint css + js files
 gulp.task("merge", ["concat-styles", "concat-js"]); // Merge & minify css + js
 
