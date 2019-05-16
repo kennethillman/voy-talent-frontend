@@ -110,7 +110,7 @@ body {
         padding-top: 70px;
 
         figure {
-            @extend .-pattern-stripe-green;
+            @extend .-pattern-stripe-yellow;
             position: absolute;
             left:0;
             top: 0;
@@ -127,7 +127,7 @@ body {
             font-size: 44px;
             display: inline-block;
             padding-right: 5px;
-            color: $green;
+            color: $yellow;
             width: 66px;
             text-align: center;
             line-height: 60px;
@@ -139,7 +139,7 @@ body {
 
         &.-solid {
             figure {
-                background: $green;
+                background: $yellow;
             }
             .number {
                 color: $white;

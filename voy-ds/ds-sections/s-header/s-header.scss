@@ -38,12 +38,12 @@
     &:hover {
       cursor: pointer;
       svg {
-        fill: $green;
+        fill: $yellow;
       }
     }
     .-visible-mobile-menu & {
       svg {
-        fill: $green;
+        fill: $yellow;
       }
     }
   }
@@ -92,7 +92,7 @@
         }
 
         &.-active {
-          color:  $green;
+          color:  $yellow;
         }
         &:focus,
         &:hover,
@@ -121,7 +121,7 @@
     }
     &:hover {
       svg {
-        fill: $green;
+        fill: $yellow;
       }
     }
   }
@@ -206,7 +206,7 @@
         @include transition(all 0.1s ease);
         height: 36px;
         width: 36px;
-        fill: $green;
+        fill: $yellow;
       }
     }
 
@@ -292,7 +292,7 @@
       }
 
       &:hover {
-        color: $green;
+        color: $yellow;
       }
 
       &.-active {
@@ -307,7 +307,7 @@
         }
         &:hover {
           &:after {
-            background: $green;
+            background: $yellow;
           }
         }
       }
