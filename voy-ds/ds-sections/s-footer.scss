@@ -7,8 +7,19 @@
 //
 
 .s-footer {
-	background-color: $grey1;
+	background-color: #222;
 	text-align: left;
+  overflow: hidden;
+  position: relative;
+
+  .pattern {
+    background: repeating-linear-gradient(-45deg, transparent, $grey1 1px, transparent 2px, transparent 7px);
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 50%;
+    left: 50%;
+  }
 
 	p {
 		color: $white;
@@ -33,6 +44,11 @@
 
 	@media screen and (min-width: $bp-1024) {
 		padding: 76px 0;
+
+    .pattern {
+      width: 25%;
+      left: 75%;
+    }
 
 		.hide-tab-desktop {
 			display: block;
