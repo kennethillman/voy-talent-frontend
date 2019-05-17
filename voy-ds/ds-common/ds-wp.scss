@@ -8,6 +8,8 @@
 
 .content {
 
+  background: $white;
+
 // - - - s-inspiration-week
 
   .s-inspiration-week{
@@ -40,7 +42,7 @@
   .wp-block-quote:not(.is-large):not(.is-style-large) {
     border-left: 4px solid $yellow;
     padding-left: 1em;
-        margin: 20px 0;
+    margin: 20px 0;
   }
 
 // - - - wp-block-image

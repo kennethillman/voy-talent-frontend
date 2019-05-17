@@ -6,29 +6,59 @@
 // LIST
 //
 
+.special-header {
+
+  font-size: 30px;
+  line-height: 1;
+  padding: 0 0 22px;
+  margin: 0;
+
+  &.-border-bottom {
+    border-bottom: 1px solid $black;
+  }
+
+  @media screen and (min-width: $bp-768) {
+    font-size: 42px;
+    &.-wide {
+      margin-left:  -8.333%;
+    }
+  }
+
+  @media screen and (min-width: $bp-1024) {
+    &.-wide {
+      margin-left:  -26%;
+    }
+  }
+
+
+}
+
 .m-list {
 
   line-height: 1;
   font-size: 18px;
-
-  &-header {
-    font-size: 22px;
-    padding: 0 0 22px;
-    margin: 0!important;
-    border-bottom: 1px solid $black;
-  }
 
   ul{
     padding: 0;
     margin: 0 0 22px;
 
   }
+  .box {
+    font-size: 15px;
+    line-height: 1;
+    padding: 7px 0 0 ;
+  }
+
+  strong {
+    &:after {
+      content: ' / '
+    }
+  }
 
   li {
     padding: 8px 0;
     list-style-type: none;
     border-bottom: 1px solid $grey2;
-
 
     .btn {
       display: inline-block;
@@ -46,6 +76,7 @@
         height: 20px;
         top: -4px;
       }
+
     }
 
     a {
@@ -57,6 +88,13 @@
 
       &:hover {
         @extend .-pattern-stripe-light;
+        .btn {
+            background: transparent;
+            border: 1px solid $grey2;
+            svg {
+              fill: $black;
+            }
+        }
       }
 
     }
@@ -83,7 +121,7 @@
 @media screen and (min-width: $bp-768) {
 
   &-header {
-    font-size: 30px;
+    font-size: 42px;
   }
 
   li {
@@ -103,12 +141,21 @@
       padding: 30px 190px 30px 22px;
     }
 
+    .box {
+      color: $grey2;
+      border: 1px solid $grey2;
+      position: absolute;
+      right: 200px;
+      top: 50%;
+      padding: 6px 26px;
+      transform: translateY(-50%);
+    }
+
   }
 
   a.-icon{
     svg {
-      padding-right: 54px;
-      padding-left: 54px;
+      right: 35px;
     }
   }
 

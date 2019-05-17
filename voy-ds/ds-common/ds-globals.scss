@@ -71,27 +71,135 @@ img {
   padding: 30px 0;
   background-color: $white;
 
+  &.-p-t-extra {
+    padding-top: 60px;
+  }
+  &.-p-b-extra {
+    padding-bottom: 60px;
+  }
+
   @media screen and (min-width: $bp-600) {
-    padding: 35px 0;
+    padding: 42px 0;
+    &.-p-t-extra {
+      padding-top: 84px;
+    }
   }
 
   @media screen and (min-width: $bp-768) {
-      padding: 45px 0;
+    padding: 54px 0;
+    &.-p-t-extra {
+      padding-top: 108px;
+    }
+    &.-p-b-extra {
+      padding-bottom: 108px;
+    }
   }
 
   @media screen and (min-width: $bp-1024) {
-    padding: 55px 0;
+    padding: 66px 0;
+    &.-p-t-extra {
+      padding-top: 132px;
+    }
+    &.-p-b-extra {
+      padding-bottom: 132px;
+    }
+  }
+
+  &.-dividers {
+    position: relative;
+
+    &:before,
+    &:after  {
+      content: '';
+      height: 1px;
+      width: 100vw;
+      position: absolute;
+      left: 50%;
+      top:0;
+      margin-left: -50vw;
+      background: #d5d5d5;
+    }
+     &:after  {
+      top:100%;
+    }
+
+  }
+
+}
+
+
+// - - - Section padding
+
+body{
+
+  .-s-p-t {
+    padding-top: 30px;
+  }
+  .-s-p-b {
+    padding-bottom: 30px;
+  }
+
+  .-s-p-t-extra {
+    padding-top: 60px;
+  }
+  .-s-p-b-extra {
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $bp-600) {
+    .-s-p-t {
+      padding-top: 42px;
+    }
+    .-s-p-b {
+      padding-bottom: 42px;
+    }
+    .-s-p-t-extra {
+      padding-top: 84px;
+    }
+    .-s-p-b-extra {
+      padding-bottom: 84px;
+    }
+  }
+
+  @media screen and (min-width: $bp-768) {
+    .-s-p-t {
+      padding-top: 54px;
+    }
+    .-s-p-b {
+      padding-bottom: 54px;
+    }
+    .-s-p-t-extra {
+      padding-top: 108px;
+    }
+    .-s-p-b-extra {
+      padding-bottom: 108px;
+    }
+  }
+
+  @media screen and (min-width: $bp-1024) {
+    .-s-p-t {
+      padding-top: 66px;
+    }
+    .-s-p-b {
+      padding-bottom: 66px;
+    }
+    .-s-p-t-extra {
+      padding-top: 132px;
+    }
+    .-s-p-b-extra {
+      padding-bottom: 132px;
+    }
   }
 
 }
 
 .-hide {
-	display: none;
+	display: none!important;
 }
 
 .-block,
 .-show {
-  display: block;
+  display: block!important;
 }
 
 /* Accessibility */

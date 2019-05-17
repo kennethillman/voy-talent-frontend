@@ -52,7 +52,7 @@ body {
     }
 }
 
-.ds-typography {
+
 
 ///////////////////////////////////////////////////////////
 // HEADINGS
@@ -69,15 +69,15 @@ body {
         display: block;
         margin: 0 0 .44em;
         word-break: break-word;
-        font-weight: 800;
+        font-weight: normal;
     }
 
-    h1  {font-size: 50px; line-height: 62px;}
-    h2  {font-size: 40px; line-height: 52px;}
-    h3  {font-size: 30px; line-height: 40px;}
-    h4  {font-size: 26px; line-height: 34px;}
-    h5  {font-size: 22px; line-height: 34px;}
-    h6  {font-size: 20px; line-height: 34px;}
+    h1  {font-size: 61px; line-height: 73px;}
+    h2  {font-size: 36px; line-height: 42px;}
+    h3  {font-size: 26px; line-height: 36px;}
+    h4  {font-size: 24px; line-height: 34px;}
+    h5  {font-size: 22px; line-height: 32px;}
+    h6  {font-size: 20px; line-height: 30px;}
 
 
 // - - - Section (Striped)
@@ -91,7 +91,7 @@ body {
         padding: 8px 0px 4px;
 
         @media screen and (min-width: $bp-768) {
-            background: repeating-linear-gradient(-45deg, transparent, #c9c9c9 1px, transparent 2px, transparent 7px);
+            background: repeating-linear-gradient(-45deg, transparent, $grey5 1px, transparent 2px, transparent 7px);
             font-size: 66px;
             padding: 16px 5px 8px;
         }
@@ -193,4 +193,4 @@ body {
 
 
 
-}
+

@@ -15,9 +15,9 @@
         background-color: $grey3;
         text-decoration: none;
         display: inline-block;
-        color: $black;
+        color: $grey1;
         &:hover {
-        	background:lighten($grey2,10%);
+        	background:lighten($grey2,14%);
         }
         &.current {
         	background-color: $yellow;
