@@ -1,0 +1,153 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* VOY TALENT - DS */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// GLOBALS
+//
+
+// - - - Body
+
+body {
+
+  margin: 0;
+  background-color: $black;
+
+  // Padding for fixed header
+  padding: 60px 0 0 0;
+  @media screen and (min-width: $bp-600) {
+    padding: 70px 0 0 0;
+  }
+
+  @media screen and (min-width: $bp-768) {
+      padding: 90px 0 0 0;
+  }
+
+  @media screen and (min-width: $bp-1024) {
+    padding: 110px 0 0 0;
+  }
+
+  // Lock body scroll when mobile menu is visible
+  &.-visible-mobile-menu {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+}
+
+// Work in progress
+body .-wip {
+  position: relative;
+  top:0;
+  left:0;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      red 1px,
+      transparent 2px,
+      transparent 7px
+    );
+    z-index: 9;
+  }
+}
+
+
+// - - - Figure / Image
+
+
+figure {
+	margin: 0;
+}
+
+img {
+	height: auto;
+	width: 100%;
+}
+
+// - - - WP / Gutenberg BLOCKS
+
+.-wp-block {
+  margin-left: -22px;
+  margin-right: -22px;
+
+  @media screen and (min-width: $bp-768) {
+    margin-left: -50vw;
+    margin-right: 0;
+    position: relative;
+    left: 50%;
+    width: 100vw;
+  }
+
+}
+
+// - - - Sections
+
+[class^="s-"] {
+  padding: 30px 0;
+  background-color: $white;
+
+  &.-p-t-extra {
+    padding-top: 60px;
+  }
+  &.-p-b-extra {
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $bp-600) {
+    padding: 42px 0;
+    &.-p-t-extra {
+      padding-top: 84px;
+    }
+  }
+
+  @media screen and (min-width: $bp-768) {
+    padding: 54px 0;
+    &.-p-t-extra {
+      padding-top: 108px;
+    }
+    &.-p-b-extra {
+      padding-bottom: 108px;
+    }
+  }
+
+  @media screen and (min-width: $bp-1024) {
+    padding: 66px 0;
+    &.-p-t-extra {
+      padding-top: 132px;
+    }
+    &.-p-b-extra {
+      padding-bottom: 132px;
+    }
+  }
+
+  &.-dividers {
+    position: relative;
+
+    &:before,
+    &:after  {
+      content: '';
+      height: 1px;
+      width: 100vw;
+      position: absolute;
+      left: 50%;
+      top:0;
+      margin-left: -50vw;
+      background: #d5d5d5;
+    }
+     &:after  {
+      top:100%;
+    }
+
+  }
+
+}
+
+
+

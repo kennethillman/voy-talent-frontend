@@ -6,22 +6,6 @@
 // IMPORTS
 //
 
-$MOBILE: 		true;
-$TABLET: 		true;
-$DESKTOP: 		true;
-$MOBILETABLET: 	true;
-
-$VP1920: 		true;
-$VP1680: 		true;
-$VP1440: 		true;
-$VP1368: 		true;
-$VP1280: 		true;
-$VP1024: 		true;
-$VP768: 		true;
-$VP600: 		true;
-$VP480: 		true;
-$VP320: 		true;
-
 
 // Variables
 @import "_voy-variables";
@@ -32,9 +16,12 @@ $VP320: 		true;
 @import "_ds-utils/mixins-breakpoint";
 
 // Common
-@import "ds-common/ds-font-import";
-@import "ds-common/ds-globals";
-@import "ds-common/ds-helpers";
+@import "ds-common/font-import";
+@import "ds-common/globals";
+@import "ds-common/accessibility";
+@import "ds-common/helpers";
+
+// Common -> (i) -> Convert file name and cleanup
 @import "ds-common/ds-grid";
 @import "ds-common/ds-typography";
 @import "ds-common/ds-links";
@@ -57,7 +44,7 @@ $VP320: 		true;
 @import "ds-modules/ds-m-paginate";
 @import "ds-modules/ds-m-content-list";
 
-
+// Blocks
 
 // Sections
 @import "ds-sections/s-header/s-header";

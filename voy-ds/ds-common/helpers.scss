@@ -1,0 +1,177 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// HELPERS
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// - - - Show / Hide
+
+.-hide {
+  display: none!important;
+}
+
+.-block,
+.-show,
+.-critical-hide {
+  display: block!important;
+}
+
+
+// - - - Background position
+
+  // Top
+  .-focus-left-top {
+    background-position: left top!important;
+  }
+  .-focus-center-top {
+    background-position: center top!important;
+  }
+  .-focus-right-top {
+    background-position: right top!important;
+  }
+  // Center
+  .-focus-left-center {
+    background-position: left center!important;
+  }
+  .-focus-center-center {
+    background-position: center center!important;
+  }
+  .-focus-right-center {
+     background-position: right center!important;
+  }
+  // Bottom
+  .-focus-left-bottom {
+    background-position: left bottom!important;
+  }
+  .-focus-center-bottom {
+     background-position: center bottom!important;
+  }
+  .-focus-right-bottom {
+    background-position: right bottom!important;
+  }
+
+
+// - - - Text position
+
+  .-text-pos-left {
+    text-align: left!important;
+  }
+
+  .-text-pos-right {
+    text-align: right!important;
+  }
+
+  .-text-pos-center {
+    text-align: center!important;
+  }
+
+
+// - - - Section padding
+
+// (i) -> Body added for specificity
+body{
+
+  .-s-p-t {
+    padding-top: 30px;
+  }
+  .-s-p-b {
+    padding-bottom: 30px;
+  }
+
+  .-s-p-t-extra {
+    padding-top: 60px;
+  }
+  .-s-p-b-extra {
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $bp-600) {
+    .-s-p-t {
+      padding-top: 42px;
+    }
+    .-s-p-b {
+      padding-bottom: 42px;
+    }
+    .-s-p-t-extra {
+      padding-top: 84px;
+    }
+    .-s-p-b-extra {
+      padding-bottom: 84px;
+    }
+  }
+
+  @media screen and (min-width: $bp-768) {
+    .-s-p-t {
+      padding-top: 54px;
+    }
+    .-s-p-b {
+      padding-bottom: 54px;
+    }
+    .-s-p-t-extra {
+      padding-top: 108px;
+    }
+    .-s-p-b-extra {
+      padding-bottom: 108px;
+    }
+  }
+
+  @media screen and (min-width: $bp-1024) {
+    .-s-p-t {
+      padding-top: 66px;
+    }
+    .-s-p-b {
+      padding-bottom: 66px;
+    }
+    .-s-p-t-extra {
+      padding-top: 132px;
+    }
+    .-s-p-b-extra {
+      padding-bottom: 132px;
+    }
+  }
+
+}
+
+
+// - - - Grid - Demo / Dev
+
+body {
+
+  // Section style
+  .s-grid-demo {
+    display: none;
+    padding: 0!important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 100;
+    opacity: .4
+  }
+
+  .s-grid-demo-placeholder {
+    height: 100vh;
+    background: #4be8a5;
+    margin-bottom: 1rem;
+    line-height: 100vh;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.55);
+    font-weight: bold;
+  }
+
+  // Show grid with class
+  &.-grid {
+    .s-grid-demo {
+      display: block;
+      padding: 0!important;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      left: 0;
+      z-index: 100;
+
+    }
+  }
+
+}
+
+
+
