@@ -144,7 +144,8 @@ body {
     width: 100%;
     left: 0;
     z-index: 100;
-    opacity: .4
+    opacity: .4;
+    background: none;
   }
 
   .s-grid-demo-placeholder {
@@ -161,13 +162,6 @@ body {
   &.-grid {
     .s-grid-demo {
       display: block;
-      padding: 0!important;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      left: 0;
-      z-index: 100;
-
     }
   }
 

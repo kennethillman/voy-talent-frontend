@@ -20,6 +20,7 @@
 @import "ds-common/globals";
 @import "ds-common/accessibility";
 @import "ds-common/helpers";
+@import "ds-common/wp-gutenberg-blocks";
 
 // Common -> (i) -> Convert file name and cleanup
 @import "ds-common/ds-grid";
@@ -28,7 +29,6 @@
 @import "ds-common/ds-patterns";
 @import "ds-common/ds-forms";
 @import "ds-common/ds-component-divider";
-@import "ds-common/ds-wp";
 @import "ds-common/ds-wp-yotu-videos";
 @import "ds-common/ds-wp-yikes-mailchimp";
 
@@ -45,12 +45,19 @@
 @import "ds-modules/ds-m-content-list";
 
 // Blocks
+@import "ds-blocks/b-header";
+@import "ds-blocks/b-divider-pusher";
+@import "ds-blocks/b-inspiration";
+@import "ds-blocks/b-testamonials";
+@import "ds-blocks/b-repeater-list";
+@import "ds-blocks/b-repeater-teasers";
+@import "ds-blocks/b-repeater-team";
 
 // Sections
 @import "ds-sections/s-header/s-header";
 @import "ds-sections/s-breadcrumbs";
-@import "ds-sections/s-join-email/s-join-email";
-@import "ds-sections/s-inspiration-week";
+// @import "ds-sections/s-join-email/s-join-email";
+// @import "ds-sections/s-inspiration-week";
 @import "ds-sections/s-share";
 @import "ds-sections/s-featured-image";
 @import "ds-sections/s-no-featured-image";
@@ -60,11 +67,11 @@
 // Pages
 @import "ds-pages/p-get-in-touch/p-get-in-touch";
 @import "ds-pages/p-job/p-job";
-@import "ds-pages/p-voy-tv/p-voy-tv";
-@import "ds-pages/p-voy-podcast/p-voy-podcast";
+//@import "ds-pages/p-voy-tv/p-voy-tv";
+//@import "ds-pages/p-voy-podcast/p-voy-podcast";
 @import "ds-pages/p-jobs/p-jobs";
-@import "ds-pages/p-inspiration/p-inspiration";
-@import "ds-pages/p-stories/p-stories";
+//@import "ds-pages/p-inspiration/p-inspiration";
+// @import "ds-pages/p-stories/p-stories";
 
 
 

@@ -80,13 +80,14 @@
 }
 
 .-pattern-stripe-light{
-    background: repeating-linear-gradient(
-      -45deg,
-      transparent,
-      $grey5 1px,
-      transparent 2px,
-      transparent 7px
-    );
+    background: url(pattern-working-2.png);
+    // background: repeating-linear-gradient(
+    //   -45deg,
+    //   transparent,
+    //   $grey5 1px,
+    //   transparent 2px,
+    //   transparent 7px
+    // );
 }
 .-pattern-stripe-big-orange{
     background: repeating-linear-gradient(

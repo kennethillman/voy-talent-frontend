@@ -73,6 +73,7 @@ img {
 
 // - - - WP / Gutenberg BLOCKS
 
+[class^="b-"],
 .-wp-block {
   margin-left: -22px;
   margin-right: -22px;
@@ -85,11 +86,27 @@ img {
     width: 100vw;
   }
 
+  &.-wp-content {
+
+    margin-left: 0;
+    margin-right: 0;
+
+    @media screen and (min-width: $bp-768) {
+      margin-left: 0;
+      margin-right: 0;
+      position: static;
+      left: 0;
+      width: 100%;
+    }
+
+  }
+
 }
 
 // - - - Sections
 
-[class^="s-"] {
+[class^="s-"],
+[class^="b-"] {
   padding: 30px 0;
   background-color: $white;
 

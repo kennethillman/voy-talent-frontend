@@ -118,7 +118,8 @@ body {
         padding: 8px 0px 4px;
 
         @media screen and (min-width: $bp-768) {
-            background: repeating-linear-gradient(-45deg, transparent, $grey5 1px, transparent 2px, transparent 7px);
+            // background: repeating-linear-gradient(-45deg, transparent, $grey5 1px, transparent 2px, transparent 7px);
+            background: url(pattern-working-2.png);
             font-size: 66px;
             padding: 16px 5px 8px;
         }

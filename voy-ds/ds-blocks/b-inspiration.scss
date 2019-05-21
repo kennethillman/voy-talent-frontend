@@ -1,0 +1,44 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// INSPIRATION
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.b-inspiration {
+
+  	display: block;
+
+		.header {
+	    font-size: 22px;
+	    padding: 0 0 22px;
+	    margin: 0;
+		}
+
+		.gc{
+			position: relative;
+		}
+
+		.text-col {
+
+			.btn {
+				margin-top: 22px;
+				margin: 22px 0;
+        box-sizing: border-box;
+			}
+		}
+
+    @media screen and (min-width: $bp-768) {
+      .text-col {
+        padding-bottom: 80px!important;
+        .btn {
+          position: absolute;
+          bottom: 0px;
+          left: 0;
+          margin-top: 22px;
+          width: 22%;
+
+        }
+      }
+  	}
+
+}
+

@@ -1,0 +1,43 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// DIVDER PUSHER
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.b-divider-pusher {
+  background: $yellow;
+
+  .btn {
+    display: block;
+    margin-top: 22px;
+  }
+
+  &.-bg-black {
+    background: $black;
+    color: $white;
+
+    .btn {
+      background: $white;
+      color: $black;
+      &:hover {
+             background:darken($white,8%);
+             color: $black;
+        }
+        &:active {
+             background: darken($white,8%);
+        }
+
+        &:visited {
+            color: $black;
+        }
+    }
+  }
+
+
+  @media screen and (min-width: $bp-768) {
+    .btn {
+      margin-top: 0;
+    }
+  }
+
+}
+

@@ -1,0 +1,51 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// REPEATER TEAAM
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.b-repeater-teaser {
+
+  text-decoration: none;
+
+  .header, h4 {
+    color: $white;
+  }
+
+  .text {
+    background-color: $grey1;
+    color: $white;
+    padding: 12px;
+    margin: -1px 0 0;
+
+    h5 {
+      color: $white;
+      margin: 0;
+    }
+    .date-time-name {
+      margin-bottom: 12px;
+    }
+  }
+  figure {
+    @include aspect-ratio-img(16,9);
+  }
+
+  &:hover {
+     .header, h4 {
+      color: $black;
+    }
+    .text {
+      @extend .-pattern-stripe-light;
+      color: $black;
+      h5 {
+            color: $black;
+          }
+    }
+  }
+
+  @media screen and (min-width: $bp-768) {
+
+
+  }
+
+}
+

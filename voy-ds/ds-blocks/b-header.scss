@@ -1,0 +1,78 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// HEADER
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.b-header {
+
+// - - - Header
+
+  .header {
+    font-size: 30px;
+    line-height: 1;
+    padding: 0 0 22px;
+    margin: 0;
+  }
+  @media screen and (min-width: $bp-768) {
+    .header {
+      font-size: 42px;
+    }
+  }
+
+
+// - - - Border
+
+  &.-border {
+    border-bottom: 1px solid #000000;
+  }
+
+// - - - Sizes
+
+  &.-big {
+    .header {
+      font-size: 42px;
+    }
+    @media screen and (min-width: $bp-768) {
+      .header {
+        font-size: 66px;
+      }
+    }
+
+  }
+
+  &.-small {
+    .header {
+      font-size: 30px;
+    }
+    @media screen and (min-width: $bp-768) {
+      .header {
+        font-size: 42px;
+      }
+    }
+  }
+
+// - - - Raster
+
+  &.-raster {
+
+    .header{
+      color: $grey1;
+      line-height: 1;
+      font-weight: 700;
+      padding: 8px 0px 4px;
+    }
+    @media screen and (min-width: $bp-768) {
+     // background: repeating-linear-gradient(-45deg, transparent, $grey5 1px, transparent 2px, transparent 7px);
+     background: url(pattern-working-2.png);
+
+      .header{
+        padding: 16px 5px 8px;
+      }
+    }
+
+  }
+
+
+}
+
+
