@@ -3,34 +3,49 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 body {
-  color: $color-charcoal;
-  font-size: $font-small;
-  font-family: $font-sans;
+  color: $sgd-black;
+  font-size: $sgd-font-s;
+  font-family: $sgd-font-system;
   min-height: 100vh;
   margin: 0;
+  overflow-x: hidden;
+  &.-sgd {
+    padding-top: 0;
+    background-color: $white;
+  }
 }
 
-header,
-footer,
-article {
-  //background-color: $color-gray-tint;
-}
-
-[class^="s-"] {
+[class^="sgd-s-"] {
   padding: 1.5em 0 2.75rem;
 
   &.-light {
-  	background-color: $white;
+  	background-color: #f6f6f6;
+  }
+  &.-off-white {
+    background-color: #f9f9f9;
   }
 
   &.-inverted {
-  	background-color: $black;
-  	color: $grey4;
+  	background-color: $sgd-black;
+  	color: $sgd-grey4;
+  }
+  &.-grey {
+    background-color: $sgd-grey4;
   }
 }
 
 .-hide {
   display: none;
+}
+
+// - - NORMALIZE
+
+body.-sgd .s-breadcrumbs{
+  position: relative;
+    .body {
+      top: 0 !important;
+      position: absolute;
+    }
 }
 
 

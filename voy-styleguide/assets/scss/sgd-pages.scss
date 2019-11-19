@@ -1,0 +1,48 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* STYLEGUIDE - Pages */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.sgd-pages {
+
+  &.-wp {
+    a{
+      text-decoration: line-through;
+      opacity: .18;
+    }
+  }
+
+  a {
+      display: block;
+      padding-right: 40px;
+      float: left;
+      width: 100%;
+      box-sizing: border-box;
+      color: $sgd-black;
+      // text-decoration: none;
+      font-size: $sgd-font-l;
+      font-weight: bold;
+      margin-bottom: 6px;
+      &:hover {
+        color: lighten($sgd-yellow, 12);
+      }
+      &:visited {
+        color: $sgd-black;
+      }
+    }
+
+    span {
+      color:$sgd-black;
+      opacity: .4;
+      font-size: $sgd-font-s;
+      font-weight: normal;
+    }
+
+
+  @media screen and (min-width: 600px) {
+    a {
+      width: 50%;
+    }
+  }
+
+
+}

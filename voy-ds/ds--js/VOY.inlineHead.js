@@ -24,10 +24,10 @@
 
   VOY = win.VOY || {};
 
-  VOY.fn = VOY.fn || {};
+  VOY.fn = VOY.fn || {},
   VOY.ui = VOY.ui || {},
   VOY.helpers = VOY.helpers || {},
-  VOY.initial = VOY.initial || {};
+  VOY.initial = VOY.initial || {},
   VOY.sections = VOY.sections || {},
   VOY.modules = VOY.modules || {},
   VOY.components = VOY.components || {},

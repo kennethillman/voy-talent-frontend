@@ -1,0 +1,28 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* VOY TALENT - DS */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// SENT RESULT
+//
+
+  .sent-result {
+
+      .header {
+        padding: 18px 14px 12px;
+        margin: 12px 0px;
+        line-height: 1;
+        display: inline-block;
+      }
+
+      &.-sent .header {
+        background-color: $green;
+      }
+
+      &.-error .header {
+        background-color: red;
+      }
+
+  }
+
+

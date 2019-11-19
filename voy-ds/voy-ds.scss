@@ -34,6 +34,7 @@
 
 // Components
 @import "ds-components/ds-c-buttons";
+@import "ds-components/ds-c-sent-result";
 
 // Modules
 @import "ds-modules/ds-m-teaser-person";
@@ -56,13 +57,14 @@
 // Sections
 @import "ds-sections/s-header/s-header";
 @import "ds-sections/s-breadcrumbs";
-// @import "ds-sections/s-join-email/s-join-email";
+@import "ds-sections/s-join-email/s-join-email";
 // @import "ds-sections/s-inspiration-week";
 @import "ds-sections/s-share";
 @import "ds-sections/s-featured-image";
 @import "ds-sections/s-no-featured-image";
 @import "ds-sections/s-follow";
 @import "ds-sections/s-footer";
+@import "ds-sections/s-welcome";
 
 // Pages
 @import "ds-pages/p-get-in-touch/p-get-in-touch";
@@ -71,17 +73,6 @@
 //@import "ds-pages/p-voy-podcast/p-voy-podcast";
 @import "ds-pages/p-jobs/p-jobs";
 //@import "ds-pages/p-inspiration/p-inspiration";
-// @import "ds-pages/p-stories/p-stories";
+//@import "ds-pages/p-stories/p-stories";
 
 
-
-
-// @import "reset";
-
-// @import "base";
-// @import "footer";
-// @import "grid";
-// @import "header";
-// @import "lists";
-// @import "navigation";
-// @import "typography";

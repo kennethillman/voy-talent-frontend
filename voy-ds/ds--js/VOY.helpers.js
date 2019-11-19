@@ -19,9 +19,9 @@ function voyDebounce(func, wait = 10, immediate = true) {
 
 
 (function() {
-    // COOKIES
 
-    const VOY = window.VOY || {};
+    VOY = window.VOY || {},
+    VOY.helpers = VOY.helpers || {};
 
     VOY.helpers.isMobile = function() {
         if (window.matchMedia('only screen and (max-width:767px)').matches) {

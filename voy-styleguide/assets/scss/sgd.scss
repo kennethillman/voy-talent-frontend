@@ -1,0 +1,51 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* STYLEGUIDE */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// - - - BREAKPOINT ENABLERS
+
+$MOBILE: 		true;
+$TABLET: 		true;
+$DESKTOP: 		true;
+$MOBILETABLET: 	true;
+
+$VP1920: 		true;
+$VP1680: 		true;
+$VP1440: 		true;
+$VP1368: 		true;
+$VP1280: 		true;
+$VP1024: 		true;
+$VP768: 		true;
+$VP600: 		true;
+$VP480: 		true;
+$VP320: 		true;
+
+
+// - - IMPORTS
+
+// Vars
+@import "_sgd-variables";
+@import "./voy-ds/_voy-variables";
+
+// Utils
+@import "_utils/functions";
+@import "_utils/mixins";
+@import "_utils/mixins-breakpoint";
+@import "_utils/mixins-styleguide";
+
+
+// Scoped SGD styles
+@import "sgd-global";
+@import "sgd-typography";
+@import "sgd-color-card";
+@import "sgd-pattern";
+@import "sgd-placeholder";
+@import "sgd-icons";
+@import "sgd-buttons";
+@import "sgd-grid";
+@import "sgd-header";
+@import "sgd-pages";
+
+
+
+

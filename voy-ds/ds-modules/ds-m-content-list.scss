@@ -14,8 +14,6 @@
   color: $grey1;
   line-height: 1.7;
 
-
-
     ul {
       @include clearfix;
       padding: 0;
@@ -39,12 +37,9 @@
       float: left;
     }
 
-
   }
 
   @media screen and (min-width: $bp-1024) {
-
-
 
   }
 

@@ -21,9 +21,9 @@ function voyDebounce(func, wait = 10, immediate = true) {
 
 
 (function() {
-    // COOKIES
 
-    const VOY = window.VOY || {};
+    VOY = window.VOY || {},
+    VOY.helpers = VOY.helpers || {};
 
     VOY.helpers.isMobile = function() {
         if (window.matchMedia('only screen and (max-width:767px)').matches) {
@@ -45,7 +45,8 @@ function voyDebounce(func, wait = 10, immediate = true) {
     // ///////////////////////////////////////////////////////////////////////////////////////////////////////
     // //// PATTERN
     // ///////////////////////////////////////////////////////////////////////////////////////////////////////
-        const VOY = window.VOY || {};
+        VOY = window.VOY || {},
+        VOY.sections = VOY.sections || {};
 
         VOY.sections.header = {
             el: 's-header',
@@ -122,6 +123,10 @@ function voyDebounce(func, wait = 10, immediate = true) {
               ft = 0
               wy = window.scrollY
 
+              if(!b){
+                return;
+              }
+
               if (document.body.classList.contains('-has-featured-image')){
 
 
@@ -146,7 +151,6 @@ function voyDebounce(func, wait = 10, immediate = true) {
                 } else {
                   h.classList.remove('-sticky');
                 }
-
 
 
               } else {
@@ -207,8 +211,6 @@ function voyDebounce(func, wait = 10, immediate = true) {
         // Set inital width
         reWi = window.innerWidth;
 
-        console.log('onload');
-
 
 
     // function documentWidth() {
@@ -248,5 +250,8 @@ function voyDebounce(func, wait = 10, immediate = true) {
     // ///////////////////////////////////////////////////////////////////////////////////////////////////////
     }(window));
 ;
+
+
+
 
 

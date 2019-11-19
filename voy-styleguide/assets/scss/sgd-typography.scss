@@ -5,29 +5,33 @@
 .sgd-header {
 
   font-size: 36px;
-  font-family: $font-system;
+  font-family: $sgd-font-system;
   font-weight: 900;
-  color: $grey1;
+  color: $sgd-grey1;
   position: relative;
   margin: 3rem 0 1.75rem;
 
   &.-sub {
     font-size: 24px;
-    color: $grey2;
+    color: #dedede;
   }
 
   &.-type {
     &:before {
       font-size: 10px;
-      background: $grey1;
+      background: $sgd-grey1;
       padding: .45rem;
-      color: $white;
+      color: $sgd-white;
       border-radius: 4px;
       position: absolute;
       bottom: 120%;
       line-height: 1;
       text-transform: uppercase;
     }
+  }
+
+  &.-discrete {
+    opacity: .18;
   }
 
   &.-common {
@@ -48,18 +52,37 @@
     }
   }
 
+  &.-block {
+    &:before {
+      content: "block";
+    }
+  }
+
   &.-section {
     &:before {
       content: "section";
     }
   }
 
+  &.-page {
+    &:before {
+      content: "page";
+    }
+  }
+
+  &.-pages {
+    &:before {
+      content: "pages";
+    }
+  }
+
+
   .-inverted & {
-    color: $grey4;
+    color: $sgd-grey4;
       &.-type {
       &:before {
-        background: $grey4;
-        color: $grey1;
+        background: $sgd-grey4;
+        color: $sgd-grey1;
       }
     }
   }

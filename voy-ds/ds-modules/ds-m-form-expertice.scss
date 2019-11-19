@@ -1,6 +1,25 @@
 .m-form-expertice-choices {
-	.btn-choice {
-		width: 50%;
-		float: left;
-	}
+	.btn-w {
+    padding: 11px 11px;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+
+  }
+
+
+  @media screen and (min-width: $bp-768) {
+
+    .btn-w {
+      width: 33.33%;
+    }
+
+  }
+
+  @media screen and (min-width: $bp-1024) {
+    .btn-w {
+      width: 25%;
+    }
+  }
+
 }

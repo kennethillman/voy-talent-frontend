@@ -3,9 +3,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .sgd-placeholder {
-  
+
   height: 50px;
-  background: $green;
+  background: $sgd-green;
   margin-bottom: 1rem;
   line-height: 50px;
   text-align: center;
@@ -13,10 +13,10 @@
   font-weight: bold;
 
   &.-darker {
-    background: darken($green,10%);
+    background: darken($sgd-green,10%);
   }
   &.-lighter {
-    background: lighten($green,10%);
+    background: lighten($sgd-green,10%);
   }
 
 }

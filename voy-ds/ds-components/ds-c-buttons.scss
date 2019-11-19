@@ -31,6 +31,7 @@
         border: none;
 
 
+
 // - - - COLORS
 
         &.-icon {
@@ -176,7 +177,14 @@
     text-align: center;
     font-weight: 500;
     border: 1px solid $grey4;
-    margin-bottom: 24px;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+
+    &.selectable {
+      background: $orange;
+      color: $white;
+    }
 
     &:hover {
       color: $black;

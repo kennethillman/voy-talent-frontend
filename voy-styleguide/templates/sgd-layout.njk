@@ -1,0 +1,28 @@
+<!-- layout.njk -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voy Talent | Styleguide</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link rel="stylesheet" href="assets/dest/css/sgd.css">
+  <link rel="stylesheet" href="assets/dest/css/voy-ds.css">
+</head>
+<body class="sgd-grid -sgd">
+
+  {% include "partials/sgd-header.njk" %}
+
+  <div class="gc">
+    {% block content %}
+
+
+    {% endblock %}
+  </div>
+
+  {% include "ds/assets-svg-sprite.njk" %}
+  <script src="assets/dest/js/voy.js"></script>
+
+</body>
+</html>

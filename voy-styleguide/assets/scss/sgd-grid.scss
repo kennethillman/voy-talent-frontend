@@ -39,11 +39,11 @@ $max-width: 1130px !default;
             $comboStart: 1;
 
             @for $p from $comboStart through $combo {
-                .gc .#{$columnprefix}-push-#{$p}     {margin-left: ($p / $combo) * 100%;}
+                .#{$prefix}-gc .#{$columnprefix}-push-#{$p}     {margin-left: ($p / $combo) * 100%;}
             }
 
             @for $p from $comboStart through $combo {
-                .gc .#{$columnprefix}-pull-#{$p}     {margin-right: ($p / $combo) * 100%;}
+                .#{$prefix}-gc .#{$columnprefix}-pull-#{$p}     {margin-right: ($p / $combo) * 100%;}
             }
 
         }
@@ -63,14 +63,14 @@ $max-width: 1130px !default;
 
             // - - - GC - G=COLUMN, M=Module
 
-            [class^="g-"] {
+            [class^="#{$prefix}-g-"] {
                 float: left;
                 @include box-sizing();
             }
 
             // - - - GC - content wrapper
 
-            .gc {
+            .#{$prefix}-gc {
                 @include clearfix;
                 padding: 0 $gutter * 0.5px;
                 min-width: $min-width;
@@ -79,9 +79,9 @@ $max-width: 1130px !default;
                 margin-right: auto;
                 box-sizing: border-box;
 
-                > [class^="g-"] {
-                            padding: 0 $gutter * 0.5px;
-                        }
+                > [class^="#{$prefix}-g-"] {
+                  padding: 0 $gutter * 0.5px;
+                }
 
                 // - - - GC - MAXIMIZE
 
@@ -90,13 +90,13 @@ $max-width: 1130px !default;
                     max-width: 100%;
                     padding: 0;
 
-                    > [class^="g-"],
-                    > div > [class^="g-"] {
+                    > [class^="#{$prefix}-g-"],
+                    > div > [class^="#{$prefix}-g-"] {
                         padding: 0;
                     }
 
                     .-full-width {
-                        > [class^="g-"] {
+                        > [class^="#{$prefix}-g-"] {
                             padding: 0 $gutter * 0.5px;
                         }
                     }
@@ -107,11 +107,11 @@ $max-width: 1130px !default;
 
                 &.-column-center,
                 &.-g-center {
-                    > [class^="g-"] {
+                    > [class^="#{$prefix}-g-"] {
                         float: none;
                         margin-right: auto;
                         margin-left: auto;
-                        &.g-1 {
+                        &.#{$prefix}-g-1 {
                             float: left;
                         }
                     }
@@ -136,19 +136,14 @@ $max-width: 1130px !default;
                     margin-left: auto;
                     margin-right: auto;
 
-                    [class^="g-"] {
+                    [class^="#{$prefix}-g-"] {
                         padding: 0;
-                    }
-
-                    [class^="m-"] {
-                        margin-left: 0;
-                        margin-right: 0;
                     }
 
                 }
 
 
-            } // .gc END
+            } // .#{$prefix}-gc END
 
 
             // - - - COLUMNS
@@ -159,7 +154,7 @@ $max-width: 1130px !default;
 
             @for $p from $oneStart through $oneEnd {
 
-                .g-#{$p} { width: 50%;}
+                .#{$prefix}-g-#{$p} { width: 50%;}
 
             }
 
@@ -167,7 +162,7 @@ $max-width: 1130px !default;
             $twoEnd: 6;
 
             @for $p from $twoStart through $twoEnd {
-                .g-#{$p} { width: 100%;}
+                .#{$prefix}-g-#{$p} { width: 100%;}
             }
 
             $threeStart: 7;
@@ -175,10 +170,10 @@ $max-width: 1130px !default;
 
 
             @for $p from $threeStart through $threeEnd {
-                .g-#{$p} { width: 100%;}
+                .#{$prefix}-g-#{$p} { width: 100%;}
             }
 
-            .row {
+            .#{$prefix}-row {
                 @include clearfix;
             }
 
@@ -201,7 +196,7 @@ $max-width: 1130px !default;
 
             // - - - COLUMNS - MODIFIER
 
-            .-g-shift-vp768 [class^="g-"] {
+            .-g-shift-vp600 [class^="#{$prefix}-g-"] {
                 float: right;
             }
 
@@ -215,7 +210,7 @@ $max-width: 1130px !default;
                     $comboStart: 1;
 
                     @for $p from $comboStart through $combo {
-                        .g-#{$p} {width: ($p / $combo) * 100%;}
+                        .#{$prefix}-g-#{$p} {width: ($p / $combo) * 100%;}
                     }
 
                 }
@@ -226,11 +221,11 @@ $max-width: 1130px !default;
                     $comboStart: 1;
 
                     @for $p from $comboStart through $combo {
-                        .g-push-#{$p} {margin-left: ($p / $combo) * 100%;}
+                        .#{$prefix}-g-push-#{$p} {margin-left: ($p / $combo) * 100%;}
                     }
 
                     @for $p from $comboStart through $combo {
-                        .g-pull-#{$p} {margin-right: ($p / $combo) * 100%;}
+                        .#{$prefix}-g-pull-#{$p} {margin-right: ($p / $combo) * 100%;}
                     }
                 }
             }
@@ -239,15 +234,19 @@ $max-width: 1130px !default;
     @include VP768 {
 
         .#{$prefix}-grid {
-            // - - - GC
-  
+
+          // - - - COLUMNS - MODIFIER
+          .-g-shift-vp768 [class^="#{$prefix}-g-"] {
+              float: right;
+          }
+
         }
     }
 
     @include VP1280 {
 
         .#{$prefix}-grid {
-            .gc {
+            .#{$prefix}-gc {
                 margin: 0 auto;
                 // width: 86%;
                 padding: 0;
@@ -256,34 +255,14 @@ $max-width: 1130px !default;
 
     }
 
-    @include MOBILE     { .#{$prefix}-grid { @include grid-cols(12, g-m); } }
-    @include TABLET     { .#{$prefix}-grid { @include grid-cols(12, g-t); } }
+    @include MOBILE     { .#{$prefix}-grid { @include grid-cols(12, #{$prefix}-g-m); } }
+    @include TABLET     { .#{$prefix}-grid { @include grid-cols(12, #{$prefix}-g-t); } }
 
 
 
 } // MIXIN grid END
 
-
+// MAKE THE GRID
 @include grid($prefix, $contentWidth, $columns, $gutter, $min-width);
 
 
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// MAKE THE GRID
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// @include grid-rwd   ($prefix, $width, $columns, $gutter, $outer-padding, $behavior, $min-width);
-// @include g-grid  ($prefix, $width, $columns, $gutter, $outer-padding, fixed, $min-width);
-
-// @include grid-breakpoint($breakpoint, $prefix, $behavior, $width, $gutter, $outer-padding);
-// @include grid-breakpoint(1441px, $prefix,  fixed, 1176 , 24, 0);
-// @include grid-breakpoint(1820px, $prefix,  fixed, 1390 , 26, 0);
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Full fluid exampel -  (Leave width in breakpoint default for full fluid)*
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// @include grid-rwd   ($name, $prefix, $width, $columns, $gutter, $outer-padding, $behavior, $min-width, $break480, $ie7);
-// @include grid-breakpoint($media-768, $name, $prefix, $media, fluid, $width , 10, 0);
-// @include grid-breakpoint($media-480, $name, $prefix, $media, fluid, $width , 10, 0);

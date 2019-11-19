@@ -7,21 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Voy Talent | Styleguide</title>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <link rel="stylesheet" href="assets/dest/css/index.css">
+  <link rel="stylesheet" href="assets/dest/css/sgd.css">
   <link rel="stylesheet" href="assets/dest/css/voy-ds.css">
 </head>
-<body class="ds-grid">
+<body class="sgd-grid -sgd">
 
   <!-- header.njk -->
 <header class="sgd-top-header">
 
-  <!-- header-menu.njk -->
-
-<section class="s-breadcrumbs -sgd">
-  <div class="gc">
-    <div class="g-12"><a href="index.html">Start page</a><a href="p-1.html">1</a><a href="p-2.html">2</a><a href="p-3.html">3</a><a href="p-6.html">6</a><a href="p-7.html">7</a><a href="p-8.html">8</a><a href="p-10-a.html">10 A</a><a href="p-10-b.html">10 B</a><a href="p-11.html">11</a></div>
-  </div>
-</section>
+   <!-- include "partials/header-menu.njk" %} -->
 
   <div class="logo-inverted">
   	<svg id="Lager_2" data-name="Lager 2" xmlns="http://www.w3.org/2000/svg" width="361" height="101.18" viewBox="0 0 361 101.18"><title>voy-talent</title><polygon points="103 101.04 71 101.04 0 30.04 22 7.04 71 56.04 71 0.04 103 0.04 103 101.04"/><polygon points="251 101.04 251 0.04 282 0.04 282 34.04 316 0.04 338 22.04 282 78.04 282 101.04 251 101.04"/><circle cx="345" cy="85.04" r="16"/><path d="M216,80c-25-1-53.3,17.5-53,51,.29,33.26,29,52,53,50,24,2,52.71-16.74,53-50C269.3,97.5,241,79,216,80Zm0,73s-20,0-20-23,20-23,20-23,20,0,20,23S216,153,216,153Z" transform="translate(-39 -79.96)"/></svg>
@@ -32,45 +26,72 @@
 </header>
 
 
-  <article class="s- content">
+  <div class="gc">
     
 
 
+<!-- SITE PAGES-->
+
+<section class="sgd-s-colors ">
+  <div class="sgd-gc">
+
+    <div class="sgd-g-6 sgd-g-m-12 sgd-g-t-12 sgd-pages">
+      <h2 class="sgd-header -type -pages">All Layouts / Pagetypes</h2>
+        <a href="p-1.html" target="_blank">Startpage <span>(1.jpg)</span></a>
+        <a href="p-7.html" target="_blank">Inspiration <span>(7.jpg)</span></a>
+        <a href="p-2.html" target="_blank">Job listing <span>(2.jpg)</span></a>
+        <a href="p-11.html" target="_blank">Job description <span>(11.jpg)</span></a>
+        <a href="p-3.html" target="_blank">Voy TV <span>(3.jpg)</span></a>
+        <a href="p-6.html" target="_blank">Voy podcast <span>(6.jpg)</span></a>
+        <a href="p-10-a.html" target="_blank">Stories - Start <span>(10.jpg)</span></a>
+        <a href="p-10-b.html" target="_blank">Stories - Deeper <span>(10.jpg)</span></a>
+        <a href="p-8.html" target="_blank">Contact <span>(8.jpg)</span></a>
+    </div>
+
+    <div class="sgd-g-6 sgd-g-m-12 sgd-g-t-12 sgd-pages -wp">
+        <h2 class="sgd-header -type -pages">Wordpress / QA / Gutenberg </h2>
+        <a href="#" target="_blank">Blocks <span>(Gutenberg default)</span></a>
+        <a href="#" target="_blank">Basics <span>(Gutenberg)</span></a>
+        <a href="#" target="_blank">Voy Blocks <span>(Voy custom)</span></a>
+    </div>
+
+  </div>
+</section>
 
 <!-- COLOR PALETTE -->
 
-<section class="s-colors">
-	<div class="gc">
+<section class="sgd-s-colors -off-white -card-shadow">
+	<div class="sgd-gc">
 
-		<div class="g-12">
+		<div class="sgd-g-12">
 			<h2 class="sgd-header -type -common">Color palette</h2>
 		</div>
-		<div class="g-4">
-			<div class="sgd-color-card -yellow"><div class="body"></div></div>
+		<div class="sgd-g-4 card">
+			<div class="sgd-color-card -yellow"><div class="body"></div><div class="shadow"></div></div>
 		</div>
-		<div class="g-4">
-			<div class="sgd-color-card -orange"><div class="body"></div></div>
+		<div class="sgd-g-4 card">
+			<div class="sgd-color-card -orange"><div class="body"></div><div class="shadow"></div></div>
 		</div>
-		<div class="g-4">
-			<div class="sgd-color-card -green"><div class="body"></div></div>
+		<div class="sgd-g-4 card">
+			<div class="sgd-color-card -green"><div class="body"></div><div class="shadow"></div></div>
 		</div>
-		<div class="g-2">
-			<div class="sgd-color-card -white"><div class="body"></div></div>
+		<div class="sgd-g-2 card card card">
+			<div class="sgd-color-card -white"><div class="body"></div><div class="shadow"></div></div>
 		</div>
-		<div class="g-2">
-			<div class="sgd-color-card -black"><div class="body"></div></div>
+		<div class="sgd-g-2 card card">
+			<div class="sgd-color-card -black"><div class="body"></div><div class="shadow"></div></div>
 		</div>
-		<div class="g-2">
-			<div class="sgd-color-card -grey1"><div class="body"></div></div>
+		<div class="sgd-g-2 card">
+			<div class="sgd-color-card -grey1"><div class="body"></div><div class="shadow"></div></div>
 		</div>
-		<div class="g-2">
-			<div class="sgd-color-card -grey2"><div class="body"></div></div>
+		<div class="sgd-g-2 card">
+			<div class="sgd-color-card -grey2"><div class="body"></div><div class="shadow"></div></div>
 		</div>
-		<div class="g-2">
-			<div class="sgd-color-card -grey3"><div class="body"></div></div>
+		<div class="sgd-g-2 card card">
+			<div class="sgd-color-card -grey3"><div class="body"></div><div class="shadow"></div></div>
 		</div>
-		<div class="g-2">
-			<div class="sgd-color-card -grey4"><div class="body"></div></div>
+		<div class="sgd-g-2 card">
+			<div class="sgd-color-card -grey4"><div class="body"></div><div class="shadow"></div></div>
 		</div>
 
 	</div>
@@ -79,55 +100,55 @@
 
 <!-- PATTERNS -->
 
-<section class="s-patterns -light">
-	<div class="gc">
+<section class="sgd-s-patterns">
+	<div class="sgd-gc">
 
-		<div class="g-12">
+		<div class="sgd-g-12">
 			<h2 class="sgd-header -type -common">Patterns</h2>
 		</div>
-		<div class="g-4">
+		<div class="sgd-g-4">
 			<div class="sgd-pattern -pattern-stripe-big-dark"><span>-pattern-stripe-big-dark</span></div>
 		</div>
-		<div class="g-4 g-pull-4">
+		<div class="sgd-g-4 sgd-g-pull-4">
 			<div class="sgd-pattern -pattern-stripe-dark"><span>-pattern-stripe-dark</span></div>
 		</div>
-		<div class="g-4">
+		<div class="sgd-g-4">
 			<div class="sgd-pattern -pattern-stripe-big-light"><span>-pattern-stripe-big-light</span></div>
 		</div>
-		<div class="g-4">
+		<div class="sgd-g-4">
 			<div class="sgd-pattern -pattern-stripe-light"><span>-pattern-stripe-light</span></div>
 		</div>
-		<div class="g-4">
+		<div class="sgd-g-4">
 			<div class="sgd-pattern -pattern-stripe-light-tight"><span>-pattern-stripe-light-tight</span></div>
 		</div>
 
-    <div class="g-4">
+    <div class="sgd-g-4">
 			<div class="sgd-pattern -pattern-stripe-big-orange"><span>-pattern-stripe-big-orange</span></div>
 		</div>
-		<div class="g-4">
+		<div class="sgd-g-4">
 			<div class="sgd-pattern -pattern-stripe-orange"><span>-pattern-stripe-orange</span></div>
 		</div>
-		<div class="g-4">
+		<div class="sgd-g-4">
 			<div class="sgd-pattern -pattern-solid-orange"><span>-pattern-solid-orange</span></div>
 		</div>
 
-    <div class="g-4">
+    <div class="sgd-g-4">
       <div class="sgd-pattern -pattern-stripe-big-yellow"><span>-pattern-stripe-big-yellow</span></div>
     </div>
-    <div class="g-4">
+    <div class="sgd-g-4">
       <div class="sgd-pattern -pattern-stripe-yellow"><span>-pattern-stripe-yellow</span></div>
     </div>
-    <div class="g-4">
+    <div class="sgd-g-4">
       <div class="sgd-pattern -pattern-solid-yellow"><span>-pattern-solid-yellow</span></div>
     </div>
 
-    <div class="g-4">
+    <div class="sgd-g-4">
       <div class="sgd-pattern -pattern-stripe-big-green"><span>-pattern-stripe-big-green</span></div>
     </div>
-    <div class="g-4">
+    <div class="sgd-g-4">
       <div class="sgd-pattern -pattern-stripe-green"><span>-pattern-stripe-green</span></div>
     </div>
-    <div class="g-4">
+    <div class="sgd-g-4">
       <div class="sgd-pattern -pattern-solid-green"><span>-pattern-solid-green</span></div>
     </div>
 
@@ -137,9 +158,9 @@
 
 <!-- GRID -->
 
-<section class="s-grid">
-	<div class="gc">
-		<div class="g-12">
+<section class="sgd-s-grid -light">
+	<div class="sgd-gc">
+		<div class="sgd-g-12">
 			<h2 class="sgd-header -type -common">Grid</h2>
 		</div>
 	</div>
@@ -216,13 +237,13 @@
 
 <!-- TYPOGRAPHY -->
 
-<section class="s-typography -light ">
-	<div class="gc">
-		<div class="g-12">
-			<h2 class="sgd-header -type -common">Typography</h2>
+<section class="sgd-s-typography">
+	<div class="sgd-gc">
+		<div class="sgd-g-12">
+			<h2 class="sgd-header -type -common -discrete">Typography</h2>
 		</div>
 
-  <div class="g-12 ds-typography content">
+  <div class="sgd-g-12 ds-typography content">
 
     <div class="b-header -wp-content  -no-m -raster -big">
       <h2 class="header">Voy Talent team big</h2>
@@ -242,7 +263,7 @@
 
   </div>
 
-		<div class="g-6 ds-typography">
+		<div class="sgd-g-6 ds-typography">
 			<h1>Header 1 - System</h1>
 			<h2>Header 2 - System</h2>
 			<h3>Header 3 - System</h3>
@@ -250,30 +271,29 @@
 			<h5>Header 5 - System</h5>
 			<h6>Header 6 - System</h6>
 		</div>
-		<div class="g-6 ds-typography">
+		<div class="sgd-g-6 ds-typography">
 			<p>P TAG: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
 
 			NO P TAG:Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-
 		</div>
-		<div class="g-12">
+		<div class="sgd-g-12">
 			<h2 class="sgd-header -sub">.header-section</h2>
 		</div>
-		<div class="g-12 ds-typography">
+		<div class="sgd-g-12 ds-typography">
 			
 <h2 class="header-section">Voy Talent team</h2>
 		</div>
-		<div class="g-12">
+		<div class="sgd-g-12">
 			<h2 class="sgd-header -sub">.header-number & .-solid</h2>
 		</div>
-		<div class="g-12 ds-typography">
+		<div class="sgd-g-12 ds-typography">
 			
 <h2 class="header-number -solid"><figure></figure><span class="number">1.</span><span class="text">So, let's get to know eachother?</span></h2>
 		</div>
-		<div class="g-12">
+		<div class="sgd-g-12">
 			<h2 class="sgd-header -sub">.header-number</h2>
 		</div>
-		<div class="g-12 ds-typography">
+		<div class="sgd-g-12 ds-typography">
 			
 <h2 class="header-number"><figure></figure><span class="number">2.</span><span class="text">And what's your area of experties</span></h2>
 		</div>
@@ -283,12 +303,12 @@
 
 <!-- ICONS -->
 
-<section class="s-icons sgd-icons">
-	<div class="gc">
-		<div class="g-12">
+<section class="sgd-s-icons sgd-icons -light">
+	<div class="sgd-gc">
+		<div class="sgd-g-12">
 			<h2 class="sgd-header -type -common">Icons</h2>
 		</div>
-		<div class="g-12">
+		<div class="sgd-g-12">
 			<svg role="img" title="icon" class="svg-icon">
       	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#voy-x" svg=""></use>
       </svg>
@@ -298,7 +318,7 @@
       <svg role="img" title="icon" class="svg-icon">
       	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#voy-arrow"  svg=""></use>
       </svg>
-<svg role="img" title="icon" class="svg-icon">
+      <svg role="img" title="icon" class="svg-icon">
       	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#voy-email"  svg=""></use>
       </svg>
       <svg role="img" title="icon" class="svg-icon">
@@ -345,12 +365,12 @@
 
 <!-- LINKS -->
 
-<section class="s-links -light">
-	<div class="gc">
-		<div class="g-12">
-			<h2 class="sgd-header -type -common">Links</h2>
+<section class="sgd-s-links">
+	<div class="sgd-gc">
+		<div class="sgd-g-12">
+			<h2 class="sgd-header -type -common -discrete ">Links</h2>
 		</div>
-		<div class="g-4">
+		<div class="sgd-g-4">
 			<a href="#">This is a link</a>
 		</div>
 	</div>
@@ -359,12 +379,12 @@
 
 <!-- BUTTONS -->
 
-<section class="s-buttons ">
-	<div class="gc">
-		<div class="g-12">
-			<h2 class="sgd-header -type -component">Buttons</h2>
+<section class="sgd-s-buttons ">
+	<div class="sgd-gc">
+		<div class="sgd-g-12">
+			<h2 class="sgd-header -type -component -discrete ">Buttons</h2>
 		</div>
-		<div class="g-12 sgd-buttons">
+		<div class="sgd-g-12 sgd-buttons">
 			<a class="btn -black">Join Voy</a>
 			<a class="btn -yellow -icon">Send<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></sv<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg></a>
 			<a class="btn -yellow -icon">Send<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg></a>
@@ -375,12 +395,12 @@
 
 <!-- COMPONENT DIVIDER -->
 
-<section class="s- -light">
-	<div class="gc">
-		<div class="g-12">
+<section class="sgd-s- -light">
+	<div class="sgd-gc">
+		<div class="sgd-g-12">
 			<h2 class="sgd-header -type -component">Component divider</h2>
 		</div>
-		<div class="g-12">
+		<div class="sgd-g-12">
 			<div class="component-divider">
 	<span class="text">Apply</span>
 	<span class="icon">
@@ -394,36 +414,53 @@
 
 <!-- FORMS-->
 
-<section class="s-forms -light">
-	<div class="gc">
-		<div class="g-12">
+<section class="sgd-s-forms">
+	<div class="sgd-gc">
+		<div class="sgd-g-12">
 			<h2 class="sgd-header -type -component">Forms</h2>
 		</div>
 	</div>
 
-	<div class="gc">
-		<div class="g-6">
+	<div class="sgd-gc">
+		<div class="sgd-g-6">
 			<input class="-full-width" type="text" placeholder="First name">
 		</div>
-		<div class="g-6">
+		<div class="sgd-g-6">
 			<input class="-full-width" type="text" placeholder="Last name">
 		</div>
-		<div class="g-6">
+		<div class="sgd-g-6">
 			<input class="-full-width -error" type="phone" placeholder="Phone">
 		</div>
-		<div class="g-6">
+		<div class="sgd-g-6">
 			<input type="email" placeholder="Email">
 		</div>
-		<div class="g-12">
+
+<div class="sgd-g-6">
+
+            <input class="-full-width -input-file" name="resume_file" id="resume_file" type="file" accept="application/pdf">
+            <label for="resume_file" class="-label-file"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg><span>Upload your resume</span></label>
+            <span class="-input-file-desc">(Only .pdf, max 3mb)</span>
+
+        </div>
+
+<!--         <div class="g-6">
+
+            <input class="-full-width -input-file" name="portfolio_file" id="portfolio_file" type="file" accept="application/pdf">
+            <label class="-label-file" for="portfolio_file">Enclose File </label>
+
+        </div> -->
+
+
+		<div class="sgd-g-12">
 			<textarea class="-full-width" placeholder="Describe your dreams and ambitions"></textarea>
 		</div>
-		<div class="g-6">
+		<div class="sgd-g-6">
 			<label class="checkbox-holder">I' m looking mostly for freelance work!
 			  <input type="checkbox" checked="checked">
 			  <span class="checkmark"></span>
 			</label>
 		</div>
-		<div class="g-6">
+		<div class="sgd-g-6">
 		</div>
 	</div>
 
@@ -433,12 +470,12 @@
 
 <!-- PAGINATE -->
 
-<section class="s- -light">
-	<div class="gc">
-		<div class="g-12">
+<section class="sgd-s- -light">
+	<div class="sgd-gc">
+		<div class="sgd-g-12">
 			<h2 class="sgd-header -type -module">Paginate</h2>
 		</div>
-		<div class="g-12">
+		<div class="sgd-g-12">
 			<div class="m-paginate">
 
 	<a class="prev page-numbers" href="#"> << Prev</a>
@@ -455,12 +492,12 @@
 
 <!-- MODULE LIST -->
 
-<section class="s- -light">
-	<div class="gc">
-		<div class="g-12">
-			<h2 class="sgd-header -type -module">List</h2>
+<section class="sgd-s- ">
+	<div class="sgd-gc">
+		<div class="sgd-g-12">
+			<h2 class="sgd-header -type -module -discrete">List</h2>
 		</div>
-		<div class="g-12">
+		<div class="sgd-g-12">
 			
 <div class="m-list">
 
@@ -505,12 +542,12 @@
 
 <!-- MODULE LIST -->
 
-<section class="s- -light">
-  <div class="gc">
-    <div class="g-12">
-      <h2 class="sgd-header -type -module">List (Search)</h2>
+<section class="sgd-s- ">
+  <div class="sgd-gc">
+    <div class="sgd-g-12">
+      <h2 class="sgd-header -type -module -discrete">List (Search)</h2>
     </div>
-    <div class="g-12">
+    <div class="sgd-g-12">
       
 <div class="m-list -search">
 
@@ -548,12 +585,12 @@
 
 <!-- MODULE FILTER -->
 
-<section class="s- -light">
-  <div class="gc">
-    <div class="g-12">
+<section class="sgd-s- -light">
+  <div class="sgd-gc">
+    <div class="sgd-g-12">
       <h2 class="sgd-header -type -module">Filter</h2>
     </div>
-    <div class="g-12">
+    <div class="sgd-g-12">
       <div class="m-filter">
     <h3 class="m-filter-header">Stories from a specific field?</h3>
     <ul>
@@ -602,12 +639,12 @@
 
 <!-- MODULE TEAM PERSON -->
 
-<section class="s- -light">
-	<div class="gc">
-		<div class="g-12">
+<section class="sgd-s- ">
+	<div class="sgd-gc">
+		<div class="sgd-g-12">
 			<h2 class="sgd-header -type -module">Teaser person</h2>
 		</div>
-		<div class="g-6">
+		<div class="sgd-g-6">
 			
 <div class="m-teaser-person">
 	<div class="body -pattern-striped-light">
@@ -631,12 +668,12 @@
 
 <!-- MODULE TEAM PERSON -->
 
-<!-- <section class="s- -inverted">
-	<div class="gc">
-		<div class="g-12">
+<!-- <section class="sgd-s- -inverted">
+	<div class="sgd-gc">
+		<div class="sgd-g-12">
 			<h2 class="sgd-header -type -module">Team person</h2>
 		</div>
-		<div class="g-4">
+		<div class="sgd-g-4">
 			Team person comes here
 		</div>
 	</div>
@@ -646,10 +683,10 @@
 
 <!-- SECTION HEADER -->
 
-<section class="s- -light -sgd">
-	<div class="gc">
-		<div class="g-12">
-			<h2 class="sgd-header -type -section">Header</h2>
+<section class="sgd-s-  --sgd ds-grid ">
+	<div class="sgd-gc">
+		<div class="sgd-g-12">
+			<h2 class="sgd-header -type -section -discrete ">Header</h2>
 		</div>
 	</div>
 
@@ -711,14 +748,15 @@
 
 <!-- SECTION HEADER -->
 
-<section class="s- -light">
-	<div class="gc">
-		<div class="g-12">
-			<h2 class="sgd-header -type -section">Breadcrumbs</h2>
+<section class="sgd-s- ">
+	<div class="sgd-gc">
+		<div class="sgd-g-12">
+			<h2 class="sgd-header -type -section -discrete ">Breadcrumbs</h2>
 		</div>
 	</div>
 
-	
+  <div class="ds-grid">
+    
 <section class="s-breadcrumbs">
   <div class="body">
     <div class="gc">
@@ -727,15 +765,17 @@
   </div>
 </section>
 
+  </div>
+
 
 </section>
 
 <!-- SECTION INSPIRATION WEEK -->
 <div class="ds">
-	<section class="s- -light">
-		<div class="gc">
-			<div class="g-12">
-				<h2 class="sgd-header -type -section">Inspiration week</h2>
+	<section class="sgd-s- ds-grid">
+		<div class="sgd-gc">
+			<div class="sgd-g-12">
+				<h2 class="sgd-header -type -section -discrete">Inspiration week</h2>
 			</div>
 		</div>
 
@@ -762,16 +802,15 @@
 </div>
 
 <!-- SECTION TEASER VIDEO -->
-<div class="ds">
-	<section class="s- -light">
+
+	<section class="sgd-s- ds-grid">
+		<div class="sgd-gc">
+			<div class="sgd-g-12">
+				<h2 class="sgd-header -type -section -discrete">Video teaser</h2>
+			</div>
+		</div>
 		<div class="gc">
-			<div class="g-12">
-				<h2 class="sgd-header -type -section">Video teaser</h2>
-			</div>
-		</div>
-
-		<div class="gc">
-			<div class="g-4 g-t-6 g-4 g-m-12">
+        <div class="g-4 g-t-6 g-4 g-m-12">
 	<div class="m-teaser-video">
 		<div class="video">
 			<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/318501240" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
@@ -788,7 +827,7 @@
 	</div>
 </div>
 
-			<div class="g-4 g-t-6 g-4 g-m-12">
+        <div class="g-4 g-t-6 g-4 g-m-12">
 	<div class="m-teaser-video">
 		<div class="video">
 			<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/318501240" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
@@ -805,7 +844,7 @@
 	</div>
 </div>
 
-			<div class="g-4 g-t-6 g-4 g-m-12">
+        <div class="g-4 g-t-6 g-4 g-m-12">
 	<div class="m-teaser-video">
 		<div class="video">
 			<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/318501240" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
@@ -823,18 +862,15 @@
 </div>
 
 		</div>
-
-
-
 	</section>
-</div>
+
 
 <!-- SECTION JOIN EMAIL -->
 <div class="ds">
-	<section class="s- -light">
-		<div class="gc">
-			<div class="g-12">
-				<h2 class="sgd-header -type -section">Join - Email</h2>
+	<section class="sgd-s- ds-grid">
+		<div class="sgd-gc">
+			<div class="sgd-g-12">
+				<h2 class="sgd-header -type -section -discrete">Join - Email</h2>
 			</div>
 		</div>
 
@@ -850,15 +886,16 @@
 	</div>
 </section>
 
+
 	</section>
 </div>
 
 <!-- SECTION FOLLOW -->
 
-<section class="s-share -light">
-<div class="gc">
-    <div class="g-12">
-      <h2 class="sgd-header -type -section">Follow</h2>
+<section class="sgd-s-share ds-grid">
+<div class="sgd-gc">
+    <div class="sgd-g-12">
+      <h2 class="sgd-header -type -section -discrete">Follow</h2>
     </div>
   </div>
 
@@ -914,9 +951,9 @@
 
 <!-- SECTION SHARE -->
 
-<section class="s-share -light">
-<div class="gc">
-		<div class="g-12">
+<!-- <section class="sgd-s-share -light">
+<div class="sgd-gc">
+		<div class="sgd-g-12">
 			<h2 class="sgd-header -type -section">Share (WIP - Not in scope)</h2>
 		</div>
 	</div>
@@ -969,14 +1006,14 @@
 
 
 
-</section>
+</section> -->
 
 <!-- SECTION FOOTER -->
 
-<section class="s- ">
-	<div class="gc">
-		<div class="g-12">
-			<h2 class="sgd-header -type -section">Footer</h2>
+<section class="sgd-s- ds-grid">
+	<div class="sgd-gc">
+		<div class="sgd-g-12">
+			<h2 class="sgd-header -type -section -discrete ">Footer</h2>
 		</div>
 	</div>
 
@@ -1014,7 +1051,7 @@
 
 
 
-  </article>
+  </div>
 
   
 <figure class="svg-sprite -hide">

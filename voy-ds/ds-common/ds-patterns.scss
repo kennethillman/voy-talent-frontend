@@ -32,16 +32,17 @@
     );
 }
 .-pattern-stripe-orange{
-    background: repeating-linear-gradient(
-      -45deg,
-      transparent,
-      $orange 1px,
-      transparent 2px,
-      transparent 3px,
-      $orange 4px,
-      transparent 5px,
-      transparent 20px
-    );
+    // background: repeating-linear-gradient(
+    //   -45deg,
+    //   transparent,
+    //   $orange 1px,
+    //   transparent 2px,
+    //   transparent 3px,
+    //   $orange 4px,
+    //   transparent 5px,
+    //   transparent 20px
+    // );
+
 }
 
 .-pattern-stripe-yellow{
@@ -58,29 +59,30 @@
 }
 
 .-pattern-stripe-dark{
-    background: repeating-linear-gradient(
-      -45deg,
-      transparent,
-      $grey1 1px,
-      transparent 2px,
-      transparent 6px
+  background: url(pattern-stripe-dark.png);
+    // background: repeating-linear-gradient(
+    //   -45deg,
+    //   transparent,
+    //   $grey1 1px,
+    //   transparent 2px,
+    //   transparent 6px
 
-    );
+    // );
 }
 
 .-pattern-stripe-light-tight{
-    background: repeating-linear-gradient(
-      -45deg,
-      transparent,
-      $grey5 1px,
-      transparent 2px,
-      transparent 4px
-
-    );
+  background: url(pattern-stripe-light-tight.png);
+    // background: repeating-linear-gradient(
+    //   -45deg,
+    //   transparent,
+    //   $grey5 1px,
+    //   transparent 2px,
+    //   transparent 4px
+    // );
 }
 
 .-pattern-stripe-light{
-    background: url(pattern-working-2.png);
+    background: url(pattern-stripe-light.png);
     // background: repeating-linear-gradient(
     //   -45deg,
     //   transparent,
@@ -103,13 +105,14 @@
 }
 
 .-pattern-stripe-orange{
-    background: repeating-linear-gradient(
-      -45deg,
-      transparent,
-      $orange 1px,
-      transparent 2px,
-      transparent 7px
-    );
+    background: url(pattern-stripe-orange.png);
+    // background: repeating-linear-gradient(
+    //   -45deg,
+    //   transparent,
+    //   $orange 1px,
+    //   transparent 2px,
+    //   transparent 7px
+    // );
 }
 
 .-pattern-solid-orange{

@@ -4,14 +4,15 @@
   "description": "Starter \"pack\" to get basic HTML / CSS / JS sit up and running with a pattern library",
   "main": "index.html",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "gulp"
   },
   "author": "Tina van Schelt",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.5",
     "del": "^4.1.0",
-    "gulp": "3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-connect-php": "1.0.1",
@@ -33,6 +34,7 @@
     "yargs": "^13.2.2"
   },
   "dependencies": {
+    "audit": "0.0.6",
     "babel-eslint": "^8.2.2",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -40,6 +42,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
+    "fix": "0.0.6",
     "gulp-eslint": "^4.0.2",
     "gulp-sass-lint": "^1.3.4",
     "nunjucks": "^3.2.0"

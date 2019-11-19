@@ -1,7 +1,11 @@
 .p-getInTouch {
 	.btn-holder {
 		padding: 0 0 40px;
-		margin:0 0 30px; 
-		border-bottom: 1px solid $grey3; 
+		margin:0 0 30px;
+		//border-bottom: 1px solid $grey3;
 	}
+  .sent-result {
+    position: relative;
+    top: -53px;
+  }
 }

@@ -5,16 +5,15 @@
 
 .b-repeater-team {
 
-    margin: 0 0 22px;
-
   .body {
-    background: repeating-linear-gradient(
-      -45deg,
-      transparent,
-      $grey5 1px,
-      transparent 2px,
-      transparent 6px
-    );
+    background: url(pattern-stripe-light-tight.png);
+    // background: repeating-linear-gradient(
+    //   -45deg,
+    //   transparent,
+    //   $grey5 1px,
+    //   transparent 2px,
+    //   transparent 6px
+    // );
     margin: 0 0 8px;
     padding: 0 22px;
     position: relative;

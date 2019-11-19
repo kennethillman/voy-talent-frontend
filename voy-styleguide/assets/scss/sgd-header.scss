@@ -8,21 +8,20 @@
   display: block;
   position: relative;
 
-
   .logo-inverted {
   	//position: absolute;
   	width: 100%;
   	padding: 15px 0;
-  	background: $black;
+  	background: $sgd-black;
   	top: 0;
   	svg {
-  		fill: $white;
+  		fill: $sgd-yellow;
   		height: 30px;
   	}
   }
   #logo{
     margin-top: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 
 }
@@ -45,5 +44,4 @@
 
 .-sgd .s-header {
   position:static;
-
 }

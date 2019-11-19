@@ -4,7 +4,14 @@
 
 
   .b-testamonials {
-    padding: 20px 0!important;
+    padding: 20px 0 !important;
+
+    &.-image-right {
+      .g-4 {
+        float: right !important;
+      }
+    }
+
     figure {
       @include aspect-ratio-img(1,1);
       display: block;

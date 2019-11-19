@@ -12,15 +12,16 @@
 	    padding: 0 0 22px;
 	    margin: 0;
 		}
+    img {
+      display: block;
+    }
 
 		.gc{
 			position: relative;
 		}
 
 		.text-col {
-
 			.btn {
-				margin-top: 22px;
 				margin: 22px 0;
         box-sizing: border-box;
 			}
@@ -33,9 +34,8 @@
           position: absolute;
           bottom: 0px;
           left: 0;
-          margin-top: 22px;
-          width: 22%;
-
+          margin: 22px 0 0;
+          width: 32%;
         }
       }
   	}

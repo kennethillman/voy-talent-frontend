@@ -2,7 +2,8 @@
     // ///////////////////////////////////////////////////////////////////////////////////////////////////////
     // //// PATTERN
     // ///////////////////////////////////////////////////////////////////////////////////////////////////////
-        const VOY = window.VOY || {};
+        VOY = window.VOY || {},
+        VOY.sections = VOY.sections || {};
 
         VOY.sections.header = {
             el: 's-header',
@@ -79,6 +80,10 @@
               ft = 0
               wy = window.scrollY
 
+              if(!b){
+                return;
+              }
+
               if (document.body.classList.contains('-has-featured-image')){
 
 
@@ -103,7 +108,6 @@
                 } else {
                   h.classList.remove('-sticky');
                 }
-
 
 
               } else {
@@ -163,8 +167,6 @@
       window.onload = function(){
         // Set inital width
         reWi = window.innerWidth;
-
-        console.log('onload');
 
 
 
