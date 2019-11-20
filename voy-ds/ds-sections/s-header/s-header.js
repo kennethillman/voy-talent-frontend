@@ -75,7 +75,7 @@
               h = document.querySelector('.s-header')
               hh = h.offsetHeight
               b = document.querySelector('.s-breadcrumbs')
-              f = document.querySelector('.s-featured-image')
+              f = document.querySelector('.n2-section-smartslider')
               fh = 0
               ft = 0
               wy = window.scrollY

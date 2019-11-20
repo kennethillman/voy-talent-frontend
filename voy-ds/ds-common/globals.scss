@@ -7,6 +7,24 @@
 //
 
 
+// - - Smart slider 3 - override
+
+.n2-section-smartslider {
+
+  display: block;
+
+  #n2-ss-4-placeholder {
+    background: red;
+  }
+
+  div[id*="placeholder"]{
+    display: none!important;
+  }
+
+}
+
+
+
 // - -
 
 .form-loader{
@@ -49,7 +67,6 @@ html body {
 }
 
 body {
-
 
   margin: 0;
   background-color: $black;
